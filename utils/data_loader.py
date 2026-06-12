@@ -9,7 +9,7 @@ import numpy as np
 from pathlib import Path
 
 # ── Rutas ──────────────────────────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent.parent.parent  # …/Dashboard/
+BASE_DIR   = Path(__file__).parent.parent  # Directorio raíz del repositorio (dashboard_emae)
 PARQUET    = BASE_DIR / "emae_base_estrella.parquet"
 EXCEL_PATH = BASE_DIR / "EMAE.BASE_FINAL_ANALISIS_SECOPI_2023_2025_MINTIC_T4_DASHBOARD_V3.xlsx"
 SHEET_NAME = "_EMAE_ _BASE_FINAL_ANALISIS_SEC"
