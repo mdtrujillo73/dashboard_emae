@@ -62,13 +62,17 @@ def load_data() -> pd.DataFrame:
     (Cache invalidation trigger v6)
     """
     if PARQUET.exists():
-        df = pd.read_parquet(PARQUET)
+        df = pd.read_parquet(PARQUET, engine="pyarrow")
     else:
         st.warning("⚠️ Archivo Parquet no encontrado. Cargando desde Excel (puede tardar varios minutos)...")
         df = pd.read_excel(EXCEL_PATH, sheet_name=SHEET_NAME, dtype=DTYPE_MAP)
         df.to_parquet(PARQUET, index=False)
 
     df = _clean(df)
+    
+    import gc
+    gc.collect()
+    
     return df
 
 
