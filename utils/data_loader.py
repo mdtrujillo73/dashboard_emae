@@ -79,6 +79,18 @@ def load_data() -> pd.DataFrame:
 def _clean(df: pd.DataFrame) -> pd.DataFrame:
     """Limpieza y tipado post-carga."""
 
+    # 🚀 DROPPING DEAD WEIGHT: Liberar más de 600MB de RAM eliminando columnas de texto gigante que no se grafican
+    unused_heavy_cols = [
+        "DETALLE_OBJETO_CONTRATAR", 
+        "OBJETO_CONTRATO_FIRMA", 
+        "OBJETO_A_CONTRATAR",
+        "NUMERO_CONSTANCIA",
+        "NUMERO_PROCESO",
+        "NUMERO_CONTRATO"
+    ]
+    cols_to_drop = [c for c in unused_heavy_cols if c in df.columns]
+    df.drop(columns=cols_to_drop, inplace=True)
+
     # Valores monetarios → numérico (filtrar centinelas: 999_999_999_999_999)
     SENTINEL = 999_999_999_999_999
     for col in VALUE_COLS:
