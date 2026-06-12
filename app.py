@@ -219,12 +219,18 @@ with st.sidebar:
     regimenes_disp = sorted(df_raw["REGIMEN_CLASIFICADO_FINAL"].dropna().unique().tolist())
     sel_regimen = st.multiselect("Régimen", options=regimenes_disp, default=[])
 
+    if "MODALIDAD_CONTRATACION" in df_raw.columns:
+        modalidades_disp = sorted(df_raw["MODALIDAD_CONTRATACION"].dropna().unique().tolist())
+    else:
+        modalidades_disp = []
+    sel_modalidad = st.multiselect("Modalidad de Contratación", options=["Todas"] + modalidades_disp, default=["Todas"])
+
     st.markdown("---")
     st.caption(f"📊 Base: {len(df_raw):,} registros totales")
     st.caption("Subdirección EMAE | Jun 2026")
 
 # ── Filtro aplicado ───────────────────────────────────────────────────────
-df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen)
+df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen, sel_modalidad)
 
 # ── HEADER PRINCIPAL ──────────────────────────────────────────────────────
 st.markdown(f"""

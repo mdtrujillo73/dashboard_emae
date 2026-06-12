@@ -46,7 +46,13 @@ with st.sidebar:
     regimenes_disp = sorted(df_raw["REGIMEN_CLASIFICADO_FINAL"].dropna().unique().tolist())
     sel_regimen = st.multiselect("Régimen", regimenes_disp, default=[])
 
-df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen)
+    if "MODALIDAD_CONTRATACION" in df_raw.columns:
+        modalidades_disp = sorted(df_raw["MODALIDAD_CONTRATACION"].dropna().unique().tolist())
+    else:
+        modalidades_disp = []
+    sel_modalidad = st.multiselect("Modalidad de Contratación", ["Todas"] + modalidades_disp, default=["Todas"])
+
+df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen, sel_modalidad)
 
 st.markdown("# 🏢 Análisis por Entidades")
 st.markdown(f"Mostrando **{len(df):,}** contratos de **{df['NOMBRE_ENTIDAD_SECOPI'].nunique():,}** entidades")

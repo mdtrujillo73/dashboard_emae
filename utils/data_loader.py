@@ -182,7 +182,7 @@ def _clean(df: pd.DataFrame) -> pd.DataFrame:
 
 # ── Helpers de filtrado ──────────────────────────────────────────────────────
 
-def apply_filters(df: pd.DataFrame, vigencia, departamentos, escenarios, regimen) -> pd.DataFrame:
+def apply_filters(df: pd.DataFrame, vigencia, departamentos, escenarios, regimen, modalidad=None) -> pd.DataFrame:
     """Aplica los filtros del sidebar al DataFrame."""
     mask = pd.Series(True, index=df.index)
 
@@ -199,23 +199,20 @@ def apply_filters(df: pd.DataFrame, vigencia, departamentos, escenarios, regimen
     if regimen and "Todos" not in regimen:
         mask &= df["REGIMEN_CLASIFICADO_FINAL"].isin(regimen)
 
+    if modalidad and "Todas" not in modalidad:
+        mask &= df["MODALIDAD_CONTRATACION"].isin(modalidad)
+
     return df[mask]
 
 
 # ── Formateadores ────────────────────────────────────────────────────────────
 
 def fmt_billones(value: float) -> str:
-    """Formatea valor en billones o miles de millones de COP."""
+    """Formatea valor en billones de COP."""
     if value is None or np.isnan(value):
         return "N/D"
     b = value / 1e12
-    if b >= 1:
-        return f"${b:,.2f} Bill."
-    mm = value / 1e9
-    if mm >= 1:
-        return f"${mm:,.1f} Miles M."
-    m = value / 1e6
-    return f"${m:,.1f} M"
+    return f"${b:,.3f} Billones de Pesos colombianos"
 
 
 def fmt_numero(value: float) -> str:
