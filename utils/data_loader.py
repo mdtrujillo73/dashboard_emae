@@ -54,7 +54,7 @@ ESCENARIO_COLORS = {
 
 # ── Carga principal ─────────────────────────────────────────────────────────
 
-@st.cache_data(show_spinner="⏳ Cargando base de datos EMAE...", ttl=3600)
+@st.cache_resource(show_spinner="⏳ Cargando base de datos EMAE...", ttl=3600)
 def load_data() -> pd.DataFrame:
     """
     Carga la base estrella desde Parquet (preferido) o desde Excel como fallback.
