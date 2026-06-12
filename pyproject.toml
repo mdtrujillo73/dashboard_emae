@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "dashboard-emae"
+version = "1.0.0"
+description = "Dashboard EMAE – SECOPI 2023-2025 | Colombia Compra Eficiente"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+streamlit = ">=1.35"
+pandas = ">=2.0"
+plotly = ">=5.0"
+openpyxl = ">=3.1"
+pyarrow = ">=14.0"
