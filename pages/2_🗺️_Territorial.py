@@ -119,7 +119,7 @@ with tab2:
                    .nlargest(n_m, "valor").sort_values("valor"))
         titulo_x = "Valor Contratado (COP)"
 
-    top_m["mpio_label"] = top_m[col_depto] + " / " + top_m[col_mpio]
+    top_m["mpio_label"] = top_m[col_depto].astype(str) + " / " + top_m[col_mpio].astype(str)
 
     fig_m = go.Figure(go.Bar(
         x=top_m["valor"],
