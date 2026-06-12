@@ -1,6 +1,6 @@
 # 🏛️ Dashboard EMAE – SECOPI 2023-2025
 
-![Colombia Compra Eficiente](https://www.colombiacompra.gov.co/sites/cce_public/files/cce_images/logo_cce_0.png)
+![Colombia Compra Eficiente](assets/escudo.png)
 
 Este repositorio contiene el **Dashboard Analítico** de la Subdirección EMAE de **Colombia Compra Eficiente**. Se trata de una herramienta interactiva que permite explorar, cruzar y visualizar la contratación estatal registrada en el portal SECOP I, así como validar la información frente al universo de entidades obligadas por la Circular 674.
 
