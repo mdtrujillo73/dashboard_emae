@@ -91,6 +91,10 @@ def _clean(df: pd.DataFrame) -> pd.DataFrame:
     cols_to_drop = [c for c in unused_heavy_cols if c in df.columns]
     df.drop(columns=cols_to_drop, inplace=True)
 
+    # Excluir la entidad 'No Definido'
+    if "NOMBRE_ENTIDAD_SECOPI" in df.columns:
+        df = df[df["NOMBRE_ENTIDAD_SECOPI"].astype(str).str.strip() != "No Definido"]
+
     # Valores monetarios → numérico (filtrar centinelas: 999_999_999_999_999)
     SENTINEL = 999_999_999_999_999
     for col in VALUE_COLS:
