@@ -155,6 +155,12 @@ def _clean(df: pd.DataFrame) -> pd.DataFrame:
             clean_map = {u: fix_encoding(u) for u in uniques}
             df[col] = df[col].map(clean_map).fillna(df[col])
 
+    # 🚀 Optimización extrema de memoria para Streamlit Cloud (Evitar OOM)
+    # Convierte columnas de texto repetitivo en categorías internas
+    for col in df.select_dtypes(include=['object']).columns:
+        if df[col].nunique() / len(df) < 0.5:
+            df[col] = df[col].astype('category')
+
     return df
 
 
