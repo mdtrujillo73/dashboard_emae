@@ -282,6 +282,12 @@ with k4:
         <div class="kpi-sub">del universo de 674</div>
     </div>""", unsafe_allow_html=True)
 
+st.markdown(f"""
+<div style="margin-top: 1rem; padding: 0.85rem 1.2rem; background-color: #FEF9E7; border-left: 4px solid #D61C38; border-radius: 8px; font-size: 0.85rem; color: #5A666A;">
+    <strong>Nota:</strong> Las {fmt_numero(obligadas_ids) if obligadas_ids else '0'} entidades corresponden a entidades identificadas dentro del universo de entidades obligadas a publicar en SECOP II que registran contratación en SECOP I durante el periodo analizado.
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("<br>", unsafe_allow_html=True)
 
 # ── ESCENARIOS ────────────────────────────────────────────────────────────
