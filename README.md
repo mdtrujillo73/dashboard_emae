@@ -1,85 +1,35 @@
-# 🏛️ Dashboard EMAE – SECOPI 2023-2025
+# 🏛️ Dashboard EMAE – Estrategia de Despliegue SECOP II (2026)
 
 ![Colombia Compra Eficiente](assets/escudo.png)
 
-Este repositorio contiene el **Dashboard Analítico** de la Subdirección EMAE de **Colombia Compra Eficiente**. Se trata de una herramienta interactiva que permite explorar, cruzar y visualizar la contratación estatal registrada en el portal SECOP I, así como validar la información frente al universo de entidades obligadas por la Circular 674.
+Este repositorio contiene el **Dashboard Analítico** de la Subdirección de Estudios de Mercado y Abastecimiento Estratégico (**EMAE**) y la Subdirección de Información y Desarrollo Tecnológico (**IDT**) de **Colombia Compra Eficiente**. Permite explorar, cruzar y visualizar el 100% de la contratación registrada en SECOP I durante las vigencias **2023, 2024 y 2025** (**985.596 procesos** consolidados en **57.543 registros agrupados** de **4.525 entidades compradoras** / **3.643 NITs homologados**), y trazar la ruta operativa de despliegue de SECOP II para 2026.
 
 ---
 
-## ✨ Características Principales
+## ✨ Características Principales (Actualización 2026)
 
-* **📊 Métricas Clave (KPIs):** Resumen inmediato de total de contratos, valor contratado, entidades identificadas y entidades obligadas bajo la Circular 674.
-* **🔎 Filtros Dinámicos:** Cruza la información filtrando por Vigencia (2023-2025), Departamento, Escenario de Reporte y Régimen de contratación.
-* **📈 Visualizaciones Interactivas:**
-  * Dona descriptiva de proporciones por *Escenario Analítico*.
-  * Gráfico comparativo interanual por vigencias (en cantidad y montos).
-  * Panel topológico y mapeo de contratos consolidados.
-* **🎨 Identidad Institucional:** Aplicación de la paleta oficial (Amarillo, Naranja, Vinotinto, Azul Institucional) y estilos visuales del manual de marca de CCE.
-* **⚡ Ultra Rápido:** Utiliza archivos `.parquet` como capa de caché local para manejar millones de filas de contratación pública casi de forma instantánea.
-
----
-
-## 🛠️ Tecnologías y Requisitos
-
-Este proyecto está construido 100% en Python utilizando las siguientes librerías core:
-
-* **[Streamlit](https://streamlit.io/):** Framework para la construcción de toda la interfaz web.
-* **[Pandas](https://pandas.pydata.org/):** Limpieza, normalización (unificación de categorías de modalidades) y procesamiento de datos.
-* **[Plotly Express / GO](https://plotly.com/python/):** Componente de graficación avanzada y dinámica.
-* **PyArrow:** Motor de compresión y lectura en formato columnar (Parquet).
-
-Asegúrate de contar con **Python 3.9 o superior**.
+* **📊 Radiografía por Segmento Normativo y Obligatoriedad (2026):**
+  * **Potencial Obligada 2026 – Contratación Ordinaria (`TD_01` y `TD_01B`):** 587.265 procesos (59,6%) | 2.975 cuentas (2.482 NITs) | \$48,01 Billones reales.
+  * **Obligada Vigencias Anteriores (2020–2025):** 221.563 procesos ordinarios (22,5%) | 730 cuentas (557 NITs) | \$18,58 Billones reales.
+  * **Régimen Especial y Fondos de Ley (`TD_03` – Ley 2195/2022 Art. 53):** 123.544 procesos (12,5%) | 1.423 cuentas (1.355 NITs) | \$13,76 Billones reales.
+  * **Exclusión Normativa Circular SECOP II (`TD_02`):** 53.224 procesos (5,4%) | 991 cuentas (930 NITs) | \$56,64 Billones reales.
+* **🔥 Mapas de Calor Geográficos (Departamental y Municipal):**
+  * **Mapa de Calor Coroplético por Departamento:** Polígonos oficiales DANE de los 33 departamentos coloreados por N° de Entidades, Procesos en SECOP I, Cuantía Real, % Penetración de Internet Fijo MinTIC (3T-2025) o % de adopción de SECOP II.
+  * **Mapa de Calor Municipal (1.076+ Municipios con Código DIVIPOLA):** Soporta **Mapa de Calor de Densidad (`Densitymapbox`) + Puntos Municipales**, **Polígonos Municipales Coropléticos** y **Burbujas Georreferenciadas**, con **auto-zoom inteligente** al seleccionar cualquier departamento.
+  * **Matriz de Calor 2D:** Cruce matricial entre Departamentos y Naturaleza Institucional (10 tipologías), Categoría CGN (Ley 617) y Conectividad MinTIC.
+* **🚀 Las 6 Rutas Operativas de Despliegue 2026 (`TD_01B_LISTA_ENTIDADES`):** Clasificación operativa para las 2.975 entidades potenciales (Fase 1, Fase 1B, Fase 2 subcuentas municipales, Fase 2 registro desde cero, doble acción Circular + Ley 2195, y verificación de bloqueo manual FSE/ESP/ESE).
+* **⚡ Carga Instantánea:** Utiliza archivos `.parquet` (`emae_base_estrella.parquet` y `emae_td01b_entidades.parquet`) y cartografía GeoJSON optimizada en `assets/` para renderizar millones de procesos en milisegundos.
 
 ---
 
-## 🚀 Cómo correr el proyecto localmente
+## 🚀 Cómo ejecutar el Dashboard localmente
 
-1. **Clona este repositorio:**
-   ```bash
-   git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-   cd TU_REPOSITORIO/dashboard_emae
-   ```
-
-2. **Crea y activa un entorno virtual** (si usas Conda):
-   ```bash
-   conda create -n ColombiaCompra python=3.10
-   conda activate ColombiaCompra
-   ```
-
-3. **Instala las dependencias** (puedes usar un `requirements.txt` o Poetry):
-   ```bash
-   pip install streamlit pandas plotly openpyxl pyarrow
-   ```
-
-4. **Agrega tu base de datos y logo:**
-   * Ubica el archivo maestro de Excel o `.parquet` llamado `emae_base_estrella.parquet` en la raíz del proyecto.
-   * Coloca el archivo `escudo.png` dentro de la carpeta `assets/` para cargar el logo.
-
-5. **Levanta el servidor local:**
-   ```bash
-   streamlit run app.py
-   ```
-   *El dashboard abrirá automáticamente en tu navegador a través de `http://localhost:8501`*.
-
----
-
-## 📁 Estructura del Directorio
-
-```text
-dashboard_emae/
-│
-├── app.py                      # 🚀 Punto de entrada y estructura web del dashboard
-├── pyproject.toml              # 📦 Dependencias y configuración (Poetry)
-├── README.md                   # 📖 Este archivo de documentación
-│
-├── assets/                     # 🖼️ Recursos gráficos
-│   └── escudo.png              # Logo CCE
-│
-└── utils/                      # ⚙️ Módulos de lógica y procesamiento
-    ├── charts.py               # Lógica de construcción de gráficos Plotly e identidad visual
-    └── data_loader.py          # Lógica de carga pesada, caché Parquet y limpieza Pandas
+```bash
+cd dashboard_emae
+streamlit run app.py
 ```
 
----
-
-*Desarrollado con 💻 para la democratización y análisis transparente de los datos de contratación en Colombia.*
+Si usas Anaconda en Windows:
+```powershell
+& "C:\ProgramData\anaconda3\Scripts\streamlit.exe" run dashboard_emae\app.py
+```

@@ -1,181 +1,280 @@
 """
-Página: Cumplimiento SECOP II – Validación de las 674 entidades obligadas
+Página: Cumplimiento y Estrategia de Despliegue SECOP II (2026)
+Incluye las 6 Rutas Operativas de TD_01B (2.975 entidades potenciales),
+seguimiento a Obligadas Previas (2020-2025), Ley 2195/2022 (TD_03) y Exclusiones (TD_02).
 """
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from utils.data_loader import load_data, apply_filters, fmt_billones, fmt_numero
-from utils.charts import chart_gauge_cumplimiento, CCE_AZUL, CCE_VERDE, CCE_ROJO, LAYOUT_DEFAULTS, ESCENARIO_LABELS
+from utils.data_loader import (
+    load_data,
+    load_td01b,
+    render_sidebar_filters,
+    fmt_billones,
+    fmt_numero,
+    RUTA_SHORT_LABELS,
+)
+from utils.charts import (
+    chart_gauge_cumplimiento,
+    chart_rutas_despliegue_2026,
+    CCE_AZUL,
+    CCE_ROJO,
+    CCE_NARANJA,
+    CCE_MORADO,
+    LAYOUT_DEFAULTS,
+)
 
-st.set_page_config(page_title="Cumplimiento SECOP II | EMAE", page_icon="✅", layout="wide")
+st.set_page_config(page_title="Despliegue & Cumplimiento SECOP II | EMAE", page_icon="✅", layout="wide")
 
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 html,[class*="css"]{font-family:'Inter',sans-serif;}
-[data-testid="stSidebar"]{background:linear-gradient(180deg,#003F7E 0%,#002855 100%);}
+[data-testid="stSidebar"]{background:linear-gradient(180deg,#174073 0%,#3E546C 100%);}
 [data-testid="stSidebar"] *{color:#fff!important;}
-[data-testid="stSidebar"] label{color:#A8C8E8!important;font-size:0.82rem;font-weight:500;text-transform:uppercase;letter-spacing:0.03em;}
-.section-header{font-size:1.15rem;font-weight:700;color:#003F7E;border-bottom:3px solid #009B3A;padding-bottom:0.4rem;margin:1.5rem 0 1rem 0;}
-.cumpl-card{border-radius:14px;padding:1.2rem 1.5rem;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,0.10);}
-.cumpl-num{font-size:2.2rem;font-weight:700;line-height:1;}
-.cumpl-lbl{font-size:0.8rem;font-weight:600;margin-top:0.3rem;opacity:0.85;}
-.badge-si{background:#009B3A;color:white;padding:.2rem .7rem;border-radius:999px;font-size:.75rem;font-weight:600;}
-.badge-no{background:#C0392B;color:white;padding:.2rem .7rem;border-radius:999px;font-size:.75rem;font-weight:600;}
-.badge-nd{background:#6C757D;color:white;padding:.2rem .7rem;border-radius:999px;font-size:.75rem;font-weight:600;}
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stMultiSelect label,
+[data-testid="stSidebar"] .stRadio label{color:#FFC000!important;font-size:0.80rem;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;}
+.section-header{font-size:1.15rem;font-weight:700;color:#174073;border-bottom:3px solid #D61C38;padding-bottom:0.4rem;margin:1.5rem 0 1rem 0;}
+.cumpl-card{border-radius:14px;padding:1.2rem 1.4rem;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,0.08);height:100%;}
+.cumpl-num{font-size:2.05rem;font-weight:700;line-height:1.1;}
+.cumpl-lbl{font-size:0.78rem;font-weight:600;margin-top:0.35rem;opacity:0.9;}
 </style>
 """, unsafe_allow_html=True)
 
 df_raw = load_data()
+df_td1b_raw = load_td01b()
+df = render_sidebar_filters(df_raw)
 
-with st.sidebar:
-    st.markdown("## 🏛️ EMAE – SECOPI")
-    st.markdown("---")
-    vigencias_disp = sorted(df_raw["VIGENCIA"].dropna().unique().tolist())
-    sel_vigencia = st.multiselect("Vigencia", ["Todas"] + vigencias_disp, default=["Todas"])
-    col_depto = "DEPARTAMENTO_MINTIC" if "DEPARTAMENTO_MINTIC" in df_raw.columns else "DEPARTAMENTO_SECOPI"
-    deptos_disp = sorted(df_raw[col_depto].dropna().unique().tolist())
-    sel_depto = st.multiselect("Departamento", deptos_disp, default=[])
-    escenarios_disp = [k for k in ESCENARIO_LABELS if k in df_raw["ESCENARIO_REPORTE_FINAL"].unique()]
-    sel_escenario = st.multiselect("Escenario", escenarios_disp, format_func=lambda x: ESCENARIO_LABELS.get(x,x), default=[])
-    regimenes_disp = sorted(df_raw["REGIMEN_CLASIFICADO_FINAL"].dropna().unique().tolist())
-    sel_regimen = st.multiselect("Régimen", regimenes_disp, default=[])
+# Sincronizar el directorio TD_01B con las entidades presentes en el filtro actual
+entidades_filtradas = set(df["NOMBRE_ENTIDAD"].unique())
+df_td1b = df_td1b_raw[df_td1b_raw["NOMBRE_ENTIDAD"].isin(entidades_filtradas)].copy()
 
-    if "MODALIDAD_CONTRATACION" in df_raw.columns:
-        modalidades_disp = sorted(df_raw["MODALIDAD_CONTRATACION"].dropna().unique().tolist())
-    else:
-        modalidades_disp = []
-    sel_modalidad = st.multiselect("Modalidad de Contratación", ["Todas"] + modalidades_disp, default=["Todas"])
+st.markdown("# ✅ Estrategia de Despliegue y Cumplimiento SECOP II (2026)")
+st.markdown(
+    "Ruta operativa para las **2.975 entidades potenciales (`TD_01B`)**, control de entidades obligadas en "
+    "**vigencias anteriores (2020–2025)**, bloqueo manual por **Ley 2195 de 2022 (`TD_03`)** y **Exclusiones (`TD_02`)**"
+)
 
-df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen, sel_modalidad)
+# ── KPIs sobre TD_01B (Potenciales Obligadas 2026) ────────────────────────
+total_pot = len(df_td1b)
+proc_pot_total = int(df_td1b["TOTAL_PROCESOS_ORDINARIOS_S1"].sum()) if not df_td1b.empty else 0
 
-st.markdown("# ✅ Cumplimiento SECOP II")
-st.markdown("Validación del universo de **674 entidades** obligadas a publicar en SECOP II")
+tiene_cuenta_mask = ~df_td1b["NOMBRE_CUENTA_SECOP2"].astype(str).str.startswith("Sin Cuenta") if not df_td1b.empty else pd.Series(dtype=bool)
+publica_s2_mask = (df_td1b["PUBLICA_EN_SECOP2"] == "Sí") if not df_td1b.empty else pd.Series(dtype=bool)
 
-# ── KPIs de cumplimiento ──────────────────────────────────────────────────
-col_circular = "ENTIDAD_EN_CIRCULAR_674_FINAL"
-col_aparece  = "APARECE_SECOPI_CIRCULAR_FINAL"
-col_cruce    = "TIENE_CRUCE_SECOPII_VALIDADO_FINAL"
-col_obligada = "DEBE_REPORTAR_SEGUN_CIRCULAR_FINAL"
+ent_con_cuenta = int(tiene_cuenta_mask.sum())
+ent_publica_s2 = int(publica_s2_mask.sum())
+ent_cuenta_sin_pub = max(0, ent_con_cuenta - ent_publica_s2)
+ent_sin_cuenta = max(0, total_pot - ent_con_cuenta)
 
-# Trabajar a nivel de entidad única (no de contrato)
-ent_df = df.drop_duplicates(subset=["NIT_ENTIDAD_SECOPI"], keep="first") if "NIT_ENTIDAD_SECOPI" in df.columns else df.drop_duplicates(subset=["NOMBRE_ENTIDAD_SECOPI"], keep="first")
+proc_en_publica_s2 = int(df_td1b.loc[publica_s2_mask, "TOTAL_PROCESOS_ORDINARIOS_S1"].sum()) if not df_td1b.empty else 0
+proc_en_con_cuenta = int(df_td1b.loc[tiene_cuenta_mask, "TOTAL_PROCESOS_ORDINARIOS_S1"].sum()) if not df_td1b.empty else 0
 
-total_ent = len(ent_df)
-
-en_circular = ent_df[ent_df.get(col_circular, pd.Series(dtype=str)) == "SI"].shape[0] if col_circular in ent_df else 0
-aparece_s2  = ent_df[ent_df.get(col_aparece, pd.Series(dtype=str)) == "SI"].shape[0] if col_aparece in ent_df else 0
-cruce_val   = ent_df[ent_df.get(col_cruce, pd.Series(dtype=str)) == "SI"].shape[0] if col_cruce in ent_df else 0
-
-pct_circular  = (en_circular / total_ent * 100) if total_ent > 0 else 0
-pct_aparece   = (aparece_s2 / en_circular * 100) if en_circular > 0 else 0
+pct_con_cuenta = (ent_con_cuenta / total_pot * 100.0) if total_pot > 0 else 0.0
+pct_publica_s2 = (ent_publica_s2 / total_pot * 100.0) if total_pot > 0 else 0.0
+pct_proc_s2    = (proc_en_publica_s2 / proc_pot_total * 100.0) if proc_pot_total > 0 else 0.0
 
 c1, c2, c3, c4 = st.columns(4)
 with c1:
-    st.markdown(f"""<div class="cumpl-card" style="background:#E8F4FD;">
-        <div class="cumpl-num" style="color:#003F7E;">{total_ent:,}</div>
-        <div class="cumpl-lbl" style="color:#003F7E;">Entidades en la muestra</div>
+    st.markdown(f"""<div class="cumpl-card" style="background:#EBF3FA;">
+        <div class="cumpl-num" style="color:#174073;">{total_pot:,}</div>
+        <div class="cumpl-lbl" style="color:#174073;">Entidades Potenciales (TD_01B)<br><span style="font-size:0.72rem;">{proc_pot_total:,} procesos ordinarios</span></div>
     </div>""", unsafe_allow_html=True)
 with c2:
-    st.markdown(f"""<div class="cumpl-card" style="background:#FEF9E7;">
-        <div class="cumpl-num" style="color:#E67E22;">{en_circular:,}</div>
-        <div class="cumpl-lbl" style="color:#E67E22;">En universo de 674 obligadas</div>
+    st.markdown(f"""<div class="cumpl-card" style="background:#EAFAF1;">
+        <div class="cumpl-num" style="color:#1E8449;">{ent_publica_s2:,}</div>
+        <div class="cumpl-lbl" style="color:#1E8449;">Ya Publican en SECOP II ({pct_publica_s2:.1f}%)<br><span style="font-size:0.72rem;">Concentran {proc_en_publica_s2:,} proc. ({pct_proc_s2:.1f}%)</span></div>
     </div>""", unsafe_allow_html=True)
 with c3:
-    st.markdown(f"""<div class="cumpl-card" style="background:#EAFAF1;">
-        <div class="cumpl-num" style="color:#009B3A;">{aparece_s2:,}</div>
-        <div class="cumpl-lbl" style="color:#009B3A;">Aparecen en SECOP II</div>
+    st.markdown(f"""<div class="cumpl-card" style="background:#FEF9E7;">
+        <div class="cumpl-num" style="color:#D98A3C;">{ent_con_cuenta:,}</div>
+        <div class="cumpl-lbl" style="color:#9C7238;">Con Cuenta en Directorio SECOP II ({pct_con_cuenta:.1f}%)<br><span style="font-size:0.72rem;">Incluye {ent_cuenta_sin_pub:,} cuentas con 0 procesos</span></div>
     </div>""", unsafe_allow_html=True)
 with c4:
     st.markdown(f"""<div class="cumpl-card" style="background:#FDEDEC;">
-        <div class="cumpl-num" style="color:#C0392B;">{en_circular - aparece_s2:,}</div>
-        <div class="cumpl-lbl" style="color:#C0392B;">Obligadas SIN presencia SECOP II</div>
+        <div class="cumpl-num" style="color:#D61C38;">{ent_sin_cuenta:,}</div>
+        <div class="cumpl-lbl" style="color:#D61C38;">Sin Cuenta Propia en SECOP II<br><span style="font-size:0.72rem;">Requieren creación de cuenta o subcuenta</span></div>
     </div>""", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ── Gauges ────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-header">📊 Indicadores de Cumplimiento</div>', unsafe_allow_html=True)
+# ── Gauges de Preparación para el Despliegue 2026 ─────────────────────────
+st.markdown('<div class="section-header">📊 Nivel de Alistamiento en SECOP II de las Entidades Potenciales (TD_01B)</div>', unsafe_allow_html=True)
 
 g1, g2, g3 = st.columns(3)
 with g1:
     st.plotly_chart(
-        chart_gauge_cumplimiento(pct_circular, "% Entidades en Universo Obligadas"),
+        chart_gauge_cumplimiento(pct_con_cuenta, "% Potenciales Registradas en SECOP II", meta=70.9),
         use_container_width=True, key="g1"
     )
 with g2:
     st.plotly_chart(
-        chart_gauge_cumplimiento(pct_aparece, "% Obligadas con presencia SECOP II"),
+        chart_gauge_cumplimiento(pct_publica_s2, "% Potenciales con Publicaciones Activas", meta=50.0),
         use_container_width=True, key="g2"
     )
 with g3:
-    pct_cruce = (cruce_val / total_ent * 100) if total_ent > 0 else 0
     st.plotly_chart(
-        chart_gauge_cumplimiento(pct_cruce, "% Con cruce SECOP II validado"),
+        chart_gauge_cumplimiento(pct_proc_s2, "% Procesos TD_01 en Entidades con SECOP II", meta=69.3),
         use_container_width=True, key="g3"
     )
 
-# ── Tabla de cumplimiento ─────────────────────────────────────────────────
-st.markdown('<div class="section-header">📋 Tabla de Cumplimiento por Entidad</div>', unsafe_allow_html=True)
+# ── Las 6 Rutas Operativas de Despliegue 2026 ─────────────────────────────
+st.markdown('<div class="section-header">🚀 Las 6 Rutas Operativas de Despliegue 2026 (CLASIFICACION_Y_RUTA_DESPLIEGUE_2026)</div>', unsafe_allow_html=True)
 
-if col_circular in df.columns:
-    df_circ = df[df[col_circular] == "SI"].copy()
-else:
-    df_circ = df.copy()
-
-cols_tabla = ["NOMBRE_ENTIDAD_SECOPI", "NIT_ENTIDAD_SECOPI", col_depto,
-              col_circular, col_obligada, col_aparece, col_cruce,
-              "REGIMEN_CLASIFICADO_FINAL", "ESCENARIO_REPORTE_FINAL"]
-cols_tabla = [c for c in cols_tabla if c in df_circ.columns]
-
-tbl = (df_circ.groupby([c for c in cols_tabla], observed=True, dropna=False)
-               .agg(Contratos=("UID","count"), Valor=("VALOR_CONTRATO_CON_ADICIONES","sum"))
-               .reset_index()
-               .sort_values("Contratos", ascending=False))
-
-# Filtro rápido cumplimiento
-filt_cumpl = st.radio(
-    "Filtrar por estado SECOP II:",
-    ["Todas", "Aparecen en SECOP II", "NO aparecen en SECOP II"],
+met_ruta = st.radio(
+    "Visualizar rutas por:",
+    ["entidades", "procesos", "valor"],
+    format_func=lambda x: {
+        "entidades": "🏛️ N° de Entidades Únicas (TD_01B)",
+        "procesos": "📄 N° de Procesos Ordinarios SECOP I",
+        "valor": "💰 Cuantía Real ($ Billones COP)",
+    }[x],
     horizontal=True,
-)
-if filt_cumpl == "Aparecen en SECOP II" and col_aparece in tbl.columns:
-    tbl = tbl[tbl[col_aparece] == "SI"]
-elif filt_cumpl == "NO aparecen en SECOP II" and col_aparece in tbl.columns:
-    tbl = tbl[tbl[col_aparece] != "SI"]
-
-st.dataframe(
-    tbl,
-    use_container_width=True,
-    hide_index=True,
-    column_config={
-        "Valor": st.column_config.NumberColumn("Valor (COP)", format="$ {:,.0f}"),
-        "Contratos": st.column_config.NumberColumn("N° Contratos", format="%d"),
-        col_aparece: st.column_config.TextColumn("¿Aparece SECOP II?"),
-        col_cruce: st.column_config.TextColumn("¿Cruce Validado?"),
-        col_circular: st.column_config.TextColumn("¿En 674 Obligadas?"),
-    },
-    height=450,
+    key="met_ruta_2026",
 )
 
-csv = tbl.to_csv(index=False).encode("utf-8-sig")
-st.download_button("⬇️ Descargar tabla CSV", csv, "cumplimiento_secop2.csv", "text/csv")
+st.plotly_chart(chart_rutas_despliegue_2026(df_td1b, met_ruta), use_container_width=True, key="chart_rutas")
 
-# ── Distribución por tipo de entidad obligada ─────────────────────────────
-if "TIPO_OBLIGADA" in df.columns and df["TIPO_OBLIGADA"].notna().sum() > 0:
-    st.markdown('<div class="section-header">🏷️ Tipo de Entidad Obligada</div>', unsafe_allow_html=True)
-    tipo_counts = (df[df.get(col_circular, pd.Series(dtype=str)) == "SI"]["TIPO_OBLIGADA"]
-                     .value_counts().reset_index())
-    tipo_counts.columns = ["Tipo", "Count"]
-    fig_tipo = px.pie(tipo_counts, names="Tipo", values="Count",
-                      color_discrete_sequence=px.colors.sequential.Blues_r,
-                      hole=0.4)
-    fig_tipo.update_traces(textinfo="label+percent")
-    fig_tipo.update_layout(**LAYOUT_DEFAULTS)
-    st.plotly_chart(fig_tipo, use_container_width=True, key="tipo_ent")
+# ── Pestañas de Gestión Operativa ─────────────────────────────────────────
+tab1, tab2, tab3 = st.tabs([
+    "📋 1. Directorio TD_01B: Potenciales 2026 (2.975 Entidades)",
+    "⚠️ 2. Obligadas Vigencias Anteriores (2020–2025) en SECOP I",
+    "🔒 3. Régimen Especial (Ley 2195/2022 - TD_03) & Exclusiones (TD_02)",
+])
+
+with tab1:
+    st.markdown("#### Directorio Maestro Único de Entidades Potenciales (`TD_01B_LISTA_ENTIDADES`)")
+    if not df_td1b.empty:
+        f_col1, f_col2 = st.columns([2, 1])
+        with f_col1:
+            rutas_disp = sorted(df_td1b["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"].dropna().unique().tolist())
+            sel_ruta_tbl = st.selectbox(
+                "Filtrar por Ruta de Despliegue 2026:",
+                ["Todas las rutas (2.975 entidades)"] + rutas_disp,
+                key="sel_ruta_tbl",
+            )
+        with f_col2:
+            sel_pub_tbl = st.radio(
+                "Estado de publicación en SECOP II:",
+                ["Todas", "Sí publica en SECOP II", "No publica en SECOP II"],
+                horizontal=True,
+                key="sel_pub_tbl",
+            )
+
+        tbl_td1b = df_td1b.copy()
+        if sel_ruta_tbl != "Todas las rutas (2.975 entidades)":
+            tbl_td1b = tbl_td1b[tbl_td1b["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"] == sel_ruta_tbl]
+        if sel_pub_tbl == "Sí publica en SECOP II":
+            tbl_td1b = tbl_td1b[tbl_td1b["PUBLICA_EN_SECOP2"] == "Sí"]
+        elif sel_pub_tbl == "No publica en SECOP II":
+            tbl_td1b = tbl_td1b[tbl_td1b["PUBLICA_EN_SECOP2"] == "No"]
+
+        cols_show_td1b = [
+            "NOMBRE_ENTIDAD", "NIT_SECOP1", "NIT_HOMOLOGADO", "NATURALEZA_INSTITUCIONAL",
+            "DEPARTAMENTO", "MUNICIPIO", "CODIGO_DIVIPOLA", "CATEGORIA_CGN",
+            "PENETRACION_INTERNET_MINTIC", "RANGO_CONECTIVIDAD_MINTIC",
+            "PROCESOS_2023", "PROCESOS_2024", "PROCESOS_2025", "TOTAL_PROCESOS_ORDINARIOS_S1",
+            "VALOR_REAL_CUANTIA_S1", "NOMBRE_CUENTA_SECOP2", "PUBLICA_EN_SECOP2",
+            "PROCESOS_HISTORICOS_SECOP2", "CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"
+        ]
+        cols_show_td1b = [c for c in cols_show_td1b if c in tbl_td1b.columns]
+        tbl_td1b = tbl_td1b[cols_show_td1b].sort_values("TOTAL_PROCESOS_ORDINARIOS_S1", ascending=False)
+
+        st.caption(f"Mostrando **{len(tbl_td1b):,}** entidades únicas | **{int(tbl_td1b['TOTAL_PROCESOS_ORDINARIOS_S1'].sum()):,}** procesos ordinarios")
+        st.dataframe(
+            tbl_td1b,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "VALOR_REAL_CUANTIA_S1": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+                "TOTAL_PROCESOS_ORDINARIOS_S1": st.column_config.NumberColumn("Total Procesos S1", format="%d"),
+                "PROCESOS_HISTORICOS_SECOP2": st.column_config.NumberColumn("Procesos Hist. S2", format="%d"),
+            },
+            height=430,
+        )
+        csv_td1b = tbl_td1b.to_csv(index=False).encode("utf-8-sig")
+        st.download_button("⬇️ Descargar Directorio TD_01B (CSV)", csv_td1b, "td_01b_entidades_potenciales_2026.csv", "text/csv")
+
+with tab2:
+    st.markdown("#### Entidades Obligadas en Vigencias Anteriores (2020–2025) que Registraron Procesos en SECOP I")
+    df_prev = df[df["ESTADO_OBLIGATORIEDAD"] == "Obligada Vigencias Anteriores (2020-2025)"].copy()
+    if df_prev.empty:
+        st.info("No hay registros de obligadas de vigencias anteriores con los filtros seleccionados.")
+    else:
+        ent_prev = int(df_prev["NOMBRE_ENTIDAD"].nunique())
+        proc_prev = int(df_prev["CANTIDAD_PROCESOS"].sum())
+        val_prev = float(df_prev["VALOR_REAL_CUANTIA"].sum())
+        st.markdown(
+            f"**{ent_prev:,}** cuentas únicas identificadas | **{proc_prev:,}** procesos en SECOP I | "
+            f"**{fmt_billones(val_prev)}** en cuantía real"
+        )
+        tbl_prev = (
+            df_prev.groupby([
+                "NOMBRE_ENTIDAD", "NIT_HOMOLOGADO", "NATURALEZA_INSTITUCIONAL",
+                "DEPARTAMENTO", "MUNICIPIO", "SEGMENTO_NORMATIVO",
+                "DETALLE_OBLIGACION_PREVIA", "NOMBRE_ENTIDAD_SECOP2", "TIENE_PUBLICACIONES_SECOP2"
+            ], observed=True, dropna=False)
+            .agg(
+                Procesos_S1=("CANTIDAD_PROCESOS", "sum"),
+                Valor_Real=("VALOR_REAL_CUANTIA", "sum"),
+                Procesos_Hist_S2=("PROCESOS_HISTORICOS_SECOP2", "max"),
+            )
+            .reset_index()
+            .sort_values("Procesos_S1", ascending=False)
+        )
+        st.dataframe(
+            tbl_prev,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+                "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
+            },
+            height=420,
+        )
+        csv_prev = tbl_prev.to_csv(index=False).encode("utf-8-sig")
+        st.download_button("⬇️ Descargar Obligadas Previas (CSV)", csv_prev, "obligadas_vigencias_anteriores_2020_2025.csv", "text/csv")
+
+with tab3:
+    col_re, col_ex = st.columns(2)
+    with col_re:
+        st.markdown("#### 🔒 Régimen Especial y Fondos de Ley (`TD_03` – Ley 2195/2022 Art. 53)")
+        df_re = df[df["SEGMENTO_NORMATIVO"] == "Régimen Especial"]
+        st.caption(
+            f"**{df_re['NOMBRE_ENTIDAD'].nunique():,}** entidades | "
+            f"**{int(df_re['CANTIDAD_PROCESOS'].sum()):,}** procesos | "
+            f"**{fmt_billones(df_re['VALOR_REAL_CUANTIA'].sum(), short=True)}**"
+        )
+        re_nat = (
+            df_re.groupby("NATURALEZA_INSTITUCIONAL", observed=True)
+            .agg(Entidades=("NOMBRE_ENTIDAD", "nunique"), Procesos=("CANTIDAD_PROCESOS", "sum"))
+            .reset_index()
+            .sort_values("Procesos", ascending=False)
+        )
+        st.dataframe(re_nat, use_container_width=True, hide_index=True)
+
+    with col_ex:
+        st.markdown("#### ⚖️ Exclusiones Normativas de Circular (`TD_02_EXCLUSIONES`)")
+        df_ex = df[df["SEGMENTO_NORMATIVO"] == "Exclusión Normativa (Circular SECOP II)"]
+        st.caption(
+            f"**{df_ex['NOMBRE_ENTIDAD'].nunique():,}** entidades | "
+            f"**{int(df_ex['CANTIDAD_PROCESOS'].sum()):,}** procesos | "
+            f"**{fmt_billones(df_ex['VALOR_REAL_CUANTIA'].sum(), short=True)}**"
+        )
+        ex_tipo = (
+            df_ex.groupby("TIPO_EXCLUSION", observed=True)
+            .agg(
+                Entidades=("NOMBRE_ENTIDAD", "nunique"),
+                Procesos=("CANTIDAD_PROCESOS", "sum"),
+                Cuantia_Real=("VALOR_REAL_CUANTIA", lambda s: fmt_billones(s.sum(), short=True)),
+            )
+            .reset_index()
+            .sort_values("Procesos", ascending=False)
+        )
+        st.dataframe(ex_tipo, use_container_width=True, hide_index=True)

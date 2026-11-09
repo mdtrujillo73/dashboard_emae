@@ -1,0 +1,6911 @@
+{
+  "municipios": {
+    "05001": {
+      "lat": 6.246631,
+      "lon": -75.581775,
+      "cod_dpto": "05",
+      "nom_mpio": "MEDELLÍN"
+    },
+    "05002": {
+      "lat": 5.789315,
+      "lon": -75.428739,
+      "cod_dpto": "05",
+      "nom_mpio": "ABEJORRAL"
+    },
+    "05004": {
+      "lat": 6.632282,
+      "lon": -76.064304,
+      "cod_dpto": "05",
+      "nom_mpio": "ABRIAQUÍ"
+    },
+    "05021": {
+      "lat": 6.376061,
+      "lon": -75.141346,
+      "cod_dpto": "05",
+      "nom_mpio": "ALEJANDRÍA"
+    },
+    "05030": {
+      "lat": 6.038708,
+      "lon": -75.702188,
+      "cod_dpto": "05",
+      "nom_mpio": "AMAGÁ"
+    },
+    "05031": {
+      "lat": 6.909655,
+      "lon": -75.077501,
+      "cod_dpto": "05",
+      "nom_mpio": "AMALFI"
+    },
+    "05034": {
+      "lat": 5.657194,
+      "lon": -75.878828,
+      "cod_dpto": "05",
+      "nom_mpio": "ANDES"
+    },
+    "05036": {
+      "lat": 6.109719,
+      "lon": -75.711389,
+      "cod_dpto": "05",
+      "nom_mpio": "ANGELÓPOLIS"
+    },
+    "05038": {
+      "lat": 6.885175,
+      "lon": -75.335116,
+      "cod_dpto": "05",
+      "nom_mpio": "ANGOSTURA"
+    },
+    "05040": {
+      "lat": 7.074703,
+      "lon": -75.148355,
+      "cod_dpto": "05",
+      "nom_mpio": "ANORÍ"
+    },
+    "05042": {
+      "lat": 6.556484,
+      "lon": -75.826648,
+      "cod_dpto": "05",
+      "nom_mpio": "SANTA FÉ DE ANTIOQUIA"
+    },
+    "05044": {
+      "lat": 6.302641,
+      "lon": -75.854442,
+      "cod_dpto": "05",
+      "nom_mpio": "ANZÁ"
+    },
+    "05045": {
+      "lat": 7.882968,
+      "lon": -76.625279,
+      "cod_dpto": "05",
+      "nom_mpio": "APARTADÓ"
+    },
+    "05051": {
+      "lat": 8.849317,
+      "lon": -76.426708,
+      "cod_dpto": "05",
+      "nom_mpio": "ARBOLETES"
+    },
+    "05055": {
+      "lat": 5.731474,
+      "lon": -75.14107,
+      "cod_dpto": "05",
+      "nom_mpio": "ARGELIA"
+    },
+    "05059": {
+      "lat": 6.155667,
+      "lon": -75.786647,
+      "cod_dpto": "05",
+      "nom_mpio": "ARMENIA"
+    },
+    "05079": {
+      "lat": 6.439195,
+      "lon": -75.331627,
+      "cod_dpto": "05",
+      "nom_mpio": "BARBOSA"
+    },
+    "05086": {
+      "lat": 6.606319,
+      "lon": -75.667779,
+      "cod_dpto": "05",
+      "nom_mpio": "BELMIRA"
+    },
+    "05088": {
+      "lat": 6.333587,
+      "lon": -75.555245,
+      "cod_dpto": "05",
+      "nom_mpio": "BELLO"
+    },
+    "05091": {
+      "lat": 5.74615,
+      "lon": -75.97679,
+      "cod_dpto": "05",
+      "nom_mpio": "BETANIA"
+    },
+    "05093": {
+      "lat": 6.115208,
+      "lon": -75.984452,
+      "cod_dpto": "05",
+      "nom_mpio": "BETULIA"
+    },
+    "05101": {
+      "lat": 5.850273,
+      "lon": -76.021509,
+      "cod_dpto": "05",
+      "nom_mpio": "CIUDAD BOLÍVAR"
+    },
+    "05107": {
+      "lat": 7.112803,
+      "lon": -75.55036,
+      "cod_dpto": "05",
+      "nom_mpio": "BRICEÑO"
+    },
+    "05113": {
+      "lat": 6.720759,
+      "lon": -75.907,
+      "cod_dpto": "05",
+      "nom_mpio": "BURITICÁ"
+    },
+    "05120": {
+      "lat": 7.578366,
+      "lon": -75.35205,
+      "cod_dpto": "05",
+      "nom_mpio": "CÁCERES"
+    },
+    "05125": {
+      "lat": 6.405607,
+      "lon": -75.98293,
+      "cod_dpto": "05",
+      "nom_mpio": "CAICEDO"
+    },
+    "05129": {
+      "lat": 6.091077,
+      "lon": -75.633673,
+      "cod_dpto": "05",
+      "nom_mpio": "CALDAS"
+    },
+    "05134": {
+      "lat": 6.979771,
+      "lon": -75.298091,
+      "cod_dpto": "05",
+      "nom_mpio": "CAMPAMENTO"
+    },
+    "05138": {
+      "lat": 6.753859,
+      "lon": -76.028228,
+      "cod_dpto": "05",
+      "nom_mpio": "CAÑASGORDAS"
+    },
+    "05142": {
+      "lat": 6.409829,
+      "lon": -74.757421,
+      "cod_dpto": "05",
+      "nom_mpio": "CARACOLÍ"
+    },
+    "05145": {
+      "lat": 5.54853,
+      "lon": -75.643868,
+      "cod_dpto": "05",
+      "nom_mpio": "CARAMANTA"
+    },
+    "05147": {
+      "lat": 7.755148,
+      "lon": -76.652652,
+      "cod_dpto": "05",
+      "nom_mpio": "CAREPA"
+    },
+    "05148": {
+      "lat": 6.082885,
+      "lon": -75.333901,
+      "cod_dpto": "05",
+      "nom_mpio": "EL CARMEN DE VIBORAL"
+    },
+    "05150": {
+      "lat": 6.725995,
+      "lon": -75.283192,
+      "cod_dpto": "05",
+      "nom_mpio": "CAROLINA"
+    },
+    "05154": {
+      "lat": 7.977278,
+      "lon": -75.197996,
+      "cod_dpto": "05",
+      "nom_mpio": "CAUCASIA"
+    },
+    "05172": {
+      "lat": 7.666147,
+      "lon": -76.681531,
+      "cod_dpto": "05",
+      "nom_mpio": "CHIGORODÓ"
+    },
+    "05190": {
+      "lat": 6.537829,
+      "lon": -75.087047,
+      "cod_dpto": "05",
+      "nom_mpio": "CISNEROS"
+    },
+    "05197": {
+      "lat": 6.058295,
+      "lon": -75.185483,
+      "cod_dpto": "05",
+      "nom_mpio": "COCORNÁ"
+    },
+    "05206": {
+      "lat": 6.394348,
+      "lon": -75.257587,
+      "cod_dpto": "05",
+      "nom_mpio": "CONCEPCIÓN"
+    },
+    "05209": {
+      "lat": 6.045738,
+      "lon": -75.908448,
+      "cod_dpto": "05",
+      "nom_mpio": "CONCORDIA"
+    },
+    "05212": {
+      "lat": 6.348557,
+      "lon": -75.509384,
+      "cod_dpto": "05",
+      "nom_mpio": "COPACABANA"
+    },
+    "05234": {
+      "lat": 6.998112,
+      "lon": -76.261614,
+      "cod_dpto": "05",
+      "nom_mpio": "DABEIBA"
+    },
+    "05237": {
+      "lat": 6.485603,
+      "lon": -75.39263,
+      "cod_dpto": "05",
+      "nom_mpio": "DONMATÍAS"
+    },
+    "05240": {
+      "lat": 6.325615,
+      "lon": -75.766413,
+      "cod_dpto": "05",
+      "nom_mpio": "EBÉJICO"
+    },
+    "05250": {
+      "lat": 7.5975,
+      "lon": -74.799097,
+      "cod_dpto": "05",
+      "nom_mpio": "EL BAGRE"
+    },
+    "05264": {
+      "lat": 6.566273,
+      "lon": -75.517685,
+      "cod_dpto": "05",
+      "nom_mpio": "ENTRERRÍOS"
+    },
+    "05266": {
+      "lat": 6.166695,
+      "lon": -75.582192,
+      "cod_dpto": "05",
+      "nom_mpio": "ENVIGADO"
+    },
+    "05282": {
+      "lat": 5.928039,
+      "lon": -75.675072,
+      "cod_dpto": "05",
+      "nom_mpio": "FREDONIA"
+    },
+    "05284": {
+      "lat": 6.776066,
+      "lon": -76.130765,
+      "cod_dpto": "05",
+      "nom_mpio": "FRONTINO"
+    },
+    "05306": {
+      "lat": 6.680808,
+      "lon": -75.952158,
+      "cod_dpto": "05",
+      "nom_mpio": "GIRALDO"
+    },
+    "05308": {
+      "lat": 6.379472,
+      "lon": -75.444238,
+      "cod_dpto": "05",
+      "nom_mpio": "GIRARDOTA"
+    },
+    "05310": {
+      "lat": 6.683269,
+      "lon": -75.220018,
+      "cod_dpto": "05",
+      "nom_mpio": "GÓMEZ PLATA"
+    },
+    "05313": {
+      "lat": 6.142892,
+      "lon": -75.184446,
+      "cod_dpto": "05",
+      "nom_mpio": "GRANADA"
+    },
+    "05315": {
+      "lat": 6.815069,
+      "lon": -75.239862,
+      "cod_dpto": "05",
+      "nom_mpio": "GUADALUPE"
+    },
+    "05318": {
+      "lat": 6.27787,
+      "lon": -75.441612,
+      "cod_dpto": "05",
+      "nom_mpio": "GUARNE"
+    },
+    "05321": {
+      "lat": 6.232461,
+      "lon": -75.160041,
+      "cod_dpto": "05",
+      "nom_mpio": "GUATAPÉ"
+    },
+    "05347": {
+      "lat": 6.206757,
+      "lon": -75.734322,
+      "cod_dpto": "05",
+      "nom_mpio": "HELICONIA"
+    },
+    "05353": {
+      "lat": 5.799461,
+      "lon": -75.906587,
+      "cod_dpto": "05",
+      "nom_mpio": "HISPANIA"
+    },
+    "05360": {
+      "lat": 6.175079,
+      "lon": -75.612056,
+      "cod_dpto": "05",
+      "nom_mpio": "ITAGÜÍ"
+    },
+    "05361": {
+      "lat": 7.171629,
+      "lon": -75.764673,
+      "cod_dpto": "05",
+      "nom_mpio": "ITUANGO"
+    },
+    "05364": {
+      "lat": 5.597542,
+      "lon": -75.818982,
+      "cod_dpto": "05",
+      "nom_mpio": "JARDÍN"
+    },
+    "05368": {
+      "lat": 5.789748,
+      "lon": -75.785499,
+      "cod_dpto": "05",
+      "nom_mpio": "JERICÓ"
+    },
+    "05376": {
+      "lat": 6.028062,
+      "lon": -75.429433,
+      "cod_dpto": "05",
+      "nom_mpio": "LA CEJA"
+    },
+    "05380": {
+      "lat": 6.145238,
+      "lon": -75.637708,
+      "cod_dpto": "05",
+      "nom_mpio": "LA ESTRELLA"
+    },
+    "05390": {
+      "lat": 5.743808,
+      "lon": -75.60781,
+      "cod_dpto": "05",
+      "nom_mpio": "LA PINTADA"
+    },
+    "05400": {
+      "lat": 5.973845,
+      "lon": -75.360874,
+      "cod_dpto": "05",
+      "nom_mpio": "LA UNIÓN"
+    },
+    "05411": {
+      "lat": 6.677316,
+      "lon": -75.812838,
+      "cod_dpto": "05",
+      "nom_mpio": "LIBORINA"
+    },
+    "05425": {
+      "lat": 6.552116,
+      "lon": -74.78716,
+      "cod_dpto": "05",
+      "nom_mpio": "MACEO"
+    },
+    "05440": {
+      "lat": 6.173995,
+      "lon": -75.339345,
+      "cod_dpto": "05",
+      "nom_mpio": "MARINILLA"
+    },
+    "05467": {
+      "lat": 5.946313,
+      "lon": -75.523455,
+      "cod_dpto": "05",
+      "nom_mpio": "MONTEBELLO"
+    },
+    "05475": {
+      "lat": 6.97771,
+      "lon": -76.817485,
+      "cod_dpto": "05",
+      "nom_mpio": "MURINDÓ"
+    },
+    "05480": {
+      "lat": 7.242875,
+      "lon": -76.435875,
+      "cod_dpto": "05",
+      "nom_mpio": "MUTATÁ"
+    },
+    "05483": {
+      "lat": 5.610777,
+      "lon": -75.176262,
+      "cod_dpto": "05",
+      "nom_mpio": "NARIÑO"
+    },
+    "05490": {
+      "lat": 8.434526,
+      "lon": -76.787271,
+      "cod_dpto": "05",
+      "nom_mpio": "NECOCLÍ"
+    },
+    "05495": {
+      "lat": 8.094129,
+      "lon": -74.77647,
+      "cod_dpto": "05",
+      "nom_mpio": "NECHÍ"
+    },
+    "05501": {
+      "lat": 6.626492,
+      "lon": -75.811773,
+      "cod_dpto": "05",
+      "nom_mpio": "OLAYA"
+    },
+    "05541": {
+      "lat": 6.219349,
+      "lon": -75.242693,
+      "cod_dpto": "05",
+      "nom_mpio": "PEÑOL"
+    },
+    "05543": {
+      "lat": 7.021029,
+      "lon": -75.910357,
+      "cod_dpto": "05",
+      "nom_mpio": "PEQUE"
+    },
+    "05576": {
+      "lat": 5.79158,
+      "lon": -75.839903,
+      "cod_dpto": "05",
+      "nom_mpio": "PUEBLORRICO"
+    },
+    "05579": {
+      "lat": 6.487028,
+      "lon": -74.410016,
+      "cod_dpto": "05",
+      "nom_mpio": "PUERTO BERRÍO"
+    },
+    "05585": {
+      "lat": 6.186025,
+      "lon": -74.583012,
+      "cod_dpto": "05",
+      "nom_mpio": "PUERTO NARE"
+    },
+    "05591": {
+      "lat": 5.871318,
+      "lon": -74.64119,
+      "cod_dpto": "05",
+      "nom_mpio": "PUERTO TRIUNFO"
+    },
+    "05604": {
+      "lat": 7.029424,
+      "lon": -74.698135,
+      "cod_dpto": "05",
+      "nom_mpio": "REMEDIOS"
+    },
+    "05607": {
+      "lat": 6.062454,
+      "lon": -75.501301,
+      "cod_dpto": "05",
+      "nom_mpio": "RETIRO"
+    },
+    "05615": {
+      "lat": 6.147148,
+      "lon": -75.377316,
+      "cod_dpto": "05",
+      "nom_mpio": "RIONEGRO"
+    },
+    "05628": {
+      "lat": 6.850028,
+      "lon": -75.816645,
+      "cod_dpto": "05",
+      "nom_mpio": "SABANALARGA"
+    },
+    "05631": {
+      "lat": 6.149903,
+      "lon": -75.615479,
+      "cod_dpto": "05",
+      "nom_mpio": "SABANETA"
+    },
+    "05642": {
+      "lat": 5.964198,
+      "lon": -75.976807,
+      "cod_dpto": "05",
+      "nom_mpio": "SALGAR"
+    },
+    "05647": {
+      "lat": 6.916676,
+      "lon": -75.674564,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN ANDRÉS DE CUERQUÍA"
+    },
+    "05649": {
+      "lat": 6.187746,
+      "lon": -74.988097,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN CARLOS"
+    },
+    "05652": {
+      "lat": 5.963476,
+      "lon": -75.101562,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN FRANCISCO"
+    },
+    "05656": {
+      "lat": 6.44809,
+      "lon": -75.726975,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN JERÓNIMO"
+    },
+    "05658": {
+      "lat": 6.85009,
+      "lon": -75.683352,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN JOSÉ DE LA MONTAÑA"
+    },
+    "05659": {
+      "lat": 8.758964,
+      "lon": -76.52857,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN JUAN DE URABÁ"
+    },
+    "05660": {
+      "lat": 6.043017,
+      "lon": -74.993619,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN LUIS"
+    },
+    "05664": {
+      "lat": 6.46012,
+      "lon": -75.556743,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN PEDRO DE LOS MILAGROS"
+    },
+    "05665": {
+      "lat": 8.276884,
+      "lon": -76.380567,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN PEDRO DE URABÁ"
+    },
+    "05667": {
+      "lat": 6.293759,
+      "lon": -75.02849,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN RAFAEL"
+    },
+    "05670": {
+      "lat": 6.485939,
+      "lon": -75.019109,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN ROQUE"
+    },
+    "05674": {
+      "lat": 6.282164,
+      "lon": -75.332616,
+      "cod_dpto": "05",
+      "nom_mpio": "SAN VICENTE FERRER"
+    },
+    "05679": {
+      "lat": 5.875527,
+      "lon": -75.567351,
+      "cod_dpto": "05",
+      "nom_mpio": "SANTA BÁRBARA"
+    },
+    "05686": {
+      "lat": 6.643366,
+      "lon": -75.460723,
+      "cod_dpto": "05",
+      "nom_mpio": "SANTA ROSA DE OSOS"
+    },
+    "05690": {
+      "lat": 6.473032,
+      "lon": -75.164903,
+      "cod_dpto": "05",
+      "nom_mpio": "SANTO DOMINGO"
+    },
+    "05697": {
+      "lat": 6.136871,
+      "lon": -75.265465,
+      "cod_dpto": "05",
+      "nom_mpio": "EL SANTUARIO"
+    },
+    "05736": {
+      "lat": 7.079648,
+      "lon": -74.701596,
+      "cod_dpto": "05",
+      "nom_mpio": "SEGOVIA"
+    },
+    "05756": {
+      "lat": 5.714851,
+      "lon": -75.309596,
+      "cod_dpto": "05",
+      "nom_mpio": "SONSÓN"
+    },
+    "05761": {
+      "lat": 6.500745,
+      "lon": -75.747378,
+      "cod_dpto": "05",
+      "nom_mpio": "SOPETRÁN"
+    },
+    "05789": {
+      "lat": 5.664645,
+      "lon": -75.714429,
+      "cod_dpto": "05",
+      "nom_mpio": "TÁMESIS"
+    },
+    "05790": {
+      "lat": 7.580127,
+      "lon": -75.401407,
+      "cod_dpto": "05",
+      "nom_mpio": "TARAZÁ"
+    },
+    "05792": {
+      "lat": 5.864542,
+      "lon": -75.822956,
+      "cod_dpto": "05",
+      "nom_mpio": "TARSO"
+    },
+    "05809": {
+      "lat": 6.062391,
+      "lon": -75.791887,
+      "cod_dpto": "05",
+      "nom_mpio": "TITIRIBÍ"
+    },
+    "05819": {
+      "lat": 7.010328,
+      "lon": -75.692281,
+      "cod_dpto": "05",
+      "nom_mpio": "TOLEDO"
+    },
+    "05837": {
+      "lat": 8.089929,
+      "lon": -76.728858,
+      "cod_dpto": "05",
+      "nom_mpio": "TURBO"
+    },
+    "05842": {
+      "lat": 6.898393,
+      "lon": -76.173284,
+      "cod_dpto": "05",
+      "nom_mpio": "URAMITA"
+    },
+    "05847": {
+      "lat": 6.317343,
+      "lon": -76.133951,
+      "cod_dpto": "05",
+      "nom_mpio": "URRAO"
+    },
+    "05854": {
+      "lat": 7.1652,
+      "lon": -75.439274,
+      "cod_dpto": "05",
+      "nom_mpio": "VALDIVIA"
+    },
+    "05856": {
+      "lat": 5.614555,
+      "lon": -75.624452,
+      "cod_dpto": "05",
+      "nom_mpio": "VALPARAÍSO"
+    },
+    "05858": {
+      "lat": 6.773525,
+      "lon": -74.798714,
+      "cod_dpto": "05",
+      "nom_mpio": "VEGACHÍ"
+    },
+    "05861": {
+      "lat": 5.964693,
+      "lon": -75.735544,
+      "cod_dpto": "05",
+      "nom_mpio": "VENECIA"
+    },
+    "05873": {
+      "lat": 6.588164,
+      "lon": -76.896004,
+      "cod_dpto": "05",
+      "nom_mpio": "VIGÍA DEL FUERTE"
+    },
+    "05885": {
+      "lat": 6.676554,
+      "lon": -74.840059,
+      "cod_dpto": "05",
+      "nom_mpio": "YALÍ"
+    },
+    "05887": {
+      "lat": 6.963832,
+      "lon": -75.418828,
+      "cod_dpto": "05",
+      "nom_mpio": "YARUMAL"
+    },
+    "05890": {
+      "lat": 6.594511,
+      "lon": -75.013385,
+      "cod_dpto": "05",
+      "nom_mpio": "YOLOMBÓ"
+    },
+    "05893": {
+      "lat": 7.00396,
+      "lon": -73.912445,
+      "cod_dpto": "05",
+      "nom_mpio": "YONDÓ"
+    },
+    "05895": {
+      "lat": 7.488583,
+      "lon": -74.867075,
+      "cod_dpto": "05",
+      "nom_mpio": "ZARAGOZA"
+    },
+    "08001": {
+      "lat": 10.977961,
+      "lon": -74.815546,
+      "cod_dpto": "08",
+      "nom_mpio": "BARRANQUILLA"
+    },
+    "08078": {
+      "lat": 10.79445,
+      "lon": -74.916077,
+      "cod_dpto": "08",
+      "nom_mpio": "BARANOA"
+    },
+    "08137": {
+      "lat": 10.378291,
+      "lon": -74.880847,
+      "cod_dpto": "08",
+      "nom_mpio": "CAMPO DE LA CRUZ"
+    },
+    "08141": {
+      "lat": 10.461903,
+      "lon": -74.879717,
+      "cod_dpto": "08",
+      "nom_mpio": "CANDELARIA"
+    },
+    "08296": {
+      "lat": 10.919033,
+      "lon": -74.870385,
+      "cod_dpto": "08",
+      "nom_mpio": "GALAPA"
+    },
+    "08372": {
+      "lat": 10.83254,
+      "lon": -75.041032,
+      "cod_dpto": "08",
+      "nom_mpio": "JUAN DE ACOSTA"
+    },
+    "08421": {
+      "lat": 10.610491,
+      "lon": -75.14199,
+      "cod_dpto": "08",
+      "nom_mpio": "LURUACO"
+    },
+    "08433": {
+      "lat": 10.857086,
+      "lon": -74.776923,
+      "cod_dpto": "08",
+      "nom_mpio": "MALAMBO"
+    },
+    "08436": {
+      "lat": 10.449089,
+      "lon": -74.956867,
+      "cod_dpto": "08",
+      "nom_mpio": "MANATÍ"
+    },
+    "08520": {
+      "lat": 10.738591,
+      "lon": -74.754765,
+      "cod_dpto": "08",
+      "nom_mpio": "PALMAR DE VARELA"
+    },
+    "08549": {
+      "lat": 10.749216,
+      "lon": -75.107592,
+      "cod_dpto": "08",
+      "nom_mpio": "PIOJÓ"
+    },
+    "08558": {
+      "lat": 10.777363,
+      "lon": -74.852981,
+      "cod_dpto": "08",
+      "nom_mpio": "POLONUEVO"
+    },
+    "08560": {
+      "lat": 10.641779,
+      "lon": -74.753885,
+      "cod_dpto": "08",
+      "nom_mpio": "PONEDERA"
+    },
+    "08573": {
+      "lat": 11.015322,
+      "lon": -74.888627,
+      "cod_dpto": "08",
+      "nom_mpio": "PUERTO COLOMBIA"
+    },
+    "08606": {
+      "lat": 10.493357,
+      "lon": -75.125534,
+      "cod_dpto": "08",
+      "nom_mpio": "REPELÓN"
+    },
+    "08634": {
+      "lat": 10.792453,
+      "lon": -74.759496,
+      "cod_dpto": "08",
+      "nom_mpio": "SABANAGRANDE"
+    },
+    "08638": {
+      "lat": 10.632091,
+      "lon": -74.921256,
+      "cod_dpto": "08",
+      "nom_mpio": "SABANALARGA"
+    },
+    "08675": {
+      "lat": 10.324303,
+      "lon": -74.959204,
+      "cod_dpto": "08",
+      "nom_mpio": "SANTA LUCÍA"
+    },
+    "08685": {
+      "lat": 10.758735,
+      "lon": -74.757859,
+      "cod_dpto": "08",
+      "nom_mpio": "SANTO TOMÁS"
+    },
+    "08758": {
+      "lat": 10.909921,
+      "lon": -74.786054,
+      "cod_dpto": "08",
+      "nom_mpio": "SOLEDAD"
+    },
+    "08770": {
+      "lat": 10.335432,
+      "lon": -74.881687,
+      "cod_dpto": "08",
+      "nom_mpio": "SUAN"
+    },
+    "08832": {
+      "lat": 10.873586,
+      "lon": -74.978704,
+      "cod_dpto": "08",
+      "nom_mpio": "TUBARÁ"
+    },
+    "08849": {
+      "lat": 10.74298,
+      "lon": -74.976985,
+      "cod_dpto": "08",
+      "nom_mpio": "USIACURÍ"
+    },
+    "11001": {
+      "lat": 4.649251,
+      "lon": -74.106992,
+      "cod_dpto": "11",
+      "nom_mpio": "BOGOTÁ, D.C."
+    },
+    "13001": {
+      "lat": 10.385126,
+      "lon": -75.496269,
+      "cod_dpto": "13",
+      "nom_mpio": "CARTAGENA DE INDIAS"
+    },
+    "13006": {
+      "lat": 8.570107,
+      "lon": -74.557676,
+      "cod_dpto": "13",
+      "nom_mpio": "ACHÍ"
+    },
+    "13030": {
+      "lat": 8.791865,
+      "lon": -74.164905,
+      "cod_dpto": "13",
+      "nom_mpio": "ALTOS DEL ROSARIO"
+    },
+    "13042": {
+      "lat": 8.458865,
+      "lon": -73.941099,
+      "cod_dpto": "13",
+      "nom_mpio": "ARENAL"
+    },
+    "13052": {
+      "lat": 10.25666,
+      "lon": -75.344332,
+      "cod_dpto": "13",
+      "nom_mpio": "ARJONA"
+    },
+    "13062": {
+      "lat": 10.250075,
+      "lon": -75.019215,
+      "cod_dpto": "13",
+      "nom_mpio": "ARROYOHONDO"
+    },
+    "13074": {
+      "lat": 8.947787,
+      "lon": -74.104391,
+      "cod_dpto": "13",
+      "nom_mpio": "BARRANCO DE LOBA"
+    },
+    "13140": {
+      "lat": 10.250431,
+      "lon": -74.916144,
+      "cod_dpto": "13",
+      "nom_mpio": "CALAMAR"
+    },
+    "13160": {
+      "lat": 7.378678,
+      "lon": -73.914605,
+      "cod_dpto": "13",
+      "nom_mpio": "CANTAGALLO"
+    },
+    "13188": {
+      "lat": 9.274281,
+      "lon": -74.645981,
+      "cod_dpto": "13",
+      "nom_mpio": "CICUCO"
+    },
+    "13212": {
+      "lat": 9.586942,
+      "lon": -74.827399,
+      "cod_dpto": "13",
+      "nom_mpio": "CÓRDOBA"
+    },
+    "13222": {
+      "lat": 10.567452,
+      "lon": -75.328469,
+      "cod_dpto": "13",
+      "nom_mpio": "CLEMENCIA"
+    },
+    "13244": {
+      "lat": 9.718653,
+      "lon": -75.121178,
+      "cod_dpto": "13",
+      "nom_mpio": "EL CARMEN DE BOLÍVAR"
+    },
+    "13248": {
+      "lat": 10.030958,
+      "lon": -74.976084,
+      "cod_dpto": "13",
+      "nom_mpio": "EL GUAMO"
+    },
+    "13268": {
+      "lat": 8.988271,
+      "lon": -73.949274,
+      "cod_dpto": "13",
+      "nom_mpio": "EL PEÑÓN"
+    },
+    "13300": {
+      "lat": 8.956014,
+      "lon": -74.077912,
+      "cod_dpto": "13",
+      "nom_mpio": "HATILLO DE LOBA"
+    },
+    "13430": {
+      "lat": 9.263799,
+      "lon": -74.766742,
+      "cod_dpto": "13",
+      "nom_mpio": "MAGANGUÉ"
+    },
+    "13433": {
+      "lat": 10.233285,
+      "lon": -75.191643,
+      "cod_dpto": "13",
+      "nom_mpio": "MAHATES"
+    },
+    "13440": {
+      "lat": 9.15784,
+      "lon": -74.285137,
+      "cod_dpto": "13",
+      "nom_mpio": "MARGARITA"
+    },
+    "13442": {
+      "lat": 9.982402,
+      "lon": -75.300516,
+      "cod_dpto": "13",
+      "nom_mpio": "MARÍA LA BAJA"
+    },
+    "13458": {
+      "lat": 8.297234,
+      "lon": -74.471176,
+      "cod_dpto": "13",
+      "nom_mpio": "MONTECRISTO"
+    },
+    "13468": {
+      "lat": 9.244241,
+      "lon": -74.42818,
+      "cod_dpto": "13",
+      "nom_mpio": "SANTA CRUZ DE MOMPOX"
+    },
+    "13473": {
+      "lat": 8.276558,
+      "lon": -73.868172,
+      "cod_dpto": "13",
+      "nom_mpio": "MORALES"
+    },
+    "13490": {
+      "lat": 8.526259,
+      "lon": -74.038003,
+      "cod_dpto": "13",
+      "nom_mpio": "NOROSÍ"
+    },
+    "13549": {
+      "lat": 8.914947,
+      "lon": -74.462279,
+      "cod_dpto": "13",
+      "nom_mpio": "PINILLOS"
+    },
+    "13580": {
+      "lat": 8.666258,
+      "lon": -73.821638,
+      "cod_dpto": "13",
+      "nom_mpio": "REGIDOR"
+    },
+    "13600": {
+      "lat": 8.58795,
+      "lon": -73.840466,
+      "cod_dpto": "13",
+      "nom_mpio": "RÍO VIEJO"
+    },
+    "13620": {
+      "lat": 10.392836,
+      "lon": -75.065076,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN CRISTÓBAL"
+    },
+    "13647": {
+      "lat": 10.398602,
+      "lon": -75.153101,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN ESTANISLAO"
+    },
+    "13650": {
+      "lat": 9.214183,
+      "lon": -74.323811,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN FERNANDO"
+    },
+    "13654": {
+      "lat": 9.830275,
+      "lon": -75.12105,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN JACINTO"
+    },
+    "13655": {
+      "lat": 8.25158,
+      "lon": -74.721156,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN JACINTO DEL CAUCA"
+    },
+    "13657": {
+      "lat": 9.953751,
+      "lon": -75.081761,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN JUAN NEPOMUCENO"
+    },
+    "13667": {
+      "lat": 8.937485,
+      "lon": -74.039134,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN MARTÍN DE LOBA"
+    },
+    "13670": {
+      "lat": 7.476747,
+      "lon": -73.924602,
+      "cod_dpto": "13",
+      "nom_mpio": "SAN PABLO"
+    },
+    "13673": {
+      "lat": 10.605294,
+      "lon": -75.287855,
+      "cod_dpto": "13",
+      "nom_mpio": "SANTA CATALINA"
+    },
+    "13683": {
+      "lat": 10.444396,
+      "lon": -75.369824,
+      "cod_dpto": "13",
+      "nom_mpio": "SANTA ROSA"
+    },
+    "13688": {
+      "lat": 7.963938,
+      "lon": -74.052243,
+      "cod_dpto": "13",
+      "nom_mpio": "SANTA ROSA DEL SUR"
+    },
+    "13744": {
+      "lat": 7.953916,
+      "lon": -73.947264,
+      "cod_dpto": "13",
+      "nom_mpio": "SIMITÍ"
+    },
+    "13760": {
+      "lat": 10.38839,
+      "lon": -75.136404,
+      "cod_dpto": "13",
+      "nom_mpio": "SOPLAVIENTO"
+    },
+    "13780": {
+      "lat": 9.30403,
+      "lon": -74.567479,
+      "cod_dpto": "13",
+      "nom_mpio": "TALAIGUA NUEVO"
+    },
+    "13810": {
+      "lat": 8.558666,
+      "lon": -74.262922,
+      "cod_dpto": "13",
+      "nom_mpio": "TIQUISIO"
+    },
+    "13836": {
+      "lat": 10.348316,
+      "lon": -75.427249,
+      "cod_dpto": "13",
+      "nom_mpio": "TURBACO"
+    },
+    "13838": {
+      "lat": 10.274585,
+      "lon": -75.44265,
+      "cod_dpto": "13",
+      "nom_mpio": "TURBANÁ"
+    },
+    "13873": {
+      "lat": 10.444089,
+      "lon": -75.275613,
+      "cod_dpto": "13",
+      "nom_mpio": "VILLANUEVA"
+    },
+    "13894": {
+      "lat": 9.746306,
+      "lon": -74.817879,
+      "cod_dpto": "13",
+      "nom_mpio": "ZAMBRANO"
+    },
+    "15001": {
+      "lat": 5.53988,
+      "lon": -73.355539,
+      "cod_dpto": "15",
+      "nom_mpio": "TUNJA"
+    },
+    "15022": {
+      "lat": 4.970857,
+      "lon": -73.378933,
+      "cod_dpto": "15",
+      "nom_mpio": "ALMEIDA"
+    },
+    "15047": {
+      "lat": 5.518602,
+      "lon": -72.88399,
+      "cod_dpto": "15",
+      "nom_mpio": "AQUITANIA"
+    },
+    "15051": {
+      "lat": 5.755673,
+      "lon": -73.437503,
+      "cod_dpto": "15",
+      "nom_mpio": "ARCABUCO"
+    },
+    "15087": {
+      "lat": 5.98923,
+      "lon": -72.911641,
+      "cod_dpto": "15",
+      "nom_mpio": "BELÉN"
+    },
+    "15090": {
+      "lat": 5.227451,
+      "lon": -73.12721,
+      "cod_dpto": "15",
+      "nom_mpio": "BERBEO"
+    },
+    "15092": {
+      "lat": 5.909978,
+      "lon": -72.809014,
+      "cod_dpto": "15",
+      "nom_mpio": "BETÉITIVA"
+    },
+    "15097": {
+      "lat": 6.330703,
+      "lon": -72.584905,
+      "cod_dpto": "15",
+      "nom_mpio": "BOAVITA"
+    },
+    "15104": {
+      "lat": 5.454578,
+      "lon": -73.361945,
+      "cod_dpto": "15",
+      "nom_mpio": "BOYACÁ"
+    },
+    "15106": {
+      "lat": 5.690879,
+      "lon": -73.92326,
+      "cod_dpto": "15",
+      "nom_mpio": "BRICEÑO"
+    },
+    "15109": {
+      "lat": 5.512594,
+      "lon": -73.94217,
+      "cod_dpto": "15",
+      "nom_mpio": "BUENAVISTA"
+    },
+    "15114": {
+      "lat": 5.831393,
+      "lon": -72.884158,
+      "cod_dpto": "15",
+      "nom_mpio": "BUSBANZÁ"
+    },
+    "15131": {
+      "lat": 5.55458,
+      "lon": -73.865553,
+      "cod_dpto": "15",
+      "nom_mpio": "CALDAS"
+    },
+    "15135": {
+      "lat": 5.031676,
+      "lon": -73.104173,
+      "cod_dpto": "15",
+      "nom_mpio": "CAMPOHERMOSO"
+    },
+    "15162": {
+      "lat": 5.955939,
+      "lon": -72.947918,
+      "cod_dpto": "15",
+      "nom_mpio": "CERINZA"
+    },
+    "15172": {
+      "lat": 5.167486,
+      "lon": -73.368476,
+      "cod_dpto": "15",
+      "nom_mpio": "CHINAVITA"
+    },
+    "15176": {
+      "lat": 5.61379,
+      "lon": -73.818745,
+      "cod_dpto": "15",
+      "nom_mpio": "CHIQUINQUIRÁ"
+    },
+    "15180": {
+      "lat": 6.553136,
+      "lon": -72.500957,
+      "cod_dpto": "15",
+      "nom_mpio": "CHISCAS"
+    },
+    "15183": {
+      "lat": 6.187083,
+      "lon": -72.471892,
+      "cod_dpto": "15",
+      "nom_mpio": "CHITA"
+    },
+    "15185": {
+      "lat": 6.027425,
+      "lon": -73.4471,
+      "cod_dpto": "15",
+      "nom_mpio": "CHITARAQUE"
+    },
+    "15187": {
+      "lat": 5.558949,
+      "lon": -73.282529,
+      "cod_dpto": "15",
+      "nom_mpio": "CHIVATÁ"
+    },
+    "15189": {
+      "lat": 5.408694,
+      "lon": -73.296049,
+      "cod_dpto": "15",
+      "nom_mpio": "CIÉNEGA"
+    },
+    "15204": {
+      "lat": 5.634545,
+      "lon": -73.323957,
+      "cod_dpto": "15",
+      "nom_mpio": "CÓMBITA"
+    },
+    "15212": {
+      "lat": 5.475074,
+      "lon": -74.045636,
+      "cod_dpto": "15",
+      "nom_mpio": "COPER"
+    },
+    "15215": {
+      "lat": 5.828064,
+      "lon": -72.844795,
+      "cod_dpto": "15",
+      "nom_mpio": "CORRALES"
+    },
+    "15218": {
+      "lat": 6.500177,
+      "lon": -72.738978,
+      "cod_dpto": "15",
+      "nom_mpio": "COVARACHÍA"
+    },
+    "15223": {
+      "lat": 6.997275,
+      "lon": -72.107939,
+      "cod_dpto": "15",
+      "nom_mpio": "CUBARÁ"
+    },
+    "15224": {
+      "lat": 5.544452,
+      "lon": -73.454338,
+      "cod_dpto": "15",
+      "nom_mpio": "CUCAITA"
+    },
+    "15226": {
+      "lat": 5.580367,
+      "lon": -72.965923,
+      "cod_dpto": "15",
+      "nom_mpio": "CUÍTIVA"
+    },
+    "15232": {
+      "lat": 5.639834,
+      "lon": -73.449463,
+      "cod_dpto": "15",
+      "nom_mpio": "CHÍQUIZA"
+    },
+    "15236": {
+      "lat": 4.888173,
+      "lon": -73.368398,
+      "cod_dpto": "15",
+      "nom_mpio": "CHIVOR"
+    },
+    "15238": {
+      "lat": 5.822964,
+      "lon": -73.03063,
+      "cod_dpto": "15",
+      "nom_mpio": "DUITAMA"
+    },
+    "15244": {
+      "lat": 6.407738,
+      "lon": -72.444537,
+      "cod_dpto": "15",
+      "nom_mpio": "EL COCUY"
+    },
+    "15248": {
+      "lat": 6.483027,
+      "lon": -72.497007,
+      "cod_dpto": "15",
+      "nom_mpio": "EL ESPINO"
+    },
+    "15272": {
+      "lat": 5.668885,
+      "lon": -72.993392,
+      "cod_dpto": "15",
+      "nom_mpio": "FIRAVITOBA"
+    },
+    "15276": {
+      "lat": 5.859519,
+      "lon": -72.918111,
+      "cod_dpto": "15",
+      "nom_mpio": "FLORESTA"
+    },
+    "15293": {
+      "lat": 5.751891,
+      "lon": -73.549092,
+      "cod_dpto": "15",
+      "nom_mpio": "GACHANTIVÁ"
+    },
+    "15296": {
+      "lat": 5.802333,
+      "lon": -72.80553,
+      "cod_dpto": "15",
+      "nom_mpio": "GÁMEZA"
+    },
+    "15299": {
+      "lat": 5.083234,
+      "lon": -73.364413,
+      "cod_dpto": "15",
+      "nom_mpio": "GARAGOA"
+    },
+    "15317": {
+      "lat": 6.459667,
+      "lon": -72.500812,
+      "cod_dpto": "15",
+      "nom_mpio": "GUACAMAYAS"
+    },
+    "15322": {
+      "lat": 5.007321,
+      "lon": -73.471207,
+      "cod_dpto": "15",
+      "nom_mpio": "GUATEQUE"
+    },
+    "15325": {
+      "lat": 4.967122,
+      "lon": -73.489698,
+      "cod_dpto": "15",
+      "nom_mpio": "GUAYATÁ"
+    },
+    "15332": {
+      "lat": 6.462864,
+      "lon": -72.411763,
+      "cod_dpto": "15",
+      "nom_mpio": "GÜICÁN DE LA SIERRA"
+    },
+    "15362": {
+      "lat": 5.611577,
+      "lon": -72.979559,
+      "cod_dpto": "15",
+      "nom_mpio": "IZA"
+    },
+    "15367": {
+      "lat": 5.385813,
+      "lon": -73.363738,
+      "cod_dpto": "15",
+      "nom_mpio": "JENESANO"
+    },
+    "15368": {
+      "lat": 6.145735,
+      "lon": -72.571122,
+      "cod_dpto": "15",
+      "nom_mpio": "JERICÓ"
+    },
+    "15377": {
+      "lat": 5.562687,
+      "lon": -72.57777,
+      "cod_dpto": "15",
+      "nom_mpio": "LABRANZAGRANDE"
+    },
+    "15380": {
+      "lat": 5.095687,
+      "lon": -73.444347,
+      "cod_dpto": "15",
+      "nom_mpio": "LA CAPILLA"
+    },
+    "15401": {
+      "lat": 5.523792,
+      "lon": -74.234393,
+      "cod_dpto": "15",
+      "nom_mpio": "LA VICTORIA"
+    },
+    "15403": {
+      "lat": 6.31616,
+      "lon": -72.559982,
+      "cod_dpto": "15",
+      "nom_mpio": "LA UVITA"
+    },
+    "15407": {
+      "lat": 5.632455,
+      "lon": -73.524948,
+      "cod_dpto": "15",
+      "nom_mpio": "VILLA DE LEYVA"
+    },
+    "15425": {
+      "lat": 4.972464,
+      "lon": -73.319593,
+      "cod_dpto": "15",
+      "nom_mpio": "MACANAL"
+    },
+    "15442": {
+      "lat": 5.550091,
+      "lon": -74.00405,
+      "cod_dpto": "15",
+      "nom_mpio": "MARIPÍ"
+    },
+    "15455": {
+      "lat": 5.196515,
+      "lon": -73.14563,
+      "cod_dpto": "15",
+      "nom_mpio": "MIRAFLORES"
+    },
+    "15464": {
+      "lat": 5.754242,
+      "lon": -72.79809,
+      "cod_dpto": "15",
+      "nom_mpio": "MONGUA"
+    },
+    "15466": {
+      "lat": 5.723486,
+      "lon": -72.849292,
+      "cod_dpto": "15",
+      "nom_mpio": "MONGUÍ"
+    },
+    "15469": {
+      "lat": 5.876331,
+      "lon": -73.573374,
+      "cod_dpto": "15",
+      "nom_mpio": "MONIQUIRÁ"
+    },
+    "15476": {
+      "lat": 5.5777,
+      "lon": -73.367841,
+      "cod_dpto": "15",
+      "nom_mpio": "MOTAVITA"
+    },
+    "15480": {
+      "lat": 5.532758,
+      "lon": -74.10269,
+      "cod_dpto": "15",
+      "nom_mpio": "MUZO"
+    },
+    "15491": {
+      "lat": 5.768046,
+      "lon": -72.937042,
+      "cod_dpto": "15",
+      "nom_mpio": "NOBSA"
+    },
+    "15494": {
+      "lat": 5.355317,
+      "lon": -73.456759,
+      "cod_dpto": "15",
+      "nom_mpio": "NUEVO COLÓN"
+    },
+    "15500": {
+      "lat": 5.595235,
+      "lon": -73.308399,
+      "cod_dpto": "15",
+      "nom_mpio": "OICATÁ"
+    },
+    "15507": {
+      "lat": 5.657536,
+      "lon": -74.180965,
+      "cod_dpto": "15",
+      "nom_mpio": "OTANCHE"
+    },
+    "15511": {
+      "lat": 5.140065,
+      "lon": -73.396953,
+      "cod_dpto": "15",
+      "nom_mpio": "PACHAVITA"
+    },
+    "15514": {
+      "lat": 5.097319,
+      "lon": -73.052737,
+      "cod_dpto": "15",
+      "nom_mpio": "PÁEZ"
+    },
+    "15516": {
+      "lat": 5.779894,
+      "lon": -73.11782,
+      "cod_dpto": "15",
+      "nom_mpio": "PAIPA"
+    },
+    "15518": {
+      "lat": 5.293783,
+      "lon": -72.703231,
+      "cod_dpto": "15",
+      "nom_mpio": "PAJARITO"
+    },
+    "15522": {
+      "lat": 6.443416,
+      "lon": -72.459424,
+      "cod_dpto": "15",
+      "nom_mpio": "PANQUEBA"
+    },
+    "15531": {
+      "lat": 5.656323,
+      "lon": -73.978449,
+      "cod_dpto": "15",
+      "nom_mpio": "PAUNA"
+    },
+    "15533": {
+      "lat": 5.625699,
+      "lon": -72.423775,
+      "cod_dpto": "15",
+      "nom_mpio": "PAYA"
+    },
+    "15537": {
+      "lat": 5.987645,
+      "lon": -72.749137,
+      "cod_dpto": "15",
+      "nom_mpio": "PAZ DE RÍO"
+    },
+    "15542": {
+      "lat": 5.558808,
+      "lon": -73.050872,
+      "cod_dpto": "15",
+      "nom_mpio": "PESCA"
+    },
+    "15550": {
+      "lat": 5.72141,
+      "lon": -72.486023,
+      "cod_dpto": "15",
+      "nom_mpio": "PISBA"
+    },
+    "15572": {
+      "lat": 5.976646,
+      "lon": -74.587782,
+      "cod_dpto": "15",
+      "nom_mpio": "PUERTO BOYACÁ"
+    },
+    "15580": {
+      "lat": 5.52055,
+      "lon": -74.180033,
+      "cod_dpto": "15",
+      "nom_mpio": "QUÍPAMA"
+    },
+    "15599": {
+      "lat": 5.400303,
+      "lon": -73.334839,
+      "cod_dpto": "15",
+      "nom_mpio": "RAMIRIQUÍ"
+    },
+    "15600": {
+      "lat": 5.539136,
+      "lon": -73.632543,
+      "cod_dpto": "15",
+      "nom_mpio": "RÁQUIRA"
+    },
+    "15621": {
+      "lat": 5.357378,
+      "lon": -73.208474,
+      "cod_dpto": "15",
+      "nom_mpio": "RONDÓN"
+    },
+    "15632": {
+      "lat": 5.697756,
+      "lon": -73.764456,
+      "cod_dpto": "15",
+      "nom_mpio": "SABOYÁ"
+    },
+    "15638": {
+      "lat": 5.584305,
+      "lon": -73.542539,
+      "cod_dpto": "15",
+      "nom_mpio": "SÁCHICA"
+    },
+    "15646": {
+      "lat": 5.492161,
+      "lon": -73.485589,
+      "cod_dpto": "15",
+      "nom_mpio": "SAMACÁ"
+    },
+    "15660": {
+      "lat": 5.22401,
+      "lon": -73.077747,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN EDUARDO"
+    },
+    "15664": {
+      "lat": 6.018924,
+      "lon": -73.545397,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN JOSÉ DE PARE"
+    },
+    "15667": {
+      "lat": 4.81976,
+      "lon": -73.168076,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN LUIS DE GACENO"
+    },
+    "15673": {
+      "lat": 6.401683,
+      "lon": -72.555264,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN MATEO"
+    },
+    "15676": {
+      "lat": 5.518083,
+      "lon": -73.722009,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN MIGUEL DE SEMA"
+    },
+    "15681": {
+      "lat": 5.650743,
+      "lon": -74.069963,
+      "cod_dpto": "15",
+      "nom_mpio": "SAN PABLO DE BORBUR"
+    },
+    "15686": {
+      "lat": 6.056866,
+      "lon": -73.481639,
+      "cod_dpto": "15",
+      "nom_mpio": "SANTANA"
+    },
+    "15690": {
+      "lat": 4.857193,
+      "lon": -73.263518,
+      "cod_dpto": "15",
+      "nom_mpio": "SANTA MARÍA"
+    },
+    "15693": {
+      "lat": 5.874547,
+      "lon": -72.982461,
+      "cod_dpto": "15",
+      "nom_mpio": "SANTA ROSA DE VITERBO"
+    },
+    "15696": {
+      "lat": 5.713269,
+      "lon": -73.602707,
+      "cod_dpto": "15",
+      "nom_mpio": "SANTA SOFÍA"
+    },
+    "15720": {
+      "lat": 6.131132,
+      "lon": -72.708458,
+      "cod_dpto": "15",
+      "nom_mpio": "SATIVANORTE"
+    },
+    "15723": {
+      "lat": 6.093183,
+      "lon": -72.712435,
+      "cod_dpto": "15",
+      "nom_mpio": "SATIVASUR"
+    },
+    "15740": {
+      "lat": 5.511811,
+      "lon": -73.24466,
+      "cod_dpto": "15",
+      "nom_mpio": "SIACHOQUE"
+    },
+    "15753": {
+      "lat": 6.331945,
+      "lon": -72.684051,
+      "cod_dpto": "15",
+      "nom_mpio": "SOATÁ"
+    },
+    "15755": {
+      "lat": 6.041162,
+      "lon": -72.636653,
+      "cod_dpto": "15",
+      "nom_mpio": "SOCOTÁ"
+    },
+    "15757": {
+      "lat": 5.996717,
+      "lon": -72.691963,
+      "cod_dpto": "15",
+      "nom_mpio": "SOCHA"
+    },
+    "15759": {
+      "lat": 5.723976,
+      "lon": -72.924355,
+      "cod_dpto": "15",
+      "nom_mpio": "SOGAMOSO"
+    },
+    "15761": {
+      "lat": 4.985726,
+      "lon": -73.433393,
+      "cod_dpto": "15",
+      "nom_mpio": "SOMONDOCO"
+    },
+    "15762": {
+      "lat": 5.56684,
+      "lon": -73.450153,
+      "cod_dpto": "15",
+      "nom_mpio": "SORA"
+    },
+    "15763": {
+      "lat": 5.764986,
+      "lon": -73.246585,
+      "cod_dpto": "15",
+      "nom_mpio": "SOTAQUIRÁ"
+    },
+    "15764": {
+      "lat": 5.500898,
+      "lon": -73.332804,
+      "cod_dpto": "15",
+      "nom_mpio": "SORACÁ"
+    },
+    "15774": {
+      "lat": 6.230332,
+      "lon": -72.690289,
+      "cod_dpto": "15",
+      "nom_mpio": "SUSACÓN"
+    },
+    "15776": {
+      "lat": 5.619781,
+      "lon": -73.620536,
+      "cod_dpto": "15",
+      "nom_mpio": "SUTAMARCHÁN"
+    },
+    "15778": {
+      "lat": 5.022989,
+      "lon": -73.452317,
+      "cod_dpto": "15",
+      "nom_mpio": "SUTATENZA"
+    },
+    "15790": {
+      "lat": 5.909821,
+      "lon": -72.781011,
+      "cod_dpto": "15",
+      "nom_mpio": "TASCO"
+    },
+    "15798": {
+      "lat": 5.076781,
+      "lon": -73.421176,
+      "cod_dpto": "15",
+      "nom_mpio": "TENZA"
+    },
+    "15804": {
+      "lat": 5.317251,
+      "lon": -73.396457,
+      "cod_dpto": "15",
+      "nom_mpio": "TIBANÁ"
+    },
+    "15806": {
+      "lat": 5.74723,
+      "lon": -72.999449,
+      "cod_dpto": "15",
+      "nom_mpio": "TIBASOSA"
+    },
+    "15808": {
+      "lat": 5.579713,
+      "lon": -73.646847,
+      "cod_dpto": "15",
+      "nom_mpio": "TINJACÁ"
+    },
+    "15810": {
+      "lat": 6.419203,
+      "lon": -72.691729,
+      "cod_dpto": "15",
+      "nom_mpio": "TIPACOQUE"
+    },
+    "15814": {
+      "lat": 5.566464,
+      "lon": -73.184794,
+      "cod_dpto": "15",
+      "nom_mpio": "TOCA"
+    },
+    "15816": {
+      "lat": 5.937438,
+      "lon": -73.513655,
+      "cod_dpto": "15",
+      "nom_mpio": "TOGÜÍ"
+    },
+    "15820": {
+      "lat": 5.768201,
+      "lon": -72.832245,
+      "cod_dpto": "15",
+      "nom_mpio": "TÓPAGA"
+    },
+    "15822": {
+      "lat": 5.560497,
+      "lon": -72.985898,
+      "cod_dpto": "15",
+      "nom_mpio": "TOTA"
+    },
+    "15832": {
+      "lat": 5.730582,
+      "lon": -73.933155,
+      "cod_dpto": "15",
+      "nom_mpio": "TUNUNGUÁ"
+    },
+    "15835": {
+      "lat": 5.323261,
+      "lon": -73.491825,
+      "cod_dpto": "15",
+      "nom_mpio": "TURMEQUÉ"
+    },
+    "15837": {
+      "lat": 5.689082,
+      "lon": -73.230285,
+      "cod_dpto": "15",
+      "nom_mpio": "TUTA"
+    },
+    "15839": {
+      "lat": 6.032608,
+      "lon": -72.856035,
+      "cod_dpto": "15",
+      "nom_mpio": "TUTAZÁ"
+    },
+    "15842": {
+      "lat": 5.221176,
+      "lon": -73.456917,
+      "cod_dpto": "15",
+      "nom_mpio": "ÚMBITA"
+    },
+    "15861": {
+      "lat": 5.368739,
+      "lon": -73.522368,
+      "cod_dpto": "15",
+      "nom_mpio": "VENTAQUEMADA"
+    },
+    "15879": {
+      "lat": 5.436833,
+      "lon": -73.296894,
+      "cod_dpto": "15",
+      "nom_mpio": "VIRACACHÁ"
+    },
+    "15897": {
+      "lat": 5.283443,
+      "lon": -73.17098,
+      "cod_dpto": "15",
+      "nom_mpio": "ZETAQUIRA"
+    },
+    "17001": {
+      "lat": 5.057657,
+      "lon": -75.491025,
+      "cod_dpto": "17",
+      "nom_mpio": "MANIZALES"
+    },
+    "17013": {
+      "lat": 5.610244,
+      "lon": -75.45487,
+      "cod_dpto": "17",
+      "nom_mpio": "AGUADAS"
+    },
+    "17042": {
+      "lat": 5.236471,
+      "lon": -75.784343,
+      "cod_dpto": "17",
+      "nom_mpio": "ANSERMA"
+    },
+    "17050": {
+      "lat": 5.271195,
+      "lon": -75.49129,
+      "cod_dpto": "17",
+      "nom_mpio": "ARANZAZU"
+    },
+    "17088": {
+      "lat": 4.993785,
+      "lon": -75.811918,
+      "cod_dpto": "17",
+      "nom_mpio": "BELALCÁZAR"
+    },
+    "17174": {
+      "lat": 4.985227,
+      "lon": -75.607529,
+      "cod_dpto": "17",
+      "nom_mpio": "CHINCHINÁ"
+    },
+    "17272": {
+      "lat": 5.297091,
+      "lon": -75.562474,
+      "cod_dpto": "17",
+      "nom_mpio": "FILADELFIA"
+    },
+    "17380": {
+      "lat": 5.460834,
+      "lon": -74.668819,
+      "cod_dpto": "17",
+      "nom_mpio": "LA DORADA"
+    },
+    "17388": {
+      "lat": 5.39647,
+      "lon": -75.546486,
+      "cod_dpto": "17",
+      "nom_mpio": "LA MERCED"
+    },
+    "17433": {
+      "lat": 5.255699,
+      "lon": -75.152829,
+      "cod_dpto": "17",
+      "nom_mpio": "MANZANARES"
+    },
+    "17442": {
+      "lat": 5.47422,
+      "lon": -75.600049,
+      "cod_dpto": "17",
+      "nom_mpio": "MARMATO"
+    },
+    "17444": {
+      "lat": 5.297525,
+      "lon": -75.053097,
+      "cod_dpto": "17",
+      "nom_mpio": "MARQUETALIA"
+    },
+    "17446": {
+      "lat": 5.284304,
+      "lon": -75.259721,
+      "cod_dpto": "17",
+      "nom_mpio": "MARULANDA"
+    },
+    "17486": {
+      "lat": 5.166895,
+      "lon": -75.520006,
+      "cod_dpto": "17",
+      "nom_mpio": "NEIRA"
+    },
+    "17495": {
+      "lat": 5.574796,
+      "lon": -74.889543,
+      "cod_dpto": "17",
+      "nom_mpio": "NORCASIA"
+    },
+    "17513": {
+      "lat": 5.527172,
+      "lon": -75.459621,
+      "cod_dpto": "17",
+      "nom_mpio": "PÁCORA"
+    },
+    "17524": {
+      "lat": 5.017879,
+      "lon": -75.624577,
+      "cod_dpto": "17",
+      "nom_mpio": "PALESTINA"
+    },
+    "17541": {
+      "lat": 5.383281,
+      "lon": -75.160299,
+      "cod_dpto": "17",
+      "nom_mpio": "PENSILVANIA"
+    },
+    "17614": {
+      "lat": 5.423673,
+      "lon": -75.702104,
+      "cod_dpto": "17",
+      "nom_mpio": "RIOSUCIO"
+    },
+    "17616": {
+      "lat": 5.164509,
+      "lon": -75.76722,
+      "cod_dpto": "17",
+      "nom_mpio": "RISARALDA"
+    },
+    "17653": {
+      "lat": 5.403025,
+      "lon": -75.487223,
+      "cod_dpto": "17",
+      "nom_mpio": "SALAMINA"
+    },
+    "17662": {
+      "lat": 5.41308,
+      "lon": -74.992263,
+      "cod_dpto": "17",
+      "nom_mpio": "SAMANÁ"
+    },
+    "17665": {
+      "lat": 5.08231,
+      "lon": -75.792063,
+      "cod_dpto": "17",
+      "nom_mpio": "SAN JOSÉ"
+    },
+    "17777": {
+      "lat": 5.446843,
+      "lon": -75.64966,
+      "cod_dpto": "17",
+      "nom_mpio": "SUPÍA"
+    },
+    "17867": {
+      "lat": 5.317437,
+      "lon": -74.911239,
+      "cod_dpto": "17",
+      "nom_mpio": "VICTORIA"
+    },
+    "17873": {
+      "lat": 5.038925,
+      "lon": -75.502487,
+      "cod_dpto": "17",
+      "nom_mpio": "VILLAMARÍA"
+    },
+    "17877": {
+      "lat": 5.062664,
+      "lon": -75.87061,
+      "cod_dpto": "17",
+      "nom_mpio": "VITERBO"
+    },
+    "18001": {
+      "lat": 1.618196,
+      "lon": -75.609831,
+      "cod_dpto": "18",
+      "nom_mpio": "FLORENCIA"
+    },
+    "18029": {
+      "lat": 1.328526,
+      "lon": -75.878375,
+      "cod_dpto": "18",
+      "nom_mpio": "ALBANIA"
+    },
+    "18094": {
+      "lat": 1.415812,
+      "lon": -75.872405,
+      "cod_dpto": "18",
+      "nom_mpio": "BELÉN DE LOS ANDAQUÍES"
+    },
+    "18150": {
+      "lat": 1.332371,
+      "lon": -74.847867,
+      "cod_dpto": "18",
+      "nom_mpio": "CARTAGENA DEL CHAIRÁ"
+    },
+    "18205": {
+      "lat": 1.033473,
+      "lon": -75.919205,
+      "cod_dpto": "18",
+      "nom_mpio": "CURILLO"
+    },
+    "18247": {
+      "lat": 1.679951,
+      "lon": -75.283631,
+      "cod_dpto": "18",
+      "nom_mpio": "EL DONCELLO"
+    },
+    "18256": {
+      "lat": 1.570226,
+      "lon": -75.326093,
+      "cod_dpto": "18",
+      "nom_mpio": "EL PAUJÍL"
+    },
+    "18410": {
+      "lat": 1.479173,
+      "lon": -75.436408,
+      "cod_dpto": "18",
+      "nom_mpio": "LA MONTAÑITA"
+    },
+    "18460": {
+      "lat": 1.29021,
+      "lon": -75.506926,
+      "cod_dpto": "18",
+      "nom_mpio": "MILÁN"
+    },
+    "18479": {
+      "lat": 1.486611,
+      "lon": -75.724146,
+      "cod_dpto": "18",
+      "nom_mpio": "MORELIA"
+    },
+    "18592": {
+      "lat": 1.909063,
+      "lon": -75.157604,
+      "cod_dpto": "18",
+      "nom_mpio": "PUERTO RICO"
+    },
+    "18610": {
+      "lat": 1.330266,
+      "lon": -75.973796,
+      "cod_dpto": "18",
+      "nom_mpio": "SAN JOSÉ DEL FRAGUA"
+    },
+    "18753": {
+      "lat": 2.119413,
+      "lon": -74.767894,
+      "cod_dpto": "18",
+      "nom_mpio": "SAN VICENTE DEL CAGUÁN"
+    },
+    "18756": {
+      "lat": 0.699077,
+      "lon": -75.253702,
+      "cod_dpto": "18",
+      "nom_mpio": "SOLANO"
+    },
+    "18785": {
+      "lat": 0.87654,
+      "lon": -75.619902,
+      "cod_dpto": "18",
+      "nom_mpio": "SOLITA"
+    },
+    "18860": {
+      "lat": 1.194619,
+      "lon": -75.70671,
+      "cod_dpto": "18",
+      "nom_mpio": "VALPARAÍSO"
+    },
+    "19001": {
+      "lat": 2.459641,
+      "lon": -76.599377,
+      "cod_dpto": "19",
+      "nom_mpio": "POPAYÁN"
+    },
+    "19022": {
+      "lat": 1.913429,
+      "lon": -76.85607,
+      "cod_dpto": "19",
+      "nom_mpio": "ALMAGUER"
+    },
+    "19050": {
+      "lat": 2.257427,
+      "lon": -77.24905,
+      "cod_dpto": "19",
+      "nom_mpio": "ARGELIA"
+    },
+    "19075": {
+      "lat": 2.040998,
+      "lon": -77.215773,
+      "cod_dpto": "19",
+      "nom_mpio": "BALBOA"
+    },
+    "19100": {
+      "lat": 1.837538,
+      "lon": -76.966215,
+      "cod_dpto": "19",
+      "nom_mpio": "BOLÍVAR"
+    },
+    "19110": {
+      "lat": 3.015382,
+      "lon": -76.642238,
+      "cod_dpto": "19",
+      "nom_mpio": "BUENOS AIRES"
+    },
+    "19130": {
+      "lat": 2.623371,
+      "lon": -76.570682,
+      "cod_dpto": "19",
+      "nom_mpio": "CAJIBÍO"
+    },
+    "19137": {
+      "lat": 2.798059,
+      "lon": -76.484319,
+      "cod_dpto": "19",
+      "nom_mpio": "CALDONO"
+    },
+    "19142": {
+      "lat": 3.034531,
+      "lon": -76.408941,
+      "cod_dpto": "19",
+      "nom_mpio": "CALOTO"
+    },
+    "19212": {
+      "lat": 3.173854,
+      "lon": -76.261866,
+      "cod_dpto": "19",
+      "nom_mpio": "CORINTO"
+    },
+    "19256": {
+      "lat": 2.451409,
+      "lon": -76.810911,
+      "cod_dpto": "19",
+      "nom_mpio": "EL TAMBO"
+    },
+    "19290": {
+      "lat": 1.682535,
+      "lon": -77.072547,
+      "cod_dpto": "19",
+      "nom_mpio": "FLORENCIA"
+    },
+    "19300": {
+      "lat": 3.134153,
+      "lon": -76.392189,
+      "cod_dpto": "19",
+      "nom_mpio": "GUACHENÉ"
+    },
+    "19318": {
+      "lat": 2.571337,
+      "lon": -77.88797,
+      "cod_dpto": "19",
+      "nom_mpio": "GUAPI"
+    },
+    "19355": {
+      "lat": 2.549183,
+      "lon": -76.063503,
+      "cod_dpto": "19",
+      "nom_mpio": "INZÁ"
+    },
+    "19364": {
+      "lat": 2.777834,
+      "lon": -76.323877,
+      "cod_dpto": "19",
+      "nom_mpio": "JAMBALÓ"
+    },
+    "19392": {
+      "lat": 2.179383,
+      "lon": -76.763278,
+      "cod_dpto": "19",
+      "nom_mpio": "LA SIERRA"
+    },
+    "19397": {
+      "lat": 2.001803,
+      "lon": -76.778771,
+      "cod_dpto": "19",
+      "nom_mpio": "LA VEGA"
+    },
+    "19418": {
+      "lat": 2.846788,
+      "lon": -77.247803,
+      "cod_dpto": "19",
+      "nom_mpio": "LÓPEZ DE MICAY"
+    },
+    "19450": {
+      "lat": 1.789193,
+      "lon": -77.164319,
+      "cod_dpto": "19",
+      "nom_mpio": "MERCADERES"
+    },
+    "19455": {
+      "lat": 3.254651,
+      "lon": -76.228722,
+      "cod_dpto": "19",
+      "nom_mpio": "MIRANDA"
+    },
+    "19473": {
+      "lat": 2.754684,
+      "lon": -76.629106,
+      "cod_dpto": "19",
+      "nom_mpio": "MORALES"
+    },
+    "19513": {
+      "lat": 3.220984,
+      "lon": -76.313265,
+      "cod_dpto": "19",
+      "nom_mpio": "PADILLA"
+    },
+    "19517": {
+      "lat": 2.645724,
+      "lon": -75.970685,
+      "cod_dpto": "19",
+      "nom_mpio": "PÁEZ"
+    },
+    "19532": {
+      "lat": 2.115875,
+      "lon": -76.981075,
+      "cod_dpto": "19",
+      "nom_mpio": "PATÍA"
+    },
+    "19533": {
+      "lat": 1.11754,
+      "lon": -76.327588,
+      "cod_dpto": "19",
+      "nom_mpio": "PIAMONTE"
+    },
+    "19548": {
+      "lat": 2.64228,
+      "lon": -76.528615,
+      "cod_dpto": "19",
+      "nom_mpio": "PIENDAMÓ - TUNÍA"
+    },
+    "19573": {
+      "lat": 3.233254,
+      "lon": -76.417673,
+      "cod_dpto": "19",
+      "nom_mpio": "PUERTO TEJADA"
+    },
+    "19585": {
+      "lat": 2.341507,
+      "lon": -76.496698,
+      "cod_dpto": "19",
+      "nom_mpio": "PURACÉ"
+    },
+    "19622": {
+      "lat": 2.260941,
+      "lon": -76.740336,
+      "cod_dpto": "19",
+      "nom_mpio": "ROSAS"
+    },
+    "19693": {
+      "lat": 1.838451,
+      "lon": -76.769467,
+      "cod_dpto": "19",
+      "nom_mpio": "SAN SEBASTIÁN"
+    },
+    "19698": {
+      "lat": 3.015008,
+      "lon": -76.485141,
+      "cod_dpto": "19",
+      "nom_mpio": "SANTANDER DE QUILICHAO"
+    },
+    "19701": {
+      "lat": 1.700916,
+      "lon": -76.573252,
+      "cod_dpto": "19",
+      "nom_mpio": "SANTA ROSA"
+    },
+    "19743": {
+      "lat": 2.611927,
+      "lon": -76.379753,
+      "cod_dpto": "19",
+      "nom_mpio": "SILVIA"
+    },
+    "19760": {
+      "lat": 2.253156,
+      "lon": -76.613365,
+      "cod_dpto": "19",
+      "nom_mpio": "SOTARÁ - PAISPAMBA"
+    },
+    "19780": {
+      "lat": 2.959785,
+      "lon": -76.69357,
+      "cod_dpto": "19",
+      "nom_mpio": "SUÁREZ"
+    },
+    "19785": {
+      "lat": 2.038237,
+      "lon": -76.926279,
+      "cod_dpto": "19",
+      "nom_mpio": "SUCRE"
+    },
+    "19807": {
+      "lat": 2.349686,
+      "lon": -76.684476,
+      "cod_dpto": "19",
+      "nom_mpio": "TIMBÍO"
+    },
+    "19809": {
+      "lat": 2.777312,
+      "lon": -77.667541,
+      "cod_dpto": "19",
+      "nom_mpio": "TIMBIQUÍ"
+    },
+    "19821": {
+      "lat": 2.953017,
+      "lon": -76.270284,
+      "cod_dpto": "19",
+      "nom_mpio": "TORIBÍO"
+    },
+    "19824": {
+      "lat": 2.510252,
+      "lon": -76.403628,
+      "cod_dpto": "19",
+      "nom_mpio": "TOTORÓ"
+    },
+    "19845": {
+      "lat": 3.17762,
+      "lon": -76.458025,
+      "cod_dpto": "19",
+      "nom_mpio": "VILLA RICA"
+    },
+    "20001": {
+      "lat": 10.460472,
+      "lon": -73.259398,
+      "cod_dpto": "20",
+      "nom_mpio": "VALLEDUPAR"
+    },
+    "20011": {
+      "lat": 8.306811,
+      "lon": -73.614027,
+      "cod_dpto": "20",
+      "nom_mpio": "AGUACHICA"
+    },
+    "20013": {
+      "lat": 10.040454,
+      "lon": -73.238389,
+      "cod_dpto": "20",
+      "nom_mpio": "AGUSTÍN CODAZZI"
+    },
+    "20032": {
+      "lat": 9.498062,
+      "lon": -73.975842,
+      "cod_dpto": "20",
+      "nom_mpio": "ASTREA"
+    },
+    "20045": {
+      "lat": 9.704404,
+      "lon": -73.278707,
+      "cod_dpto": "20",
+      "nom_mpio": "BECERRIL"
+    },
+    "20060": {
+      "lat": 9.975098,
+      "lon": -73.888761,
+      "cod_dpto": "20",
+      "nom_mpio": "BOSCONIA"
+    },
+    "20175": {
+      "lat": 9.25875,
+      "lon": -73.813278,
+      "cod_dpto": "20",
+      "nom_mpio": "CHIMICHAGUA"
+    },
+    "20178": {
+      "lat": 9.361058,
+      "lon": -73.599913,
+      "cod_dpto": "20",
+      "nom_mpio": "CHIRIGUANÁ"
+    },
+    "20228": {
+      "lat": 9.201716,
+      "lon": -73.540843,
+      "cod_dpto": "20",
+      "nom_mpio": "CURUMANÍ"
+    },
+    "20238": {
+      "lat": 10.149883,
+      "lon": -73.962703,
+      "cod_dpto": "20",
+      "nom_mpio": "EL COPEY"
+    },
+    "20250": {
+      "lat": 9.668461,
+      "lon": -73.742012,
+      "cod_dpto": "20",
+      "nom_mpio": "EL PASO"
+    },
+    "20295": {
+      "lat": 8.324793,
+      "lon": -73.737558,
+      "cod_dpto": "20",
+      "nom_mpio": "GAMARRA"
+    },
+    "20310": {
+      "lat": 8.389604,
+      "lon": -73.38004,
+      "cod_dpto": "20",
+      "nom_mpio": "GONZÁLEZ"
+    },
+    "20383": {
+      "lat": 8.619298,
+      "lon": -73.80321,
+      "cod_dpto": "20",
+      "nom_mpio": "LA GLORIA"
+    },
+    "20400": {
+      "lat": 9.563752,
+      "lon": -73.334143,
+      "cod_dpto": "20",
+      "nom_mpio": "LA JAGUA DE IBIRICO"
+    },
+    "20443": {
+      "lat": 10.390776,
+      "lon": -73.029472,
+      "cod_dpto": "20",
+      "nom_mpio": "MANAURE BALCÓN DEL CESAR"
+    },
+    "20517": {
+      "lat": 8.959399,
+      "lon": -73.625825,
+      "cod_dpto": "20",
+      "nom_mpio": "PAILITAS"
+    },
+    "20550": {
+      "lat": 8.689451,
+      "lon": -73.666735,
+      "cod_dpto": "20",
+      "nom_mpio": "PELAYA"
+    },
+    "20570": {
+      "lat": 10.417321,
+      "lon": -73.586211,
+      "cod_dpto": "20",
+      "nom_mpio": "PUEBLO BELLO"
+    },
+    "20614": {
+      "lat": 8.292292,
+      "lon": -73.386393,
+      "cod_dpto": "20",
+      "nom_mpio": "RÍO DE ORO"
+    },
+    "20621": {
+      "lat": 10.387552,
+      "lon": -73.171365,
+      "cod_dpto": "20",
+      "nom_mpio": "LA PAZ"
+    },
+    "20710": {
+      "lat": 7.76111,
+      "lon": -73.393889,
+      "cod_dpto": "20",
+      "nom_mpio": "SAN ALBERTO"
+    },
+    "20750": {
+      "lat": 10.333039,
+      "lon": -73.181208,
+      "cod_dpto": "20",
+      "nom_mpio": "SAN DIEGO"
+    },
+    "20770": {
+      "lat": 7.999855,
+      "lon": -73.510914,
+      "cod_dpto": "20",
+      "nom_mpio": "SAN MARTÍN"
+    },
+    "20787": {
+      "lat": 8.861725,
+      "lon": -73.812172,
+      "cod_dpto": "20",
+      "nom_mpio": "TAMALAMEQUE"
+    },
+    "23001": {
+      "lat": 8.759789,
+      "lon": -75.873096,
+      "cod_dpto": "23",
+      "nom_mpio": "MONTERÍA"
+    },
+    "23068": {
+      "lat": 8.313838,
+      "lon": -75.146048,
+      "cod_dpto": "23",
+      "nom_mpio": "AYAPEL"
+    },
+    "23079": {
+      "lat": 8.221187,
+      "lon": -75.480897,
+      "cod_dpto": "23",
+      "nom_mpio": "BUENAVISTA"
+    },
+    "23090": {
+      "lat": 8.786939,
+      "lon": -76.241476,
+      "cod_dpto": "23",
+      "nom_mpio": "CANALETE"
+    },
+    "23162": {
+      "lat": 8.888532,
+      "lon": -75.796093,
+      "cod_dpto": "23",
+      "nom_mpio": "CERETÉ"
+    },
+    "23168": {
+      "lat": 9.149698,
+      "lon": -75.626886,
+      "cod_dpto": "23",
+      "nom_mpio": "CHIMÁ"
+    },
+    "23182": {
+      "lat": 9.105473,
+      "lon": -75.399633,
+      "cod_dpto": "23",
+      "nom_mpio": "CHINÚ"
+    },
+    "23189": {
+      "lat": 8.875794,
+      "lon": -75.620807,
+      "cod_dpto": "23",
+      "nom_mpio": "CIÉNAGA DE ORO"
+    },
+    "23300": {
+      "lat": 9.037163,
+      "lon": -75.799216,
+      "cod_dpto": "23",
+      "nom_mpio": "COTORRA"
+    },
+    "23350": {
+      "lat": 8.050125,
+      "lon": -75.336031,
+      "cod_dpto": "23",
+      "nom_mpio": "LA APARTADA"
+    },
+    "23417": {
+      "lat": 9.240789,
+      "lon": -75.816084,
+      "cod_dpto": "23",
+      "nom_mpio": "LORICA"
+    },
+    "23419": {
+      "lat": 8.892098,
+      "lon": -76.35518,
+      "cod_dpto": "23",
+      "nom_mpio": "LOS CÓRDOBAS"
+    },
+    "23464": {
+      "lat": 9.240707,
+      "lon": -75.67796,
+      "cod_dpto": "23",
+      "nom_mpio": "MOMIL"
+    },
+    "23466": {
+      "lat": 7.973777,
+      "lon": -75.416818,
+      "cod_dpto": "23",
+      "nom_mpio": "MONTELÍBANO"
+    },
+    "23500": {
+      "lat": 9.245223,
+      "lon": -76.1291,
+      "cod_dpto": "23",
+      "nom_mpio": "MOÑITOS"
+    },
+    "23555": {
+      "lat": 8.4082,
+      "lon": -75.583241,
+      "cod_dpto": "23",
+      "nom_mpio": "PLANETA RICA"
+    },
+    "23570": {
+      "lat": 8.504099,
+      "lon": -75.508035,
+      "cod_dpto": "23",
+      "nom_mpio": "PUEBLO NUEVO"
+    },
+    "23574": {
+      "lat": 9.005372,
+      "lon": -76.260411,
+      "cod_dpto": "23",
+      "nom_mpio": "PUERTO ESCONDIDO"
+    },
+    "23580": {
+      "lat": 7.888859,
+      "lon": -75.671761,
+      "cod_dpto": "23",
+      "nom_mpio": "PUERTO LIBERTADOR"
+    },
+    "23586": {
+      "lat": 9.239295,
+      "lon": -75.724987,
+      "cod_dpto": "23",
+      "nom_mpio": "PURÍSIMA DE LA CONCEPCIÓN"
+    },
+    "23660": {
+      "lat": 8.943048,
+      "lon": -75.445834,
+      "cod_dpto": "23",
+      "nom_mpio": "SAHAGÚN"
+    },
+    "23670": {
+      "lat": 9.145448,
+      "lon": -75.50879,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN ANDRÉS DE SOTAVENTO"
+    },
+    "23672": {
+      "lat": 9.376434,
+      "lon": -75.76112,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN ANTERO"
+    },
+    "23675": {
+      "lat": 9.35247,
+      "lon": -75.955107,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN BERNARDO DEL VIENTO"
+    },
+    "23678": {
+      "lat": 8.799282,
+      "lon": -75.698799,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN CARLOS"
+    },
+    "23682": {
+      "lat": 7.787303,
+      "lon": -75.533476,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN JOSÉ DE URÉ"
+    },
+    "23686": {
+      "lat": 8.958436,
+      "lon": -75.835615,
+      "cod_dpto": "23",
+      "nom_mpio": "SAN PELAYO"
+    },
+    "23807": {
+      "lat": 8.170612,
+      "lon": -76.059797,
+      "cod_dpto": "23",
+      "nom_mpio": "TIERRALTA"
+    },
+    "23815": {
+      "lat": 9.186625,
+      "lon": -75.553962,
+      "cod_dpto": "23",
+      "nom_mpio": "TUCHÍN"
+    },
+    "23855": {
+      "lat": 8.255016,
+      "lon": -76.150756,
+      "cod_dpto": "23",
+      "nom_mpio": "VALENCIA"
+    },
+    "25001": {
+      "lat": 4.375309,
+      "lon": -74.669221,
+      "cod_dpto": "25",
+      "nom_mpio": "AGUA DE DIOS"
+    },
+    "25019": {
+      "lat": 4.878022,
+      "lon": -74.438261,
+      "cod_dpto": "25",
+      "nom_mpio": "ALBÁN"
+    },
+    "25035": {
+      "lat": 4.562737,
+      "lon": -74.528676,
+      "cod_dpto": "25",
+      "nom_mpio": "ANAPOIMA"
+    },
+    "25040": {
+      "lat": 4.7617,
+      "lon": -74.46384,
+      "cod_dpto": "25",
+      "nom_mpio": "ANOLAIMA"
+    },
+    "25053": {
+      "lat": 4.272534,
+      "lon": -74.414901,
+      "cod_dpto": "25",
+      "nom_mpio": "ARBELÁEZ"
+    },
+    "25086": {
+      "lat": 4.802832,
+      "lon": -74.741666,
+      "cod_dpto": "25",
+      "nom_mpio": "BELTRÁN"
+    },
+    "25095": {
+      "lat": 4.872171,
+      "lon": -74.539609,
+      "cod_dpto": "25",
+      "nom_mpio": "BITUIMA"
+    },
+    "25099": {
+      "lat": 4.737205,
+      "lon": -74.344594,
+      "cod_dpto": "25",
+      "nom_mpio": "BOJACÁ"
+    },
+    "25120": {
+      "lat": 3.985164,
+      "lon": -74.484549,
+      "cod_dpto": "25",
+      "nom_mpio": "CABRERA"
+    },
+    "25123": {
+      "lat": 4.730957,
+      "lon": -74.435711,
+      "cod_dpto": "25",
+      "nom_mpio": "CACHIPAY"
+    },
+    "25126": {
+      "lat": 4.920009,
+      "lon": -74.02298,
+      "cod_dpto": "25",
+      "nom_mpio": "CAJICÁ"
+    },
+    "25148": {
+      "lat": 5.34758,
+      "lon": -74.491045,
+      "cod_dpto": "25",
+      "nom_mpio": "CAPARRAPÍ"
+    },
+    "25151": {
+      "lat": 4.404112,
+      "lon": -73.946473,
+      "cod_dpto": "25",
+      "nom_mpio": "CÁQUEZA"
+    },
+    "25154": {
+      "lat": 5.349119,
+      "lon": -73.901357,
+      "cod_dpto": "25",
+      "nom_mpio": "CARMEN DE CARUPA"
+    },
+    "25168": {
+      "lat": 4.948916,
+      "lon": -74.593455,
+      "cod_dpto": "25",
+      "nom_mpio": "CHAGUANÍ"
+    },
+    "25175": {
+      "lat": 4.866508,
+      "lon": -74.05,
+      "cod_dpto": "25",
+      "nom_mpio": "CHÍA"
+    },
+    "25178": {
+      "lat": 4.442671,
+      "lon": -74.044876,
+      "cod_dpto": "25",
+      "nom_mpio": "CHIPAQUE"
+    },
+    "25181": {
+      "lat": 4.527048,
+      "lon": -73.922894,
+      "cod_dpto": "25",
+      "nom_mpio": "CHOACHÍ"
+    },
+    "25183": {
+      "lat": 5.145224,
+      "lon": -73.683533,
+      "cod_dpto": "25",
+      "nom_mpio": "CHOCONTÁ"
+    },
+    "25200": {
+      "lat": 5.061842,
+      "lon": -73.978497,
+      "cod_dpto": "25",
+      "nom_mpio": "COGUA"
+    },
+    "25214": {
+      "lat": 4.812564,
+      "lon": -74.102569,
+      "cod_dpto": "25",
+      "nom_mpio": "COTA"
+    },
+    "25224": {
+      "lat": 5.249795,
+      "lon": -73.766113,
+      "cod_dpto": "25",
+      "nom_mpio": "CUCUNUBÁ"
+    },
+    "25245": {
+      "lat": 4.577951,
+      "lon": -74.442261,
+      "cod_dpto": "25",
+      "nom_mpio": "EL COLEGIO"
+    },
+    "25258": {
+      "lat": 5.248747,
+      "lon": -74.290207,
+      "cod_dpto": "25",
+      "nom_mpio": "EL PEÑÓN"
+    },
+    "25260": {
+      "lat": 4.850589,
+      "lon": -74.263103,
+      "cod_dpto": "25",
+      "nom_mpio": "EL ROSAL"
+    },
+    "25269": {
+      "lat": 4.813353,
+      "lon": -74.350085,
+      "cod_dpto": "25",
+      "nom_mpio": "FACATATIVÁ"
+    },
+    "25279": {
+      "lat": 4.485474,
+      "lon": -73.892523,
+      "cod_dpto": "25",
+      "nom_mpio": "FÓMEQUE"
+    },
+    "25281": {
+      "lat": 4.339093,
+      "lon": -73.93902,
+      "cod_dpto": "25",
+      "nom_mpio": "FOSCA"
+    },
+    "25286": {
+      "lat": 4.710412,
+      "lon": -74.201528,
+      "cod_dpto": "25",
+      "nom_mpio": "FUNZA"
+    },
+    "25288": {
+      "lat": 5.403997,
+      "lon": -73.795855,
+      "cod_dpto": "25",
+      "nom_mpio": "FÚQUENE"
+    },
+    "25290": {
+      "lat": 4.336723,
+      "lon": -74.37543,
+      "cod_dpto": "25",
+      "nom_mpio": "FUSAGASUGÁ"
+    },
+    "25293": {
+      "lat": 4.693579,
+      "lon": -73.520161,
+      "cod_dpto": "25",
+      "nom_mpio": "GACHALÁ"
+    },
+    "25295": {
+      "lat": 4.990947,
+      "lon": -73.873464,
+      "cod_dpto": "25",
+      "nom_mpio": "GACHANCIPÁ"
+    },
+    "25297": {
+      "lat": 4.816411,
+      "lon": -73.636377,
+      "cod_dpto": "25",
+      "nom_mpio": "GACHETÁ"
+    },
+    "25299": {
+      "lat": 4.763325,
+      "lon": -73.611037,
+      "cod_dpto": "25",
+      "nom_mpio": "GAMA"
+    },
+    "25307": {
+      "lat": 4.313069,
+      "lon": -74.798201,
+      "cod_dpto": "25",
+      "nom_mpio": "GIRARDOT"
+    },
+    "25312": {
+      "lat": 4.519763,
+      "lon": -74.350766,
+      "cod_dpto": "25",
+      "nom_mpio": "GRANADA"
+    },
+    "25317": {
+      "lat": 5.383378,
+      "lon": -73.686972,
+      "cod_dpto": "25",
+      "nom_mpio": "GUACHETÁ"
+    },
+    "25320": {
+      "lat": 5.072076,
+      "lon": -74.603402,
+      "cod_dpto": "25",
+      "nom_mpio": "GUADUAS"
+    },
+    "25322": {
+      "lat": 4.866719,
+      "lon": -73.877143,
+      "cod_dpto": "25",
+      "nom_mpio": "GUASCA"
+    },
+    "25324": {
+      "lat": 4.517517,
+      "lon": -74.790058,
+      "cod_dpto": "25",
+      "nom_mpio": "GUATAQUÍ"
+    },
+    "25326": {
+      "lat": 4.935211,
+      "lon": -73.83293,
+      "cod_dpto": "25",
+      "nom_mpio": "GUATAVITA"
+    },
+    "25328": {
+      "lat": 4.877968,
+      "lon": -74.467437,
+      "cod_dpto": "25",
+      "nom_mpio": "GUAYABAL DE SÍQUIMA"
+    },
+    "25335": {
+      "lat": 4.215306,
+      "lon": -73.815107,
+      "cod_dpto": "25",
+      "nom_mpio": "GUAYABETAL"
+    },
+    "25339": {
+      "lat": 4.254679,
+      "lon": -74.003042,
+      "cod_dpto": "25",
+      "nom_mpio": "GUTIÉRREZ"
+    },
+    "25368": {
+      "lat": 4.562273,
+      "lon": -74.695474,
+      "cod_dpto": "25",
+      "nom_mpio": "JERUSALÉN"
+    },
+    "25372": {
+      "lat": 4.79057,
+      "lon": -73.662961,
+      "cod_dpto": "25",
+      "nom_mpio": "JUNÍN"
+    },
+    "25377": {
+      "lat": 4.721104,
+      "lon": -73.968161,
+      "cod_dpto": "25",
+      "nom_mpio": "LA CALERA"
+    },
+    "25386": {
+      "lat": 4.631028,
+      "lon": -74.461588,
+      "cod_dpto": "25",
+      "nom_mpio": "LA MESA"
+    },
+    "25394": {
+      "lat": 5.358816,
+      "lon": -74.391022,
+      "cod_dpto": "25",
+      "nom_mpio": "LA PALMA"
+    },
+    "25398": {
+      "lat": 5.198945,
+      "lon": -74.394105,
+      "cod_dpto": "25",
+      "nom_mpio": "LA PEÑA"
+    },
+    "25402": {
+      "lat": 4.997768,
+      "lon": -74.336885,
+      "cod_dpto": "25",
+      "nom_mpio": "LA VEGA"
+    },
+    "25407": {
+      "lat": 5.306131,
+      "lon": -73.711512,
+      "cod_dpto": "25",
+      "nom_mpio": "LENGUAZAQUE"
+    },
+    "25426": {
+      "lat": 5.08007,
+      "lon": -73.608226,
+      "cod_dpto": "25",
+      "nom_mpio": "MACHETÁ"
+    },
+    "25430": {
+      "lat": 4.732791,
+      "lon": -74.265854,
+      "cod_dpto": "25",
+      "nom_mpio": "MADRID"
+    },
+    "25436": {
+      "lat": 5.009008,
+      "lon": -73.540444,
+      "cod_dpto": "25",
+      "nom_mpio": "MANTA"
+    },
+    "25438": {
+      "lat": 4.506298,
+      "lon": -73.348449,
+      "cod_dpto": "25",
+      "nom_mpio": "MEDINA"
+    },
+    "25473": {
+      "lat": 4.70653,
+      "lon": -74.221154,
+      "cod_dpto": "25",
+      "nom_mpio": "MOSQUERA"
+    },
+    "25483": {
+      "lat": 4.399837,
+      "lon": -74.824732,
+      "cod_dpto": "25",
+      "nom_mpio": "NARIÑO"
+    },
+    "25486": {
+      "lat": 5.068705,
+      "lon": -73.877888,
+      "cod_dpto": "25",
+      "nom_mpio": "NEMOCÓN"
+    },
+    "25488": {
+      "lat": 4.305838,
+      "lon": -74.620009,
+      "cod_dpto": "25",
+      "nom_mpio": "NILO"
+    },
+    "25489": {
+      "lat": 5.125992,
+      "lon": -74.38604,
+      "cod_dpto": "25",
+      "nom_mpio": "NIMAIMA"
+    },
+    "25491": {
+      "lat": 5.069466,
+      "lon": -74.379093,
+      "cod_dpto": "25",
+      "nom_mpio": "NOCAIMA"
+    },
+    "25506": {
+      "lat": 4.089056,
+      "lon": -74.478301,
+      "cod_dpto": "25",
+      "nom_mpio": "VENECIA"
+    },
+    "25513": {
+      "lat": 5.136907,
+      "lon": -74.156132,
+      "cod_dpto": "25",
+      "nom_mpio": "PACHO"
+    },
+    "25518": {
+      "lat": 5.370487,
+      "lon": -74.152213,
+      "cod_dpto": "25",
+      "nom_mpio": "PAIME"
+    },
+    "25524": {
+      "lat": 4.190393,
+      "lon": -74.486641,
+      "cod_dpto": "25",
+      "nom_mpio": "PANDI"
+    },
+    "25530": {
+      "lat": 4.374832,
+      "lon": -73.212825,
+      "cod_dpto": "25",
+      "nom_mpio": "PARATEBUENO"
+    },
+    "25535": {
+      "lat": 4.308979,
+      "lon": -74.302276,
+      "cod_dpto": "25",
+      "nom_mpio": "PASCA"
+    },
+    "25572": {
+      "lat": 5.465413,
+      "lon": -74.653695,
+      "cod_dpto": "25",
+      "nom_mpio": "PUERTO SALGAR"
+    },
+    "25580": {
+      "lat": 4.682022,
+      "lon": -74.71438,
+      "cod_dpto": "25",
+      "nom_mpio": "PULÍ"
+    },
+    "25592": {
+      "lat": 5.118076,
+      "lon": -74.48014,
+      "cod_dpto": "25",
+      "nom_mpio": "QUEBRADANEGRA"
+    },
+    "25594": {
+      "lat": 4.329884,
+      "lon": -73.863214,
+      "cod_dpto": "25",
+      "nom_mpio": "QUETAME"
+    },
+    "25596": {
+      "lat": 4.74481,
+      "lon": -74.533705,
+      "cod_dpto": "25",
+      "nom_mpio": "QUIPILE"
+    },
+    "25599": {
+      "lat": 4.520304,
+      "lon": -74.593926,
+      "cod_dpto": "25",
+      "nom_mpio": "APULO"
+    },
+    "25612": {
+      "lat": 4.282113,
+      "lon": -74.772861,
+      "cod_dpto": "25",
+      "nom_mpio": "RICAURTE"
+    },
+    "25645": {
+      "lat": 4.616138,
+      "lon": -74.351443,
+      "cod_dpto": "25",
+      "nom_mpio": "SAN ANTONIO DEL TEQUENDAMA"
+    },
+    "25649": {
+      "lat": 4.179433,
+      "lon": -74.42296,
+      "cod_dpto": "25",
+      "nom_mpio": "SAN BERNARDO"
+    },
+    "25653": {
+      "lat": 5.332938,
+      "lon": -74.024754,
+      "cod_dpto": "25",
+      "nom_mpio": "SAN CAYETANO"
+    },
+    "25658": {
+      "lat": 4.972917,
+      "lon": -74.289672,
+      "cod_dpto": "25",
+      "nom_mpio": "SAN FRANCISCO"
+    },
+    "25662": {
+      "lat": 4.847575,
+      "lon": -74.621919,
+      "cod_dpto": "25",
+      "nom_mpio": "SAN JUAN DE RIOSECO"
+    },
+    "25718": {
+      "lat": 4.962167,
+      "lon": -74.432628,
+      "cod_dpto": "25",
+      "nom_mpio": "SASAIMA"
+    },
+    "25736": {
+      "lat": 5.04476,
+      "lon": -73.796099,
+      "cod_dpto": "25",
+      "nom_mpio": "SESQUILÉ"
+    },
+    "25740": {
+      "lat": 4.492625,
+      "lon": -74.257874,
+      "cod_dpto": "25",
+      "nom_mpio": "SIBATÉ"
+    },
+    "25743": {
+      "lat": 4.381981,
+      "lon": -74.405534,
+      "cod_dpto": "25",
+      "nom_mpio": "SILVANIA"
+    },
+    "25745": {
+      "lat": 5.505231,
+      "lon": -73.850703,
+      "cod_dpto": "25",
+      "nom_mpio": "SIMIJACA"
+    },
+    "25754": {
+      "lat": 4.579268,
+      "lon": -74.215463,
+      "cod_dpto": "25",
+      "nom_mpio": "SOACHA"
+    },
+    "25758": {
+      "lat": 4.915395,
+      "lon": -73.943328,
+      "cod_dpto": "25",
+      "nom_mpio": "SOPÓ"
+    },
+    "25769": {
+      "lat": 4.929118,
+      "lon": -74.172773,
+      "cod_dpto": "25",
+      "nom_mpio": "SUBACHOQUE"
+    },
+    "25772": {
+      "lat": 5.103495,
+      "lon": -73.798227,
+      "cod_dpto": "25",
+      "nom_mpio": "SUESCA"
+    },
+    "25777": {
+      "lat": 5.06162,
+      "lon": -74.235403,
+      "cod_dpto": "25",
+      "nom_mpio": "SUPATÁ"
+    },
+    "25779": {
+      "lat": 5.455291,
+      "lon": -73.813938,
+      "cod_dpto": "25",
+      "nom_mpio": "SUSA"
+    },
+    "25781": {
+      "lat": 5.247482,
+      "lon": -73.853159,
+      "cod_dpto": "25",
+      "nom_mpio": "SUTATAUSA"
+    },
+    "25785": {
+      "lat": 4.916832,
+      "lon": -74.096461,
+      "cod_dpto": "25",
+      "nom_mpio": "TABIO"
+    },
+    "25793": {
+      "lat": 5.196333,
+      "lon": -73.887813,
+      "cod_dpto": "25",
+      "nom_mpio": "TAUSA"
+    },
+    "25797": {
+      "lat": 4.655286,
+      "lon": -74.389193,
+      "cod_dpto": "25",
+      "nom_mpio": "TENA"
+    },
+    "25799": {
+      "lat": 4.872014,
+      "lon": -74.143724,
+      "cod_dpto": "25",
+      "nom_mpio": "TENJO"
+    },
+    "25805": {
+      "lat": 4.348605,
+      "lon": -74.452662,
+      "cod_dpto": "25",
+      "nom_mpio": "TIBACUY"
+    },
+    "25807": {
+      "lat": 5.052278,
+      "lon": -73.504514,
+      "cod_dpto": "25",
+      "nom_mpio": "TIBIRITA"
+    },
+    "25815": {
+      "lat": 4.459279,
+      "lon": -74.636296,
+      "cod_dpto": "25",
+      "nom_mpio": "TOCAIMA"
+    },
+    "25817": {
+      "lat": 4.964641,
+      "lon": -73.91207,
+      "cod_dpto": "25",
+      "nom_mpio": "TOCANCIPÁ"
+    },
+    "25823": {
+      "lat": 5.336224,
+      "lon": -74.300626,
+      "cod_dpto": "25",
+      "nom_mpio": "TOPAIPÍ"
+    },
+    "25839": {
+      "lat": 4.74762,
+      "lon": -73.531489,
+      "cod_dpto": "25",
+      "nom_mpio": "UBALÁ"
+    },
+    "25841": {
+      "lat": 4.483788,
+      "lon": -73.933477,
+      "cod_dpto": "25",
+      "nom_mpio": "UBAQUE"
+    },
+    "25843": {
+      "lat": 5.307463,
+      "lon": -73.814367,
+      "cod_dpto": "25",
+      "nom_mpio": "VILLA DE SAN DIEGO DE UBATÉ"
+    },
+    "25845": {
+      "lat": 4.40245,
+      "lon": -74.025183,
+      "cod_dpto": "25",
+      "nom_mpio": "UNE"
+    },
+    "25851": {
+      "lat": 5.19055,
+      "lon": -74.483154,
+      "cod_dpto": "25",
+      "nom_mpio": "ÚTICA"
+    },
+    "25862": {
+      "lat": 5.117258,
+      "lon": -74.346163,
+      "cod_dpto": "25",
+      "nom_mpio": "VERGARA"
+    },
+    "25867": {
+      "lat": 4.875208,
+      "lon": -74.56132,
+      "cod_dpto": "25",
+      "nom_mpio": "VIANÍ"
+    },
+    "25871": {
+      "lat": 5.273024,
+      "lon": -74.195145,
+      "cod_dpto": "25",
+      "nom_mpio": "VILLAGÓMEZ"
+    },
+    "25873": {
+      "lat": 5.216393,
+      "lon": -73.595704,
+      "cod_dpto": "25",
+      "nom_mpio": "VILLAPINZÓN"
+    },
+    "25875": {
+      "lat": 5.012754,
+      "lon": -74.469686,
+      "cod_dpto": "25",
+      "nom_mpio": "VILLETA"
+    },
+    "25878": {
+      "lat": 4.43935,
+      "lon": -74.523131,
+      "cod_dpto": "25",
+      "nom_mpio": "VIOTÁ"
+    },
+    "25885": {
+      "lat": 5.459272,
+      "lon": -74.33806,
+      "cod_dpto": "25",
+      "nom_mpio": "YACOPÍ"
+    },
+    "25898": {
+      "lat": 4.759932,
+      "lon": -74.379566,
+      "cod_dpto": "25",
+      "nom_mpio": "ZIPACÓN"
+    },
+    "25899": {
+      "lat": 5.025477,
+      "lon": -73.994444,
+      "cod_dpto": "25",
+      "nom_mpio": "ZIPAQUIRÁ"
+    },
+    "27001": {
+      "lat": 5.682166,
+      "lon": -76.638144,
+      "cod_dpto": "27",
+      "nom_mpio": "QUIBDÓ"
+    },
+    "27006": {
+      "lat": 8.512178,
+      "lon": -77.279951,
+      "cod_dpto": "27",
+      "nom_mpio": "ACANDÍ"
+    },
+    "27025": {
+      "lat": 5.516221,
+      "lon": -76.974373,
+      "cod_dpto": "27",
+      "nom_mpio": "ALTO BAUDÓ"
+    },
+    "27050": {
+      "lat": 5.531419,
+      "lon": -76.635674,
+      "cod_dpto": "27",
+      "nom_mpio": "ATRATO"
+    },
+    "27073": {
+      "lat": 5.409681,
+      "lon": -76.416063,
+      "cod_dpto": "27",
+      "nom_mpio": "BAGADÓ"
+    },
+    "27075": {
+      "lat": 6.222807,
+      "lon": -77.401359,
+      "cod_dpto": "27",
+      "nom_mpio": "BAHÍA SOLANO"
+    },
+    "27077": {
+      "lat": 4.954576,
+      "lon": -77.365717,
+      "cod_dpto": "27",
+      "nom_mpio": "BAJO BAUDÓ"
+    },
+    "27099": {
+      "lat": 6.559708,
+      "lon": -76.886773,
+      "cod_dpto": "27",
+      "nom_mpio": "BOJAYÁ"
+    },
+    "27135": {
+      "lat": 5.335321,
+      "lon": -76.726844,
+      "cod_dpto": "27",
+      "nom_mpio": "EL CANTÓN DEL SAN PABLO"
+    },
+    "27150": {
+      "lat": 7.158294,
+      "lon": -76.970798,
+      "cod_dpto": "27",
+      "nom_mpio": "CARMEN DEL DARIÉN"
+    },
+    "27160": {
+      "lat": 5.371373,
+      "lon": -76.607619,
+      "cod_dpto": "27",
+      "nom_mpio": "CÉRTEGUI"
+    },
+    "27205": {
+      "lat": 5.091003,
+      "lon": -76.650683,
+      "cod_dpto": "27",
+      "nom_mpio": "CONDOTO"
+    },
+    "27245": {
+      "lat": 5.899789,
+      "lon": -76.142112,
+      "cod_dpto": "27",
+      "nom_mpio": "EL CARMEN DE ATRATO"
+    },
+    "27250": {
+      "lat": 4.259564,
+      "lon": -77.363702,
+      "cod_dpto": "27",
+      "nom_mpio": "EL LITORAL DEL SAN JUAN"
+    },
+    "27361": {
+      "lat": 5.153946,
+      "lon": -76.68518,
+      "cod_dpto": "27",
+      "nom_mpio": "ISTMINA"
+    },
+    "27372": {
+      "lat": 7.103619,
+      "lon": -77.762751,
+      "cod_dpto": "27",
+      "nom_mpio": "JURADÓ"
+    },
+    "27413": {
+      "lat": 5.49789,
+      "lon": -76.545147,
+      "cod_dpto": "27",
+      "nom_mpio": "LLORÓ"
+    },
+    "27425": {
+      "lat": 5.994935,
+      "lon": -76.783042,
+      "cod_dpto": "27",
+      "nom_mpio": "MEDIO ATRATO"
+    },
+    "27430": {
+      "lat": 5.192471,
+      "lon": -76.950891,
+      "cod_dpto": "27",
+      "nom_mpio": "MEDIO BAUDÓ"
+    },
+    "27450": {
+      "lat": 5.098291,
+      "lon": -76.694409,
+      "cod_dpto": "27",
+      "nom_mpio": "MEDIO SAN JUAN"
+    },
+    "27491": {
+      "lat": 4.956063,
+      "lon": -76.609467,
+      "cod_dpto": "27",
+      "nom_mpio": "NÓVITA"
+    },
+    "27493": {
+      "lat": 7.3719,
+      "lon": -76.71727,
+      "cod_dpto": "27",
+      "nom_mpio": "NUEVO BELÉN DE BAJIRÁ"
+    },
+    "27495": {
+      "lat": 5.709812,
+      "lon": -77.265507,
+      "cod_dpto": "27",
+      "nom_mpio": "NUQUÍ"
+    },
+    "27580": {
+      "lat": 5.1863,
+      "lon": -76.472925,
+      "cod_dpto": "27",
+      "nom_mpio": "RÍO IRÓ"
+    },
+    "27600": {
+      "lat": 5.483667,
+      "lon": -76.740684,
+      "cod_dpto": "27",
+      "nom_mpio": "RÍO QUITO"
+    },
+    "27615": {
+      "lat": 7.436704,
+      "lon": -77.113156,
+      "cod_dpto": "27",
+      "nom_mpio": "RIOSUCIO"
+    },
+    "27660": {
+      "lat": 4.896954,
+      "lon": -76.234227,
+      "cod_dpto": "27",
+      "nom_mpio": "SAN JOSÉ DEL PALMAR"
+    },
+    "27745": {
+      "lat": 4.65262,
+      "lon": -76.643453,
+      "cod_dpto": "27",
+      "nom_mpio": "SIPÍ"
+    },
+    "27787": {
+      "lat": 5.264873,
+      "lon": -76.558571,
+      "cod_dpto": "27",
+      "nom_mpio": "TADÓ"
+    },
+    "27800": {
+      "lat": 8.04406,
+      "lon": -77.092538,
+      "cod_dpto": "27",
+      "nom_mpio": "UNGUÍA"
+    },
+    "27810": {
+      "lat": 5.281108,
+      "lon": -76.630143,
+      "cod_dpto": "27",
+      "nom_mpio": "UNIÓN PANAMERICANA"
+    },
+    "41001": {
+      "lat": 2.935432,
+      "lon": -75.277327,
+      "cod_dpto": "41",
+      "nom_mpio": "NEIVA"
+    },
+    "41006": {
+      "lat": 1.805173,
+      "lon": -75.888706,
+      "cod_dpto": "41",
+      "nom_mpio": "ACEVEDO"
+    },
+    "41013": {
+      "lat": 2.25987,
+      "lon": -75.772022,
+      "cod_dpto": "41",
+      "nom_mpio": "AGRADO"
+    },
+    "41016": {
+      "lat": 3.223996,
+      "lon": -75.239017,
+      "cod_dpto": "41",
+      "nom_mpio": "AIPE"
+    },
+    "41020": {
+      "lat": 2.521674,
+      "lon": -75.315389,
+      "cod_dpto": "41",
+      "nom_mpio": "ALGECIRAS"
+    },
+    "41026": {
+      "lat": 2.063841,
+      "lon": -75.788471,
+      "cod_dpto": "41",
+      "nom_mpio": "ALTAMIRA"
+    },
+    "41078": {
+      "lat": 3.152204,
+      "lon": -75.054843,
+      "cod_dpto": "41",
+      "nom_mpio": "BARAYA"
+    },
+    "41132": {
+      "lat": 2.686767,
+      "lon": -75.325748,
+      "cod_dpto": "41",
+      "nom_mpio": "CAMPOALEGRE"
+    },
+    "41206": {
+      "lat": 3.376745,
+      "lon": -74.802815,
+      "cod_dpto": "41",
+      "nom_mpio": "COLOMBIA"
+    },
+    "41244": {
+      "lat": 2.012854,
+      "lon": -75.938301,
+      "cod_dpto": "41",
+      "nom_mpio": "ELÍAS"
+    },
+    "41298": {
+      "lat": 2.196493,
+      "lon": -75.627057,
+      "cod_dpto": "41",
+      "nom_mpio": "GARZÓN"
+    },
+    "41306": {
+      "lat": 2.384031,
+      "lon": -75.547681,
+      "cod_dpto": "41",
+      "nom_mpio": "GIGANTE"
+    },
+    "41319": {
+      "lat": 2.02426,
+      "lon": -75.757185,
+      "cod_dpto": "41",
+      "nom_mpio": "GUADALUPE"
+    },
+    "41349": {
+      "lat": 2.580812,
+      "lon": -75.447697,
+      "cod_dpto": "41",
+      "nom_mpio": "HOBO"
+    },
+    "41357": {
+      "lat": 2.649359,
+      "lon": -75.634497,
+      "cod_dpto": "41",
+      "nom_mpio": "ÍQUIRA"
+    },
+    "41359": {
+      "lat": 1.929467,
+      "lon": -76.217637,
+      "cod_dpto": "41",
+      "nom_mpio": "ISNOS"
+    },
+    "41378": {
+      "lat": 2.198496,
+      "lon": -75.979763,
+      "cod_dpto": "41",
+      "nom_mpio": "LA ARGENTINA"
+    },
+    "41396": {
+      "lat": 2.389263,
+      "lon": -75.891254,
+      "cod_dpto": "41",
+      "nom_mpio": "LA PLATA"
+    },
+    "41483": {
+      "lat": 2.5451,
+      "lon": -75.808756,
+      "cod_dpto": "41",
+      "nom_mpio": "NÁTAGA"
+    },
+    "41503": {
+      "lat": 2.025088,
+      "lon": -75.995165,
+      "cod_dpto": "41",
+      "nom_mpio": "OPORAPA"
+    },
+    "41518": {
+      "lat": 2.449651,
+      "lon": -75.773158,
+      "cod_dpto": "41",
+      "nom_mpio": "PAICOL"
+    },
+    "41524": {
+      "lat": 2.889649,
+      "lon": -75.435296,
+      "cod_dpto": "41",
+      "nom_mpio": "PALERMO"
+    },
+    "41530": {
+      "lat": 1.723725,
+      "lon": -76.133251,
+      "cod_dpto": "41",
+      "nom_mpio": "PALESTINA"
+    },
+    "41548": {
+      "lat": 2.266618,
+      "lon": -75.804544,
+      "cod_dpto": "41",
+      "nom_mpio": "PITAL"
+    },
+    "41551": {
+      "lat": 1.852631,
+      "lon": -76.049441,
+      "cod_dpto": "41",
+      "nom_mpio": "PITALITO"
+    },
+    "41615": {
+      "lat": 2.777586,
+      "lon": -75.258753,
+      "cod_dpto": "41",
+      "nom_mpio": "RIVERA"
+    },
+    "41660": {
+      "lat": 1.9934,
+      "lon": -76.044747,
+      "cod_dpto": "41",
+      "nom_mpio": "SALADOBLANCO"
+    },
+    "41668": {
+      "lat": 1.881081,
+      "lon": -76.27036,
+      "cod_dpto": "41",
+      "nom_mpio": "SAN AGUSTÍN"
+    },
+    "41676": {
+      "lat": 2.939603,
+      "lon": -75.586223,
+      "cod_dpto": "41",
+      "nom_mpio": "SANTA MARÍA"
+    },
+    "41770": {
+      "lat": 1.976051,
+      "lon": -75.79525,
+      "cod_dpto": "41",
+      "nom_mpio": "SUAZA"
+    },
+    "41791": {
+      "lat": 2.111325,
+      "lon": -75.823976,
+      "cod_dpto": "41",
+      "nom_mpio": "TARQUI"
+    },
+    "41797": {
+      "lat": 2.486364,
+      "lon": -75.730271,
+      "cod_dpto": "41",
+      "nom_mpio": "TESALIA"
+    },
+    "41799": {
+      "lat": 3.067538,
+      "lon": -75.138773,
+      "cod_dpto": "41",
+      "nom_mpio": "TELLO"
+    },
+    "41801": {
+      "lat": 2.740968,
+      "lon": -75.567034,
+      "cod_dpto": "41",
+      "nom_mpio": "TERUEL"
+    },
+    "41807": {
+      "lat": 1.974539,
+      "lon": -75.932167,
+      "cod_dpto": "41",
+      "nom_mpio": "TIMANÁ"
+    },
+    "41872": {
+      "lat": 3.218822,
+      "lon": -75.217174,
+      "cod_dpto": "41",
+      "nom_mpio": "VILLAVIEJA"
+    },
+    "41885": {
+      "lat": 2.664694,
+      "lon": -75.518023,
+      "cod_dpto": "41",
+      "nom_mpio": "YAGUARÁ"
+    },
+    "44001": {
+      "lat": 11.528588,
+      "lon": -72.911795,
+      "cod_dpto": "44",
+      "nom_mpio": "RIOHACHA"
+    },
+    "44035": {
+      "lat": 11.151628,
+      "lon": -72.61232,
+      "cod_dpto": "44",
+      "nom_mpio": "ALBANIA"
+    },
+    "44078": {
+      "lat": 10.958669,
+      "lon": -72.793639,
+      "cod_dpto": "44",
+      "nom_mpio": "BARRANCAS"
+    },
+    "44090": {
+      "lat": 11.27155,
+      "lon": -73.307598,
+      "cod_dpto": "44",
+      "nom_mpio": "DIBULLA"
+    },
+    "44098": {
+      "lat": 10.898414,
+      "lon": -72.887405,
+      "cod_dpto": "44",
+      "nom_mpio": "DISTRACCIÓN"
+    },
+    "44110": {
+      "lat": 10.653505,
+      "lon": -72.92673,
+      "cod_dpto": "44",
+      "nom_mpio": "EL MOLINO"
+    },
+    "44279": {
+      "lat": 10.886734,
+      "lon": -72.846319,
+      "cod_dpto": "44",
+      "nom_mpio": "FONSECA"
+    },
+    "44378": {
+      "lat": 11.068864,
+      "lon": -72.75904,
+      "cod_dpto": "44",
+      "nom_mpio": "HATONUEVO"
+    },
+    "44420": {
+      "lat": 10.511862,
+      "lon": -73.072638,
+      "cod_dpto": "44",
+      "nom_mpio": "LA JAGUA DEL PILAR"
+    },
+    "44430": {
+      "lat": 11.378535,
+      "lon": -72.242738,
+      "cod_dpto": "44",
+      "nom_mpio": "MAICAO"
+    },
+    "44560": {
+      "lat": 11.773767,
+      "lon": -72.438739,
+      "cod_dpto": "44",
+      "nom_mpio": "MANAURE"
+    },
+    "44650": {
+      "lat": 10.769546,
+      "lon": -73.000629,
+      "cod_dpto": "44",
+      "nom_mpio": "SAN JUAN DEL CESAR"
+    },
+    "44847": {
+      "lat": 11.711904,
+      "lon": -72.265906,
+      "cod_dpto": "44",
+      "nom_mpio": "URIBIA"
+    },
+    "44855": {
+      "lat": 10.560169,
+      "lon": -73.012507,
+      "cod_dpto": "44",
+      "nom_mpio": "URUMITA"
+    },
+    "44874": {
+      "lat": 10.608774,
+      "lon": -72.977583,
+      "cod_dpto": "44",
+      "nom_mpio": "VILLANUEVA"
+    },
+    "47001": {
+      "lat": 11.204679,
+      "lon": -74.199829,
+      "cod_dpto": "47",
+      "nom_mpio": "SANTA MARTA"
+    },
+    "47030": {
+      "lat": 10.188059,
+      "lon": -74.061132,
+      "cod_dpto": "47",
+      "nom_mpio": "ALGARROBO"
+    },
+    "47053": {
+      "lat": 10.589791,
+      "lon": -74.186702,
+      "cod_dpto": "47",
+      "nom_mpio": "ARACATACA"
+    },
+    "47058": {
+      "lat": 9.847047,
+      "lon": -74.236515,
+      "cod_dpto": "47",
+      "nom_mpio": "ARIGUANÍ"
+    },
+    "47161": {
+      "lat": 10.325531,
+      "lon": -74.868474,
+      "cod_dpto": "47",
+      "nom_mpio": "CERRO DE SAN ANTONIO"
+    },
+    "47170": {
+      "lat": 10.026631,
+      "lon": -74.622242,
+      "cod_dpto": "47",
+      "nom_mpio": "CHIVOLO"
+    },
+    "47189": {
+      "lat": 11.006654,
+      "lon": -74.241286,
+      "cod_dpto": "47",
+      "nom_mpio": "CIÉNAGA"
+    },
+    "47205": {
+      "lat": 10.257314,
+      "lon": -74.83303,
+      "cod_dpto": "47",
+      "nom_mpio": "CONCORDIA"
+    },
+    "47245": {
+      "lat": 9.008503,
+      "lon": -73.97437,
+      "cod_dpto": "47",
+      "nom_mpio": "EL BANCO"
+    },
+    "47258": {
+      "lat": 10.402781,
+      "lon": -74.823094,
+      "cod_dpto": "47",
+      "nom_mpio": "EL PIÑÓN"
+    },
+    "47268": {
+      "lat": 10.610488,
+      "lon": -74.268444,
+      "cod_dpto": "47",
+      "nom_mpio": "EL RETÉN"
+    },
+    "47288": {
+      "lat": 10.514146,
+      "lon": -74.191453,
+      "cod_dpto": "47",
+      "nom_mpio": "FUNDACIÓN"
+    },
+    "47318": {
+      "lat": 9.144354,
+      "lon": -74.223689,
+      "cod_dpto": "47",
+      "nom_mpio": "GUAMAL"
+    },
+    "47460": {
+      "lat": 9.80186,
+      "lon": -74.391841,
+      "cod_dpto": "47",
+      "nom_mpio": "NUEVA GRANADA"
+    },
+    "47541": {
+      "lat": 10.18825,
+      "lon": -74.9154,
+      "cod_dpto": "47",
+      "nom_mpio": "PEDRAZA"
+    },
+    "47545": {
+      "lat": 9.331922,
+      "lon": -74.459034,
+      "cod_dpto": "47",
+      "nom_mpio": "PIJIÑO DEL CARMEN"
+    },
+    "47551": {
+      "lat": 10.460707,
+      "lon": -74.613312,
+      "cod_dpto": "47",
+      "nom_mpio": "PIVIJAY"
+    },
+    "47555": {
+      "lat": 9.796713,
+      "lon": -74.784549,
+      "cod_dpto": "47",
+      "nom_mpio": "PLATO"
+    },
+    "47570": {
+      "lat": 10.994766,
+      "lon": -74.28253,
+      "cod_dpto": "47",
+      "nom_mpio": "PUEBLOVIEJO"
+    },
+    "47605": {
+      "lat": 10.701952,
+      "lon": -74.716172,
+      "cod_dpto": "47",
+      "nom_mpio": "REMOLINO"
+    },
+    "47660": {
+      "lat": 10.032536,
+      "lon": -74.213946,
+      "cod_dpto": "47",
+      "nom_mpio": "SABANAS DE SAN ÁNGEL"
+    },
+    "47675": {
+      "lat": 10.491229,
+      "lon": -74.794189,
+      "cod_dpto": "47",
+      "nom_mpio": "SALAMINA"
+    },
+    "47692": {
+      "lat": 9.241656,
+      "lon": -74.351498,
+      "cod_dpto": "47",
+      "nom_mpio": "SAN SEBASTIÁN DE BUENAVISTA"
+    },
+    "47703": {
+      "lat": 9.245061,
+      "lon": -74.498992,
+      "cod_dpto": "47",
+      "nom_mpio": "SAN ZENÓN"
+    },
+    "47707": {
+      "lat": 9.324294,
+      "lon": -74.566845,
+      "cod_dpto": "47",
+      "nom_mpio": "SANTA ANA"
+    },
+    "47720": {
+      "lat": 9.432263,
+      "lon": -74.704667,
+      "cod_dpto": "47",
+      "nom_mpio": "SANTA BÁRBARA DE PINTO"
+    },
+    "47745": {
+      "lat": 10.775285,
+      "lon": -74.720021,
+      "cod_dpto": "47",
+      "nom_mpio": "SITIONUEVO"
+    },
+    "47798": {
+      "lat": 9.898273,
+      "lon": -74.859783,
+      "cod_dpto": "47",
+      "nom_mpio": "TENERIFE"
+    },
+    "47960": {
+      "lat": 10.168297,
+      "lon": -74.716878,
+      "cod_dpto": "47",
+      "nom_mpio": "ZAPAYÁN"
+    },
+    "47980": {
+      "lat": 10.763024,
+      "lon": -74.140091,
+      "cod_dpto": "47",
+      "nom_mpio": "ZONA BANANERA"
+    },
+    "50001": {
+      "lat": 4.126369,
+      "lon": -73.622601,
+      "cod_dpto": "50",
+      "nom_mpio": "VILLAVICENCIO"
+    },
+    "50006": {
+      "lat": 3.990413,
+      "lon": -73.766034,
+      "cod_dpto": "50",
+      "nom_mpio": "ACACÍAS"
+    },
+    "50110": {
+      "lat": 4.566225,
+      "lon": -72.961083,
+      "cod_dpto": "50",
+      "nom_mpio": "BARRANCA DE UPÍA"
+    },
+    "50124": {
+      "lat": 4.286705,
+      "lon": -72.791768,
+      "cod_dpto": "50",
+      "nom_mpio": "CABUYARO"
+    },
+    "50150": {
+      "lat": 3.830005,
+      "lon": -73.687302,
+      "cod_dpto": "50",
+      "nom_mpio": "CASTILLA LA NUEVA"
+    },
+    "50223": {
+      "lat": 3.793653,
+      "lon": -73.837999,
+      "cod_dpto": "50",
+      "nom_mpio": "CUBARRAL"
+    },
+    "50226": {
+      "lat": 4.270042,
+      "lon": -73.487052,
+      "cod_dpto": "50",
+      "nom_mpio": "CUMARAL"
+    },
+    "50245": {
+      "lat": 4.352665,
+      "lon": -73.713325,
+      "cod_dpto": "50",
+      "nom_mpio": "EL CALVARIO"
+    },
+    "50251": {
+      "lat": 3.563907,
+      "lon": -73.794225,
+      "cod_dpto": "50",
+      "nom_mpio": "EL CASTILLO"
+    },
+    "50270": {
+      "lat": 3.739984,
+      "lon": -73.835264,
+      "cod_dpto": "50",
+      "nom_mpio": "EL DORADO"
+    },
+    "50287": {
+      "lat": 3.462875,
+      "lon": -73.618121,
+      "cod_dpto": "50",
+      "nom_mpio": "FUENTE DE ORO"
+    },
+    "50313": {
+      "lat": 3.547147,
+      "lon": -73.705815,
+      "cod_dpto": "50",
+      "nom_mpio": "GRANADA"
+    },
+    "50318": {
+      "lat": 3.879657,
+      "lon": -73.768815,
+      "cod_dpto": "50",
+      "nom_mpio": "GUAMAL"
+    },
+    "50325": {
+      "lat": 2.896617,
+      "lon": -72.135509,
+      "cod_dpto": "50",
+      "nom_mpio": "MAPIRIPÁN"
+    },
+    "50330": {
+      "lat": 3.382732,
+      "lon": -74.044328,
+      "cod_dpto": "50",
+      "nom_mpio": "MESETAS"
+    },
+    "50350": {
+      "lat": 2.177143,
+      "lon": -73.78661,
+      "cod_dpto": "50",
+      "nom_mpio": "LA MACARENA"
+    },
+    "50370": {
+      "lat": 3.239634,
+      "lon": -74.351508,
+      "cod_dpto": "50",
+      "nom_mpio": "URIBE"
+    },
+    "50400": {
+      "lat": 3.525115,
+      "lon": -74.023514,
+      "cod_dpto": "50",
+      "nom_mpio": "LEJANÍAS"
+    },
+    "50450": {
+      "lat": 2.624006,
+      "lon": -72.760209,
+      "cod_dpto": "50",
+      "nom_mpio": "PUERTO CONCORDIA"
+    },
+    "50568": {
+      "lat": 4.314905,
+      "lon": -72.087649,
+      "cod_dpto": "50",
+      "nom_mpio": "PUERTO GAITÁN"
+    },
+    "50573": {
+      "lat": 4.09349,
+      "lon": -72.957324,
+      "cod_dpto": "50",
+      "nom_mpio": "PUERTO LÓPEZ"
+    },
+    "50577": {
+      "lat": 3.272117,
+      "lon": -73.37385,
+      "cod_dpto": "50",
+      "nom_mpio": "PUERTO LLERAS"
+    },
+    "50590": {
+      "lat": 2.939621,
+      "lon": -73.206314,
+      "cod_dpto": "50",
+      "nom_mpio": "PUERTO RICO"
+    },
+    "50606": {
+      "lat": 4.259556,
+      "lon": -73.565408,
+      "cod_dpto": "50",
+      "nom_mpio": "RESTREPO"
+    },
+    "50680": {
+      "lat": 3.71065,
+      "lon": -73.242253,
+      "cod_dpto": "50",
+      "nom_mpio": "SAN CARLOS DE GUAROA"
+    },
+    "50683": {
+      "lat": 3.373728,
+      "lon": -73.875832,
+      "cod_dpto": "50",
+      "nom_mpio": "SAN JUAN DE ARAMA"
+    },
+    "50686": {
+      "lat": 4.458181,
+      "lon": -73.676699,
+      "cod_dpto": "50",
+      "nom_mpio": "SAN JUANITO"
+    },
+    "50689": {
+      "lat": 3.701899,
+      "lon": -73.695812,
+      "cod_dpto": "50",
+      "nom_mpio": "SAN MARTÍN"
+    },
+    "50711": {
+      "lat": 3.125579,
+      "lon": -73.750966,
+      "cod_dpto": "50",
+      "nom_mpio": "VISTAHERMOSA"
+    },
+    "52001": {
+      "lat": 1.212352,
+      "lon": -77.278795,
+      "cod_dpto": "52",
+      "nom_mpio": "PASTO"
+    },
+    "52019": {
+      "lat": 1.474978,
+      "lon": -77.080712,
+      "cod_dpto": "52",
+      "nom_mpio": "ALBÁN"
+    },
+    "52022": {
+      "lat": 0.882381,
+      "lon": -77.700564,
+      "cod_dpto": "52",
+      "nom_mpio": "ALDANA"
+    },
+    "52036": {
+      "lat": 1.263276,
+      "lon": -77.514512,
+      "cod_dpto": "52",
+      "nom_mpio": "ANCUYA"
+    },
+    "52051": {
+      "lat": 1.503418,
+      "lon": -77.135467,
+      "cod_dpto": "52",
+      "nom_mpio": "ARBOLEDA"
+    },
+    "52079": {
+      "lat": 1.671733,
+      "lon": -78.13765,
+      "cod_dpto": "52",
+      "nom_mpio": "BARBACOAS"
+    },
+    "52083": {
+      "lat": 1.595681,
+      "lon": -77.015619,
+      "cod_dpto": "52",
+      "nom_mpio": "BELÉN"
+    },
+    "52110": {
+      "lat": 1.381453,
+      "lon": -77.156463,
+      "cod_dpto": "52",
+      "nom_mpio": "BUESACO"
+    },
+    "52203": {
+      "lat": 1.643878,
+      "lon": -77.019777,
+      "cod_dpto": "52",
+      "nom_mpio": "COLÓN"
+    },
+    "52207": {
+      "lat": 1.207854,
+      "lon": -77.466136,
+      "cod_dpto": "52",
+      "nom_mpio": "CONSACÁ"
+    },
+    "52210": {
+      "lat": 0.910458,
+      "lon": -77.549409,
+      "cod_dpto": "52",
+      "nom_mpio": "CONTADERO"
+    },
+    "52215": {
+      "lat": 0.854564,
+      "lon": -77.517897,
+      "cod_dpto": "52",
+      "nom_mpio": "CÓRDOBA"
+    },
+    "52224": {
+      "lat": 0.862978,
+      "lon": -77.728947,
+      "cod_dpto": "52",
+      "nom_mpio": "CUASPUD CARLOSAMA"
+    },
+    "52227": {
+      "lat": 0.906367,
+      "lon": -77.792505,
+      "cod_dpto": "52",
+      "nom_mpio": "CUMBAL"
+    },
+    "52233": {
+      "lat": 1.647163,
+      "lon": -77.578616,
+      "cod_dpto": "52",
+      "nom_mpio": "CUMBITARA"
+    },
+    "52240": {
+      "lat": 1.360545,
+      "lon": -77.281869,
+      "cod_dpto": "52",
+      "nom_mpio": "CHACHAGÜÍ"
+    },
+    "52250": {
+      "lat": 2.479688,
+      "lon": -78.110217,
+      "cod_dpto": "52",
+      "nom_mpio": "EL CHARCO"
+    },
+    "52254": {
+      "lat": 1.453567,
+      "lon": -77.438522,
+      "cod_dpto": "52",
+      "nom_mpio": "EL PEÑOL"
+    },
+    "52256": {
+      "lat": 1.745309,
+      "lon": -77.33417,
+      "cod_dpto": "52",
+      "nom_mpio": "EL ROSARIO"
+    },
+    "52258": {
+      "lat": 1.427277,
+      "lon": -77.097101,
+      "cod_dpto": "52",
+      "nom_mpio": "EL TABLÓN DE GÓMEZ"
+    },
+    "52260": {
+      "lat": 1.407913,
+      "lon": -77.390772,
+      "cod_dpto": "52",
+      "nom_mpio": "EL TAMBO"
+    },
+    "52287": {
+      "lat": 1.001159,
+      "lon": -77.448913,
+      "cod_dpto": "52",
+      "nom_mpio": "FUNES"
+    },
+    "52317": {
+      "lat": 0.959744,
+      "lon": -77.731589,
+      "cod_dpto": "52",
+      "nom_mpio": "GUACHUCAL"
+    },
+    "52320": {
+      "lat": 1.129574,
+      "lon": -77.549824,
+      "cod_dpto": "52",
+      "nom_mpio": "GUAITARILLA"
+    },
+    "52323": {
+      "lat": 0.919652,
+      "lon": -77.568701,
+      "cod_dpto": "52",
+      "nom_mpio": "GUALMATÁN"
+    },
+    "52352": {
+      "lat": 0.96952,
+      "lon": -77.521227,
+      "cod_dpto": "52",
+      "nom_mpio": "ILES"
+    },
+    "52354": {
+      "lat": 1.05506,
+      "lon": -77.496339,
+      "cod_dpto": "52",
+      "nom_mpio": "IMUÉS"
+    },
+    "52356": {
+      "lat": 0.827732,
+      "lon": -77.646367,
+      "cod_dpto": "52",
+      "nom_mpio": "IPIALES"
+    },
+    "52378": {
+      "lat": 1.601318,
+      "lon": -76.970504,
+      "cod_dpto": "52",
+      "nom_mpio": "LA CRUZ"
+    },
+    "52381": {
+      "lat": 1.29753,
+      "lon": -77.402882,
+      "cod_dpto": "52",
+      "nom_mpio": "LA FLORIDA"
+    },
+    "52385": {
+      "lat": 1.472892,
+      "lon": -77.58091,
+      "cod_dpto": "52",
+      "nom_mpio": "LA LLANADA"
+    },
+    "52390": {
+      "lat": 2.398999,
+      "lon": -78.189725,
+      "cod_dpto": "52",
+      "nom_mpio": "LA TOLA"
+    },
+    "52399": {
+      "lat": 1.600219,
+      "lon": -77.131316,
+      "cod_dpto": "52",
+      "nom_mpio": "LA UNIÓN"
+    },
+    "52405": {
+      "lat": 1.934453,
+      "lon": -77.306135,
+      "cod_dpto": "52",
+      "nom_mpio": "LEIVA"
+    },
+    "52411": {
+      "lat": 1.350814,
+      "lon": -77.523953,
+      "cod_dpto": "52",
+      "nom_mpio": "LINARES"
+    },
+    "52418": {
+      "lat": 1.494587,
+      "lon": -77.521303,
+      "cod_dpto": "52",
+      "nom_mpio": "LOS ANDES"
+    },
+    "52427": {
+      "lat": 1.765633,
+      "lon": -78.182924,
+      "cod_dpto": "52",
+      "nom_mpio": "MAGÜÍ"
+    },
+    "52435": {
+      "lat": 1.141037,
+      "lon": -77.864549,
+      "cod_dpto": "52",
+      "nom_mpio": "MALLAMA"
+    },
+    "52473": {
+      "lat": 2.507139,
+      "lon": -78.452992,
+      "cod_dpto": "52",
+      "nom_mpio": "MOSQUERA"
+    },
+    "52480": {
+      "lat": 1.288979,
+      "lon": -77.357972,
+      "cod_dpto": "52",
+      "nom_mpio": "NARIÑO"
+    },
+    "52490": {
+      "lat": 2.347457,
+      "lon": -78.325814,
+      "cod_dpto": "52",
+      "nom_mpio": "OLAYA HERRERA"
+    },
+    "52506": {
+      "lat": 1.058433,
+      "lon": -77.566082,
+      "cod_dpto": "52",
+      "nom_mpio": "OSPINA"
+    },
+    "52520": {
+      "lat": 2.040629,
+      "lon": -78.658361,
+      "cod_dpto": "52",
+      "nom_mpio": "FRANCISCO PIZARRO"
+    },
+    "52540": {
+      "lat": 1.627196,
+      "lon": -77.458686,
+      "cod_dpto": "52",
+      "nom_mpio": "POLICARPA"
+    },
+    "52560": {
+      "lat": 0.806639,
+      "lon": -77.573003,
+      "cod_dpto": "52",
+      "nom_mpio": "POTOSÍ"
+    },
+    "52565": {
+      "lat": 1.237814,
+      "lon": -77.596794,
+      "cod_dpto": "52",
+      "nom_mpio": "PROVIDENCIA"
+    },
+    "52573": {
+      "lat": 0.885125,
+      "lon": -77.504211,
+      "cod_dpto": "52",
+      "nom_mpio": "PUERRES"
+    },
+    "52585": {
+      "lat": 0.870442,
+      "lon": -77.636042,
+      "cod_dpto": "52",
+      "nom_mpio": "PUPIALES"
+    },
+    "52612": {
+      "lat": 1.212492,
+      "lon": -77.995153,
+      "cod_dpto": "52",
+      "nom_mpio": "RICAURTE"
+    },
+    "52621": {
+      "lat": 1.697492,
+      "lon": -78.245716,
+      "cod_dpto": "52",
+      "nom_mpio": "ROBERTO PAYÁN"
+    },
+    "52678": {
+      "lat": 1.335438,
+      "lon": -77.594341,
+      "cod_dpto": "52",
+      "nom_mpio": "SAMANIEGO"
+    },
+    "52683": {
+      "lat": 1.283438,
+      "lon": -77.47313,
+      "cod_dpto": "52",
+      "nom_mpio": "SANDONÁ"
+    },
+    "52685": {
+      "lat": 1.513762,
+      "lon": -77.0475,
+      "cod_dpto": "52",
+      "nom_mpio": "SAN BERNARDO"
+    },
+    "52687": {
+      "lat": 1.503362,
+      "lon": -77.21542,
+      "cod_dpto": "52",
+      "nom_mpio": "SAN LORENZO"
+    },
+    "52693": {
+      "lat": 1.669429,
+      "lon": -77.013984,
+      "cod_dpto": "52",
+      "nom_mpio": "SAN PABLO"
+    },
+    "52694": {
+      "lat": 1.551572,
+      "lon": -77.11941,
+      "cod_dpto": "52",
+      "nom_mpio": "SAN PEDRO DE CARTAGO"
+    },
+    "52696": {
+      "lat": 2.449653,
+      "lon": -77.979916,
+      "cod_dpto": "52",
+      "nom_mpio": "SANTA BÁRBARA"
+    },
+    "52699": {
+      "lat": 1.222589,
+      "lon": -77.677035,
+      "cod_dpto": "52",
+      "nom_mpio": "SANTACRUZ"
+    },
+    "52720": {
+      "lat": 1.037536,
+      "lon": -77.62028,
+      "cod_dpto": "52",
+      "nom_mpio": "SAPUYES"
+    },
+    "52786": {
+      "lat": 1.570358,
+      "lon": -77.2808,
+      "cod_dpto": "52",
+      "nom_mpio": "TAMINANGO"
+    },
+    "52788": {
+      "lat": 1.09482,
+      "lon": -77.393735,
+      "cod_dpto": "52",
+      "nom_mpio": "TANGUA"
+    },
+    "52835": {
+      "lat": 1.807399,
+      "lon": -78.764073,
+      "cod_dpto": "52",
+      "nom_mpio": "SAN ANDRÉS DE TUMACO"
+    },
+    "52838": {
+      "lat": 1.085044,
+      "lon": -77.61672,
+      "cod_dpto": "52",
+      "nom_mpio": "TÚQUERRES"
+    },
+    "52885": {
+      "lat": 1.115937,
+      "lon": -77.400169,
+      "cod_dpto": "52",
+      "nom_mpio": "YACUANQUER"
+    },
+    "54001": {
+      "lat": 7.905725,
+      "lon": -72.508178,
+      "cod_dpto": "54",
+      "nom_mpio": "SAN JOSÉ DE CÚCUTA"
+    },
+    "54003": {
+      "lat": 8.081616,
+      "lon": -73.221722,
+      "cod_dpto": "54",
+      "nom_mpio": "ÁBREGO"
+    },
+    "54051": {
+      "lat": 7.642985,
+      "lon": -72.798952,
+      "cod_dpto": "54",
+      "nom_mpio": "ARBOLEDAS"
+    },
+    "54099": {
+      "lat": 7.612192,
+      "lon": -72.64701,
+      "cod_dpto": "54",
+      "nom_mpio": "BOCHALEMA"
+    },
+    "54109": {
+      "lat": 8.041299,
+      "lon": -72.868231,
+      "cod_dpto": "54",
+      "nom_mpio": "BUCARASICA"
+    },
+    "54125": {
+      "lat": 7.268705,
+      "lon": -72.642059,
+      "cod_dpto": "54",
+      "nom_mpio": "CÁCOTA"
+    },
+    "54128": {
+      "lat": 7.741248,
+      "lon": -73.048983,
+      "cod_dpto": "54",
+      "nom_mpio": "CÁCHIRA"
+    },
+    "54172": {
+      "lat": 7.603112,
+      "lon": -72.601162,
+      "cod_dpto": "54",
+      "nom_mpio": "CHINÁCOTA"
+    },
+    "54174": {
+      "lat": 7.138187,
+      "lon": -72.665468,
+      "cod_dpto": "54",
+      "nom_mpio": "CHITAGÁ"
+    },
+    "54206": {
+      "lat": 8.470374,
+      "lon": -73.3372,
+      "cod_dpto": "54",
+      "nom_mpio": "CONVENCIÓN"
+    },
+    "54223": {
+      "lat": 7.539633,
+      "lon": -72.772816,
+      "cod_dpto": "54",
+      "nom_mpio": "CUCUTILLA"
+    },
+    "54239": {
+      "lat": 7.714804,
+      "lon": -72.658491,
+      "cod_dpto": "54",
+      "nom_mpio": "DURANIA"
+    },
+    "54245": {
+      "lat": 8.510579,
+      "lon": -73.446687,
+      "cod_dpto": "54",
+      "nom_mpio": "EL CARMEN"
+    },
+    "54250": {
+      "lat": 8.574281,
+      "lon": -73.09614,
+      "cod_dpto": "54",
+      "nom_mpio": "EL TARRA"
+    },
+    "54261": {
+      "lat": 7.938572,
+      "lon": -72.604717,
+      "cod_dpto": "54",
+      "nom_mpio": "EL ZULIA"
+    },
+    "54313": {
+      "lat": 7.916946,
+      "lon": -72.787233,
+      "cod_dpto": "54",
+      "nom_mpio": "GRAMALOTE"
+    },
+    "54344": {
+      "lat": 8.321506,
+      "lon": -73.145997,
+      "cod_dpto": "54",
+      "nom_mpio": "HACARÍ"
+    },
+    "54347": {
+      "lat": 7.506541,
+      "lon": -72.483519,
+      "cod_dpto": "54",
+      "nom_mpio": "HERRÁN"
+    },
+    "54377": {
+      "lat": 7.298414,
+      "lon": -72.495983,
+      "cod_dpto": "54",
+      "nom_mpio": "LABATECA"
+    },
+    "54385": {
+      "lat": 7.639839,
+      "lon": -73.328126,
+      "cod_dpto": "54",
+      "nom_mpio": "LA ESPERANZA"
+    },
+    "54398": {
+      "lat": 8.21124,
+      "lon": -73.239986,
+      "cod_dpto": "54",
+      "nom_mpio": "LA PLAYA"
+    },
+    "54405": {
+      "lat": 7.833186,
+      "lon": -72.505612,
+      "cod_dpto": "54",
+      "nom_mpio": "LOS PATIOS"
+    },
+    "54418": {
+      "lat": 7.945631,
+      "lon": -72.832376,
+      "cod_dpto": "54",
+      "nom_mpio": "LOURDES"
+    },
+    "54480": {
+      "lat": 7.300469,
+      "lon": -72.747169,
+      "cod_dpto": "54",
+      "nom_mpio": "MUTISCUA"
+    },
+    "54498": {
+      "lat": 8.248574,
+      "lon": -73.35607,
+      "cod_dpto": "54",
+      "nom_mpio": "OCAÑA"
+    },
+    "54518": {
+      "lat": 7.372802,
+      "lon": -72.647714,
+      "cod_dpto": "54",
+      "nom_mpio": "PAMPLONA"
+    },
+    "54520": {
+      "lat": 7.436745,
+      "lon": -72.639111,
+      "cod_dpto": "54",
+      "nom_mpio": "PAMPLONITA"
+    },
+    "54553": {
+      "lat": 8.359993,
+      "lon": -72.411363,
+      "cod_dpto": "54",
+      "nom_mpio": "PUERTO SANTANDER"
+    },
+    "54599": {
+      "lat": 7.577861,
+      "lon": -72.476708,
+      "cod_dpto": "54",
+      "nom_mpio": "RAGONVALIA"
+    },
+    "54660": {
+      "lat": 7.773683,
+      "lon": -72.813064,
+      "cod_dpto": "54",
+      "nom_mpio": "SALAZAR"
+    },
+    "54670": {
+      "lat": 8.40214,
+      "lon": -73.208622,
+      "cod_dpto": "54",
+      "nom_mpio": "SAN CALIXTO"
+    },
+    "54673": {
+      "lat": 7.875695,
+      "lon": -72.625459,
+      "cod_dpto": "54",
+      "nom_mpio": "SAN CAYETANO"
+    },
+    "54680": {
+      "lat": 7.865856,
+      "lon": -72.716203,
+      "cod_dpto": "54",
+      "nom_mpio": "SANTIAGO"
+    },
+    "54720": {
+      "lat": 8.082105,
+      "lon": -72.800577,
+      "cod_dpto": "54",
+      "nom_mpio": "SARDINATA"
+    },
+    "54743": {
+      "lat": 7.204736,
+      "lon": -72.757128,
+      "cod_dpto": "54",
+      "nom_mpio": "SILOS"
+    },
+    "54800": {
+      "lat": 8.438134,
+      "lon": -73.28707,
+      "cod_dpto": "54",
+      "nom_mpio": "TEORAMA"
+    },
+    "54810": {
+      "lat": 8.639891,
+      "lon": -72.734496,
+      "cod_dpto": "54",
+      "nom_mpio": "TIBÚ"
+    },
+    "54820": {
+      "lat": 7.307692,
+      "lon": -72.481915,
+      "cod_dpto": "54",
+      "nom_mpio": "TOLEDO"
+    },
+    "54871": {
+      "lat": 7.914244,
+      "lon": -72.973601,
+      "cod_dpto": "54",
+      "nom_mpio": "VILLA CARO"
+    },
+    "54874": {
+      "lat": 7.847672,
+      "lon": -72.469758,
+      "cod_dpto": "54",
+      "nom_mpio": "VILLA DEL ROSARIO"
+    },
+    "63001": {
+      "lat": 4.53598,
+      "lon": -75.680786,
+      "cod_dpto": "63",
+      "nom_mpio": "ARMENIA"
+    },
+    "63111": {
+      "lat": 4.360029,
+      "lon": -75.739572,
+      "cod_dpto": "63",
+      "nom_mpio": "BUENAVISTA"
+    },
+    "63130": {
+      "lat": 4.520982,
+      "lon": -75.646085,
+      "cod_dpto": "63",
+      "nom_mpio": "CALARCÁ"
+    },
+    "63190": {
+      "lat": 4.617759,
+      "lon": -75.636533,
+      "cod_dpto": "63",
+      "nom_mpio": "CIRCASIA"
+    },
+    "63212": {
+      "lat": 4.392485,
+      "lon": -75.687866,
+      "cod_dpto": "63",
+      "nom_mpio": "CÓRDOBA"
+    },
+    "63272": {
+      "lat": 4.674338,
+      "lon": -75.658387,
+      "cod_dpto": "63",
+      "nom_mpio": "FILANDIA"
+    },
+    "63302": {
+      "lat": 4.206641,
+      "lon": -75.790402,
+      "cod_dpto": "63",
+      "nom_mpio": "GÉNOVA"
+    },
+    "63401": {
+      "lat": 4.453755,
+      "lon": -75.786887,
+      "cod_dpto": "63",
+      "nom_mpio": "LA TEBAIDA"
+    },
+    "63470": {
+      "lat": 4.565057,
+      "lon": -75.749827,
+      "cod_dpto": "63",
+      "nom_mpio": "MONTENEGRO"
+    },
+    "63548": {
+      "lat": 4.335036,
+      "lon": -75.703329,
+      "cod_dpto": "63",
+      "nom_mpio": "PIJAO"
+    },
+    "63594": {
+      "lat": 4.624387,
+      "lon": -75.765074,
+      "cod_dpto": "63",
+      "nom_mpio": "QUIMBAYA"
+    },
+    "63690": {
+      "lat": 4.637157,
+      "lon": -75.570844,
+      "cod_dpto": "63",
+      "nom_mpio": "SALENTO"
+    },
+    "66001": {
+      "lat": 4.804985,
+      "lon": -75.719711,
+      "cod_dpto": "66",
+      "nom_mpio": "PEREIRA"
+    },
+    "66045": {
+      "lat": 5.106526,
+      "lon": -75.942356,
+      "cod_dpto": "66",
+      "nom_mpio": "APÍA"
+    },
+    "66075": {
+      "lat": 4.949096,
+      "lon": -75.958663,
+      "cod_dpto": "66",
+      "nom_mpio": "BALBOA"
+    },
+    "66088": {
+      "lat": 5.200793,
+      "lon": -75.868334,
+      "cod_dpto": "66",
+      "nom_mpio": "BELÉN DE UMBRÍA"
+    },
+    "66170": {
+      "lat": 4.833131,
+      "lon": -75.675371,
+      "cod_dpto": "66",
+      "nom_mpio": "DOSQUEBRADAS"
+    },
+    "66318": {
+      "lat": 5.315367,
+      "lon": -75.799005,
+      "cod_dpto": "66",
+      "nom_mpio": "GUÁTICA"
+    },
+    "66383": {
+      "lat": 5.002787,
+      "lon": -76.0032,
+      "cod_dpto": "66",
+      "nom_mpio": "LA CELIA"
+    },
+    "66400": {
+      "lat": 4.896624,
+      "lon": -75.880394,
+      "cod_dpto": "66",
+      "nom_mpio": "LA VIRGINIA"
+    },
+    "66440": {
+      "lat": 4.935771,
+      "lon": -75.73879,
+      "cod_dpto": "66",
+      "nom_mpio": "MARSELLA"
+    },
+    "66456": {
+      "lat": 5.297039,
+      "lon": -75.882886,
+      "cod_dpto": "66",
+      "nom_mpio": "MISTRATÓ"
+    },
+    "66572": {
+      "lat": 5.222043,
+      "lon": -76.030801,
+      "cod_dpto": "66",
+      "nom_mpio": "PUEBLO RICO"
+    },
+    "66594": {
+      "lat": 5.340456,
+      "lon": -75.730431,
+      "cod_dpto": "66",
+      "nom_mpio": "QUINCHÍA"
+    },
+    "66682": {
+      "lat": 4.876271,
+      "lon": -75.623268,
+      "cod_dpto": "66",
+      "nom_mpio": "SANTA ROSA DE CABAL"
+    },
+    "66687": {
+      "lat": 5.074911,
+      "lon": -75.964628,
+      "cod_dpto": "66",
+      "nom_mpio": "SANTUARIO"
+    },
+    "68001": {
+      "lat": 7.11647,
+      "lon": -73.132562,
+      "cod_dpto": "68",
+      "nom_mpio": "BUCARAMANGA"
+    },
+    "68013": {
+      "lat": 6.162355,
+      "lon": -73.523132,
+      "cod_dpto": "68",
+      "nom_mpio": "AGUADA"
+    },
+    "68020": {
+      "lat": 5.759166,
+      "lon": -73.91336,
+      "cod_dpto": "68",
+      "nom_mpio": "ALBANIA"
+    },
+    "68051": {
+      "lat": 6.694418,
+      "lon": -73.01786,
+      "cod_dpto": "68",
+      "nom_mpio": "ARATOCA"
+    },
+    "68077": {
+      "lat": 5.932531,
+      "lon": -73.615965,
+      "cod_dpto": "68",
+      "nom_mpio": "BARBOSA"
+    },
+    "68079": {
+      "lat": 6.634111,
+      "lon": -73.223047,
+      "cod_dpto": "68",
+      "nom_mpio": "BARICHARA"
+    },
+    "68081": {
+      "lat": 7.064857,
+      "lon": -73.849243,
+      "cod_dpto": "68",
+      "nom_mpio": "BARRANCABERMEJA"
+    },
+    "68092": {
+      "lat": 6.899525,
+      "lon": -73.283669,
+      "cod_dpto": "68",
+      "nom_mpio": "BETULIA"
+    },
+    "68101": {
+      "lat": 5.988953,
+      "lon": -73.771346,
+      "cod_dpto": "68",
+      "nom_mpio": "BOLÍVAR"
+    },
+    "68121": {
+      "lat": 6.592118,
+      "lon": -73.246475,
+      "cod_dpto": "68",
+      "nom_mpio": "CABRERA"
+    },
+    "68132": {
+      "lat": 7.347989,
+      "lon": -72.946491,
+      "cod_dpto": "68",
+      "nom_mpio": "CALIFORNIA"
+    },
+    "68147": {
+      "lat": 6.527394,
+      "lon": -72.695427,
+      "cod_dpto": "68",
+      "nom_mpio": "CAPITANEJO"
+    },
+    "68152": {
+      "lat": 6.629016,
+      "lon": -72.627099,
+      "cod_dpto": "68",
+      "nom_mpio": "CARCASÍ"
+    },
+    "68160": {
+      "lat": 6.753518,
+      "lon": -72.973536,
+      "cod_dpto": "68",
+      "nom_mpio": "CEPITÁ"
+    },
+    "68162": {
+      "lat": 6.840405,
+      "lon": -72.694851,
+      "cod_dpto": "68",
+      "nom_mpio": "CERRITO"
+    },
+    "68167": {
+      "lat": 6.284339,
+      "lon": -73.146873,
+      "cod_dpto": "68",
+      "nom_mpio": "CHARALÁ"
+    },
+    "68169": {
+      "lat": 7.28082,
+      "lon": -72.968798,
+      "cod_dpto": "68",
+      "nom_mpio": "CHARTA"
+    },
+    "68176": {
+      "lat": 6.344348,
+      "lon": -73.373656,
+      "cod_dpto": "68",
+      "nom_mpio": "CHIMA"
+    },
+    "68179": {
+      "lat": 6.062521,
+      "lon": -73.637111,
+      "cod_dpto": "68",
+      "nom_mpio": "CHIPATÁ"
+    },
+    "68190": {
+      "lat": 6.320886,
+      "lon": -73.953011,
+      "cod_dpto": "68",
+      "nom_mpio": "CIMITARRA"
+    },
+    "68207": {
+      "lat": 6.768908,
+      "lon": -72.694567,
+      "cod_dpto": "68",
+      "nom_mpio": "CONCEPCIÓN"
+    },
+    "68209": {
+      "lat": 6.357327,
+      "lon": -73.240554,
+      "cod_dpto": "68",
+      "nom_mpio": "CONFINES"
+    },
+    "68211": {
+      "lat": 6.290561,
+      "lon": -73.474426,
+      "cod_dpto": "68",
+      "nom_mpio": "CONTRATACIÓN"
+    },
+    "68217": {
+      "lat": 6.294999,
+      "lon": -73.040816,
+      "cod_dpto": "68",
+      "nom_mpio": "COROMORO"
+    },
+    "68229": {
+      "lat": 6.605099,
+      "lon": -73.069383,
+      "cod_dpto": "68",
+      "nom_mpio": "CURITÍ"
+    },
+    "68235": {
+      "lat": 6.700038,
+      "lon": -73.51066,
+      "cod_dpto": "68",
+      "nom_mpio": "EL CARMEN DE CHUCURÍ"
+    },
+    "68245": {
+      "lat": 6.245111,
+      "lon": -73.496908,
+      "cod_dpto": "68",
+      "nom_mpio": "EL GUACAMAYO"
+    },
+    "68250": {
+      "lat": 6.05537,
+      "lon": -73.815532,
+      "cod_dpto": "68",
+      "nom_mpio": "EL PEÑÓN"
+    },
+    "68255": {
+      "lat": 7.470715,
+      "lon": -73.20287,
+      "cod_dpto": "68",
+      "nom_mpio": "EL PLAYÓN"
+    },
+    "68264": {
+      "lat": 6.137429,
+      "lon": -73.098749,
+      "cod_dpto": "68",
+      "nom_mpio": "ENCINO"
+    },
+    "68266": {
+      "lat": 6.668034,
+      "lon": -72.699647,
+      "cod_dpto": "68",
+      "nom_mpio": "ENCISO"
+    },
+    "68271": {
+      "lat": 5.804659,
+      "lon": -73.97143,
+      "cod_dpto": "68",
+      "nom_mpio": "FLORIÁN"
+    },
+    "68276": {
+      "lat": 7.072329,
+      "lon": -73.099104,
+      "cod_dpto": "68",
+      "nom_mpio": "FLORIDABLANCA"
+    },
+    "68296": {
+      "lat": 6.638423,
+      "lon": -73.287769,
+      "cod_dpto": "68",
+      "nom_mpio": "GALÁN"
+    },
+    "68298": {
+      "lat": 5.945998,
+      "lon": -73.344185,
+      "cod_dpto": "68",
+      "nom_mpio": "GÁMBITA"
+    },
+    "68307": {
+      "lat": 7.070432,
+      "lon": -73.166832,
+      "cod_dpto": "68",
+      "nom_mpio": "GIRÓN"
+    },
+    "68318": {
+      "lat": 6.876563,
+      "lon": -72.856322,
+      "cod_dpto": "68",
+      "nom_mpio": "GUACA"
+    },
+    "68320": {
+      "lat": 6.245847,
+      "lon": -73.419292,
+      "cod_dpto": "68",
+      "nom_mpio": "GUADALUPE"
+    },
+    "68322": {
+      "lat": 6.308635,
+      "lon": -73.320732,
+      "cod_dpto": "68",
+      "nom_mpio": "GUAPOTÁ"
+    },
+    "68324": {
+      "lat": 5.954348,
+      "lon": -73.700906,
+      "cod_dpto": "68",
+      "nom_mpio": "GUAVATÁ"
+    },
+    "68327": {
+      "lat": 6.025013,
+      "lon": -73.575146,
+      "cod_dpto": "68",
+      "nom_mpio": "GÜEPSA"
+    },
+    "68344": {
+      "lat": 6.543957,
+      "lon": -73.308399,
+      "cod_dpto": "68",
+      "nom_mpio": "HATO"
+    },
+    "68368": {
+      "lat": 5.876497,
+      "lon": -73.783396,
+      "cod_dpto": "68",
+      "nom_mpio": "JESÚS MARÍA"
+    },
+    "68370": {
+      "lat": 6.732727,
+      "lon": -73.096053,
+      "cod_dpto": "68",
+      "nom_mpio": "JORDÁN"
+    },
+    "68377": {
+      "lat": 5.85925,
+      "lon": -73.965494,
+      "cod_dpto": "68",
+      "nom_mpio": "LA BELLEZA"
+    },
+    "68385": {
+      "lat": 6.218812,
+      "lon": -73.811359,
+      "cod_dpto": "68",
+      "nom_mpio": "LANDÁZURI"
+    },
+    "68397": {
+      "lat": 6.178509,
+      "lon": -73.58959,
+      "cod_dpto": "68",
+      "nom_mpio": "LA PAZ"
+    },
+    "68406": {
+      "lat": 7.113351,
+      "lon": -73.219524,
+      "cod_dpto": "68",
+      "nom_mpio": "LEBRIJA"
+    },
+    "68418": {
+      "lat": 6.755203,
+      "lon": -73.102739,
+      "cod_dpto": "68",
+      "nom_mpio": "LOS SANTOS"
+    },
+    "68425": {
+      "lat": 6.50658,
+      "lon": -72.593105,
+      "cod_dpto": "68",
+      "nom_mpio": "MACARAVITA"
+    },
+    "68432": {
+      "lat": 6.703081,
+      "lon": -72.732089,
+      "cod_dpto": "68",
+      "nom_mpio": "MÁLAGA"
+    },
+    "68444": {
+      "lat": 7.323175,
+      "lon": -73.015566,
+      "cod_dpto": "68",
+      "nom_mpio": "MATANZA"
+    },
+    "68464": {
+      "lat": 6.475246,
+      "lon": -72.969807,
+      "cod_dpto": "68",
+      "nom_mpio": "MOGOTES"
+    },
+    "68468": {
+      "lat": 6.67432,
+      "lon": -72.809175,
+      "cod_dpto": "68",
+      "nom_mpio": "MOLAGAVITA"
+    },
+    "68498": {
+      "lat": 6.339988,
+      "lon": -73.122563,
+      "cod_dpto": "68",
+      "nom_mpio": "OCAMONTE"
+    },
+    "68500": {
+      "lat": 6.26521,
+      "lon": -73.299791,
+      "cod_dpto": "68",
+      "nom_mpio": "OIBA"
+    },
+    "68502": {
+      "lat": 6.344104,
+      "lon": -72.816766,
+      "cod_dpto": "68",
+      "nom_mpio": "ONZAGA"
+    },
+    "68522": {
+      "lat": 6.537789,
+      "lon": -73.29109,
+      "cod_dpto": "68",
+      "nom_mpio": "PALMAR"
+    },
+    "68524": {
+      "lat": 6.406139,
+      "lon": -73.287764,
+      "cod_dpto": "68",
+      "nom_mpio": "PALMAS DEL SOCORRO"
+    },
+    "68533": {
+      "lat": 6.416811,
+      "lon": -73.17022,
+      "cod_dpto": "68",
+      "nom_mpio": "PÁRAMO"
+    },
+    "68547": {
+      "lat": 6.997245,
+      "lon": -73.054795,
+      "cod_dpto": "68",
+      "nom_mpio": "PIEDECUESTA"
+    },
+    "68549": {
+      "lat": 6.531552,
+      "lon": -73.174209,
+      "cod_dpto": "68",
+      "nom_mpio": "PINCHOTE"
+    },
+    "68572": {
+      "lat": 5.878381,
+      "lon": -73.677567,
+      "cod_dpto": "68",
+      "nom_mpio": "PUENTE NACIONAL"
+    },
+    "68573": {
+      "lat": 6.650785,
+      "lon": -74.056129,
+      "cod_dpto": "68",
+      "nom_mpio": "PUERTO PARRA"
+    },
+    "68575": {
+      "lat": 7.344057,
+      "lon": -73.899909,
+      "cod_dpto": "68",
+      "nom_mpio": "PUERTO WILCHES"
+    },
+    "68615": {
+      "lat": 7.265014,
+      "lon": -73.150177,
+      "cod_dpto": "68",
+      "nom_mpio": "RIONEGRO"
+    },
+    "68655": {
+      "lat": 7.391919,
+      "lon": -73.49906,
+      "cod_dpto": "68",
+      "nom_mpio": "SABANA DE TORRES"
+    },
+    "68669": {
+      "lat": 6.811511,
+      "lon": -72.848864,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN ANDRÉS"
+    },
+    "68673": {
+      "lat": 6.126656,
+      "lon": -73.50907,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN BENITO"
+    },
+    "68679": {
+      "lat": 6.551952,
+      "lon": -73.134776,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN GIL"
+    },
+    "68682": {
+      "lat": 6.427548,
+      "lon": -72.867638,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN JOAQUÍN"
+    },
+    "68684": {
+      "lat": 6.658995,
+      "lon": -72.733616,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN JOSÉ DE MIRANDA"
+    },
+    "68686": {
+      "lat": 6.575315,
+      "lon": -72.644123,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN MIGUEL"
+    },
+    "68689": {
+      "lat": 6.880383,
+      "lon": -73.411024,
+      "cod_dpto": "68",
+      "nom_mpio": "SAN VICENTE DE CHUCURÍ"
+    },
+    "68705": {
+      "lat": 6.990996,
+      "lon": -72.907445,
+      "cod_dpto": "68",
+      "nom_mpio": "SANTA BÁRBARA"
+    },
+    "68720": {
+      "lat": 6.339565,
+      "lon": -73.616716,
+      "cod_dpto": "68",
+      "nom_mpio": "SANTA HELENA DEL OPÓN"
+    },
+    "68745": {
+      "lat": 6.443469,
+      "lon": -73.337368,
+      "cod_dpto": "68",
+      "nom_mpio": "SIMACOTA"
+    },
+    "68755": {
+      "lat": 6.46387,
+      "lon": -73.261198,
+      "cod_dpto": "68",
+      "nom_mpio": "SOCORRO"
+    },
+    "68770": {
+      "lat": 6.101329,
+      "lon": -73.44165,
+      "cod_dpto": "68",
+      "nom_mpio": "SUAITA"
+    },
+    "68773": {
+      "lat": 5.918743,
+      "lon": -73.790975,
+      "cod_dpto": "68",
+      "nom_mpio": "SUCRE"
+    },
+    "68780": {
+      "lat": 7.36658,
+      "lon": -72.984232,
+      "cod_dpto": "68",
+      "nom_mpio": "SURATÁ"
+    },
+    "68820": {
+      "lat": 7.201417,
+      "lon": -72.967023,
+      "cod_dpto": "68",
+      "nom_mpio": "TONA"
+    },
+    "68855": {
+      "lat": 6.448028,
+      "lon": -73.143507,
+      "cod_dpto": "68",
+      "nom_mpio": "VALLE DE SAN JOSÉ"
+    },
+    "68861": {
+      "lat": 6.009275,
+      "lon": -73.672447,
+      "cod_dpto": "68",
+      "nom_mpio": "VÉLEZ"
+    },
+    "68867": {
+      "lat": 7.30981,
+      "lon": -72.871041,
+      "cod_dpto": "68",
+      "nom_mpio": "VETAS"
+    },
+    "68872": {
+      "lat": 6.670078,
+      "lon": -73.174307,
+      "cod_dpto": "68",
+      "nom_mpio": "VILLANUEVA"
+    },
+    "68895": {
+      "lat": 6.814387,
+      "lon": -73.268034,
+      "cod_dpto": "68",
+      "nom_mpio": "ZAPATOCA"
+    },
+    "70001": {
+      "lat": 9.302322,
+      "lon": -75.395445,
+      "cod_dpto": "70",
+      "nom_mpio": "SINCELEJO"
+    },
+    "70110": {
+      "lat": 9.319794,
+      "lon": -74.972827,
+      "cod_dpto": "70",
+      "nom_mpio": "BUENAVISTA"
+    },
+    "70124": {
+      "lat": 8.789324,
+      "lon": -75.117141,
+      "cod_dpto": "70",
+      "nom_mpio": "CAIMITO"
+    },
+    "70204": {
+      "lat": 9.494192,
+      "lon": -75.353256,
+      "cod_dpto": "70",
+      "nom_mpio": "COLOSÓ"
+    },
+    "70215": {
+      "lat": 9.318749,
+      "lon": -75.293048,
+      "cod_dpto": "70",
+      "nom_mpio": "COROZAL"
+    },
+    "70221": {
+      "lat": 9.402779,
+      "lon": -75.680158,
+      "cod_dpto": "70",
+      "nom_mpio": "COVEÑAS"
+    },
+    "70230": {
+      "lat": 9.545352,
+      "lon": -75.312697,
+      "cod_dpto": "70",
+      "nom_mpio": "CHALÁN"
+    },
+    "70233": {
+      "lat": 9.100647,
+      "lon": -75.198378,
+      "cod_dpto": "70",
+      "nom_mpio": "EL ROBLE"
+    },
+    "70235": {
+      "lat": 9.160379,
+      "lon": -75.04959,
+      "cod_dpto": "70",
+      "nom_mpio": "GALERAS"
+    },
+    "70265": {
+      "lat": 8.468556,
+      "lon": -74.537749,
+      "cod_dpto": "70",
+      "nom_mpio": "GUARANDA"
+    },
+    "70400": {
+      "lat": 8.853975,
+      "lon": -75.276056,
+      "cod_dpto": "70",
+      "nom_mpio": "LA UNIÓN"
+    },
+    "70418": {
+      "lat": 9.380269,
+      "lon": -75.268716,
+      "cod_dpto": "70",
+      "nom_mpio": "LOS PALMITOS"
+    },
+    "70429": {
+      "lat": 8.541163,
+      "lon": -74.628077,
+      "cod_dpto": "70",
+      "nom_mpio": "MAJAGUAL"
+    },
+    "70473": {
+      "lat": 9.331395,
+      "lon": -75.305949,
+      "cod_dpto": "70",
+      "nom_mpio": "MORROA"
+    },
+    "70508": {
+      "lat": 9.527176,
+      "lon": -75.229037,
+      "cod_dpto": "70",
+      "nom_mpio": "OVEJAS"
+    },
+    "70523": {
+      "lat": 9.333157,
+      "lon": -75.541264,
+      "cod_dpto": "70",
+      "nom_mpio": "PALMITO"
+    },
+    "70670": {
+      "lat": 9.183193,
+      "lon": -75.380222,
+      "cod_dpto": "70",
+      "nom_mpio": "SAMPUÉS"
+    },
+    "70678": {
+      "lat": 8.930108,
+      "lon": -75.031089,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN BENITO ABAD"
+    },
+    "70702": {
+      "lat": 9.273066,
+      "lon": -75.243565,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN JUAN DE BETULIA"
+    },
+    "70708": {
+      "lat": 8.661774,
+      "lon": -75.133831,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN MARCOS"
+    },
+    "70713": {
+      "lat": 9.736955,
+      "lon": -75.522398,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN ONOFRE"
+    },
+    "70717": {
+      "lat": 9.39625,
+      "lon": -75.063647,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN PEDRO"
+    },
+    "70742": {
+      "lat": 9.244308,
+      "lon": -75.145999,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN LUIS DE SINCÉ"
+    },
+    "70771": {
+      "lat": 8.811737,
+      "lon": -74.723175,
+      "cod_dpto": "70",
+      "nom_mpio": "SUCRE"
+    },
+    "70820": {
+      "lat": 9.525387,
+      "lon": -75.581112,
+      "cod_dpto": "70",
+      "nom_mpio": "SANTIAGO DE TOLÚ"
+    },
+    "70823": {
+      "lat": 9.451819,
+      "lon": -75.44085,
+      "cod_dpto": "70",
+      "nom_mpio": "SAN JOSÉ DE TOLUVIEJO"
+    },
+    "73001": {
+      "lat": 4.432248,
+      "lon": -75.19425,
+      "cod_dpto": "73",
+      "nom_mpio": "IBAGUÉ"
+    },
+    "73024": {
+      "lat": 3.391548,
+      "lon": -74.9329,
+      "cod_dpto": "73",
+      "nom_mpio": "ALPUJARRA"
+    },
+    "73026": {
+      "lat": 4.567356,
+      "lon": -74.953418,
+      "cod_dpto": "73",
+      "nom_mpio": "ALVARADO"
+    },
+    "73030": {
+      "lat": 4.782682,
+      "lon": -74.764429,
+      "cod_dpto": "73",
+      "nom_mpio": "AMBALEMA"
+    },
+    "73043": {
+      "lat": 4.631756,
+      "lon": -75.093772,
+      "cod_dpto": "73",
+      "nom_mpio": "ANZOÁTEGUI"
+    },
+    "73055": {
+      "lat": 5.030744,
+      "lon": -74.884438,
+      "cod_dpto": "73",
+      "nom_mpio": "ARMERO"
+    },
+    "73067": {
+      "lat": 3.590591,
+      "lon": -75.382545,
+      "cod_dpto": "73",
+      "nom_mpio": "ATACO"
+    },
+    "73124": {
+      "lat": 4.438812,
+      "lon": -75.431971,
+      "cod_dpto": "73",
+      "nom_mpio": "CAJAMARCA"
+    },
+    "73148": {
+      "lat": 4.152334,
+      "lon": -74.717633,
+      "cod_dpto": "73",
+      "nom_mpio": "CARMEN DE APICALÁ"
+    },
+    "73152": {
+      "lat": 5.078465,
+      "lon": -75.120966,
+      "cod_dpto": "73",
+      "nom_mpio": "CASABIANCA"
+    },
+    "73168": {
+      "lat": 3.722918,
+      "lon": -75.480765,
+      "cod_dpto": "73",
+      "nom_mpio": "CHAPARRAL"
+    },
+    "73200": {
+      "lat": 4.287276,
+      "lon": -74.898464,
+      "cod_dpto": "73",
+      "nom_mpio": "COELLO"
+    },
+    "73217": {
+      "lat": 3.798036,
+      "lon": -75.193862,
+      "cod_dpto": "73",
+      "nom_mpio": "COYAIMA"
+    },
+    "73226": {
+      "lat": 4.059259,
+      "lon": -74.692227,
+      "cod_dpto": "73",
+      "nom_mpio": "CUNDAY"
+    },
+    "73236": {
+      "lat": 3.539072,
+      "lon": -74.896761,
+      "cod_dpto": "73",
+      "nom_mpio": "DOLORES"
+    },
+    "73268": {
+      "lat": 4.151314,
+      "lon": -74.885446,
+      "cod_dpto": "73",
+      "nom_mpio": "ESPINAL"
+    },
+    "73270": {
+      "lat": 5.123104,
+      "lon": -74.953007,
+      "cod_dpto": "73",
+      "nom_mpio": "FALAN"
+    },
+    "73275": {
+      "lat": 4.276373,
+      "lon": -74.818763,
+      "cod_dpto": "73",
+      "nom_mpio": "FLANDES"
+    },
+    "73283": {
+      "lat": 5.153576,
+      "lon": -75.035722,
+      "cod_dpto": "73",
+      "nom_mpio": "FRESNO"
+    },
+    "73319": {
+      "lat": 4.030992,
+      "lon": -74.968135,
+      "cod_dpto": "73",
+      "nom_mpio": "GUAMO"
+    },
+    "73347": {
+      "lat": 5.080228,
+      "lon": -75.177151,
+      "cod_dpto": "73",
+      "nom_mpio": "HERVEO"
+    },
+    "73349": {
+      "lat": 5.211816,
+      "lon": -74.75699,
+      "cod_dpto": "73",
+      "nom_mpio": "HONDA"
+    },
+    "73352": {
+      "lat": 4.176487,
+      "lon": -74.531969,
+      "cod_dpto": "73",
+      "nom_mpio": "ICONONZO"
+    },
+    "73408": {
+      "lat": 4.862046,
+      "lon": -74.910716,
+      "cod_dpto": "73",
+      "nom_mpio": "LÉRIDA"
+    },
+    "73411": {
+      "lat": 4.92042,
+      "lon": -75.061959,
+      "cod_dpto": "73",
+      "nom_mpio": "LÍBANO"
+    },
+    "73443": {
+      "lat": 5.199708,
+      "lon": -74.889276,
+      "cod_dpto": "73",
+      "nom_mpio": "SAN SEBASTIÁN DE MARIQUITA"
+    },
+    "73449": {
+      "lat": 4.203655,
+      "lon": -74.641317,
+      "cod_dpto": "73",
+      "nom_mpio": "MELGAR"
+    },
+    "73461": {
+      "lat": 4.874341,
+      "lon": -75.171022,
+      "cod_dpto": "73",
+      "nom_mpio": "MURILLO"
+    },
+    "73483": {
+      "lat": 3.624324,
+      "lon": -75.093182,
+      "cod_dpto": "73",
+      "nom_mpio": "NATAGAIMA"
+    },
+    "73504": {
+      "lat": 3.934916,
+      "lon": -75.222601,
+      "cod_dpto": "73",
+      "nom_mpio": "ORTEGA"
+    },
+    "73520": {
+      "lat": 5.120918,
+      "lon": -75.022167,
+      "cod_dpto": "73",
+      "nom_mpio": "PALOCABILDO"
+    },
+    "73547": {
+      "lat": 4.543951,
+      "lon": -74.878106,
+      "cod_dpto": "73",
+      "nom_mpio": "PIEDRAS"
+    },
+    "73555": {
+      "lat": 3.197911,
+      "lon": -75.644163,
+      "cod_dpto": "73",
+      "nom_mpio": "PLANADAS"
+    },
+    "73563": {
+      "lat": 3.750939,
+      "lon": -74.927447,
+      "cod_dpto": "73",
+      "nom_mpio": "PRADO"
+    },
+    "73585": {
+      "lat": 3.857246,
+      "lon": -74.935555,
+      "cod_dpto": "73",
+      "nom_mpio": "PURIFICACIÓN"
+    },
+    "73616": {
+      "lat": 3.529932,
+      "lon": -75.644069,
+      "cod_dpto": "73",
+      "nom_mpio": "RIOBLANCO"
+    },
+    "73622": {
+      "lat": 4.011567,
+      "lon": -75.605959,
+      "cod_dpto": "73",
+      "nom_mpio": "RONCESVALLES"
+    },
+    "73624": {
+      "lat": 4.239019,
+      "lon": -75.240648,
+      "cod_dpto": "73",
+      "nom_mpio": "ROVIRA"
+    },
+    "73671": {
+      "lat": 3.929815,
+      "lon": -75.016852,
+      "cod_dpto": "73",
+      "nom_mpio": "SALDAÑA"
+    },
+    "73675": {
+      "lat": 3.914146,
+      "lon": -75.480074,
+      "cod_dpto": "73",
+      "nom_mpio": "SAN ANTONIO"
+    },
+    "73678": {
+      "lat": 4.133721,
+      "lon": -75.095804,
+      "cod_dpto": "73",
+      "nom_mpio": "SAN LUIS"
+    },
+    "73686": {
+      "lat": 4.713606,
+      "lon": -75.097934,
+      "cod_dpto": "73",
+      "nom_mpio": "SANTA ISABEL"
+    },
+    "73770": {
+      "lat": 4.048891,
+      "lon": -74.831885,
+      "cod_dpto": "73",
+      "nom_mpio": "SUÁREZ"
+    },
+    "73854": {
+      "lat": 4.197494,
+      "lon": -75.115669,
+      "cod_dpto": "73",
+      "nom_mpio": "VALLE DE SAN JUAN"
+    },
+    "73861": {
+      "lat": 4.717878,
+      "lon": -74.929333,
+      "cod_dpto": "73",
+      "nom_mpio": "VENADILLO"
+    },
+    "73870": {
+      "lat": 5.030452,
+      "lon": -75.117729,
+      "cod_dpto": "73",
+      "nom_mpio": "VILLAHERMOSA"
+    },
+    "73873": {
+      "lat": 3.936902,
+      "lon": -74.600285,
+      "cod_dpto": "73",
+      "nom_mpio": "VILLARRICA"
+    },
+    "76001": {
+      "lat": 3.413686,
+      "lon": -76.52133,
+      "cod_dpto": "76",
+      "nom_mpio": "SANTIAGO DE CALI"
+    },
+    "76020": {
+      "lat": 4.674994,
+      "lon": -75.779792,
+      "cod_dpto": "76",
+      "nom_mpio": "ALCALÁ"
+    },
+    "76036": {
+      "lat": 4.171713,
+      "lon": -76.167925,
+      "cod_dpto": "76",
+      "nom_mpio": "ANDALUCÍA"
+    },
+    "76041": {
+      "lat": 4.794984,
+      "lon": -75.992003,
+      "cod_dpto": "76",
+      "nom_mpio": "ANSERMANUEVO"
+    },
+    "76054": {
+      "lat": 4.726945,
+      "lon": -76.119905,
+      "cod_dpto": "76",
+      "nom_mpio": "ARGELIA"
+    },
+    "76100": {
+      "lat": 4.337846,
+      "lon": -76.183583,
+      "cod_dpto": "76",
+      "nom_mpio": "BOLÍVAR"
+    },
+    "76109": {
+      "lat": 3.875708,
+      "lon": -77.01074,
+      "cod_dpto": "76",
+      "nom_mpio": "BUENAVENTURA"
+    },
+    "76111": {
+      "lat": 3.900736,
+      "lon": -76.298979,
+      "cod_dpto": "76",
+      "nom_mpio": "GUADALAJARA DE BUGA"
+    },
+    "76113": {
+      "lat": 4.208358,
+      "lon": -76.15682,
+      "cod_dpto": "76",
+      "nom_mpio": "BUGALAGRANDE"
+    },
+    "76122": {
+      "lat": 4.334808,
+      "lon": -75.830594,
+      "cod_dpto": "76",
+      "nom_mpio": "CAICEDONIA"
+    },
+    "76126": {
+      "lat": 3.933664,
+      "lon": -76.484132,
+      "cod_dpto": "76",
+      "nom_mpio": "CALIMA"
+    },
+    "76130": {
+      "lat": 3.408354,
+      "lon": -76.346519,
+      "cod_dpto": "76",
+      "nom_mpio": "CANDELARIA"
+    },
+    "76147": {
+      "lat": 4.742192,
+      "lon": -75.924374,
+      "cod_dpto": "76",
+      "nom_mpio": "CARTAGO"
+    },
+    "76233": {
+      "lat": 3.657318,
+      "lon": -76.68886,
+      "cod_dpto": "76",
+      "nom_mpio": "DAGUA"
+    },
+    "76243": {
+      "lat": 4.906062,
+      "lon": -76.042779,
+      "cod_dpto": "76",
+      "nom_mpio": "EL ÁGUILA"
+    },
+    "76246": {
+      "lat": 4.760874,
+      "lon": -76.221611,
+      "cod_dpto": "76",
+      "nom_mpio": "EL CAIRO"
+    },
+    "76248": {
+      "lat": 3.684229,
+      "lon": -76.311972,
+      "cod_dpto": "76",
+      "nom_mpio": "EL CERRITO"
+    },
+    "76250": {
+      "lat": 4.510452,
+      "lon": -76.237084,
+      "cod_dpto": "76",
+      "nom_mpio": "EL DOVIO"
+    },
+    "76275": {
+      "lat": 3.324118,
+      "lon": -76.234199,
+      "cod_dpto": "76",
+      "nom_mpio": "FLORIDA"
+    },
+    "76306": {
+      "lat": 3.724181,
+      "lon": -76.268068,
+      "cod_dpto": "76",
+      "nom_mpio": "GINEBRA"
+    },
+    "76318": {
+      "lat": 3.761815,
+      "lon": -76.330911,
+      "cod_dpto": "76",
+      "nom_mpio": "GUACARÍ"
+    },
+    "76364": {
+      "lat": 3.258751,
+      "lon": -76.538472,
+      "cod_dpto": "76",
+      "nom_mpio": "JAMUNDÍ"
+    },
+    "76377": {
+      "lat": 3.649268,
+      "lon": -76.56805,
+      "cod_dpto": "76",
+      "nom_mpio": "LA CUMBRE"
+    },
+    "76400": {
+      "lat": 4.533869,
+      "lon": -76.099661,
+      "cod_dpto": "76",
+      "nom_mpio": "LA UNIÓN"
+    },
+    "76403": {
+      "lat": 4.523603,
+      "lon": -76.036529,
+      "cod_dpto": "76",
+      "nom_mpio": "LA VICTORIA"
+    },
+    "76497": {
+      "lat": 4.575712,
+      "lon": -75.974709,
+      "cod_dpto": "76",
+      "nom_mpio": "OBANDO"
+    },
+    "76520": {
+      "lat": 3.531544,
+      "lon": -76.298846,
+      "cod_dpto": "76",
+      "nom_mpio": "PALMIRA"
+    },
+    "76563": {
+      "lat": 3.419793,
+      "lon": -76.241799,
+      "cod_dpto": "76",
+      "nom_mpio": "PRADERA"
+    },
+    "76606": {
+      "lat": 3.821351,
+      "lon": -76.523329,
+      "cod_dpto": "76",
+      "nom_mpio": "RESTREPO"
+    },
+    "76616": {
+      "lat": 4.156908,
+      "lon": -76.288313,
+      "cod_dpto": "76",
+      "nom_mpio": "RIOFRÍO"
+    },
+    "76622": {
+      "lat": 4.413601,
+      "lon": -76.152277,
+      "cod_dpto": "76",
+      "nom_mpio": "ROLDANILLO"
+    },
+    "76670": {
+      "lat": 3.995073,
+      "lon": -76.228692,
+      "cod_dpto": "76",
+      "nom_mpio": "SAN PEDRO"
+    },
+    "76736": {
+      "lat": 4.270714,
+      "lon": -75.931629,
+      "cod_dpto": "76",
+      "nom_mpio": "SEVILLA"
+    },
+    "76823": {
+      "lat": 4.608085,
+      "lon": -76.076859,
+      "cod_dpto": "76",
+      "nom_mpio": "TORO"
+    },
+    "76828": {
+      "lat": 4.212037,
+      "lon": -76.318818,
+      "cod_dpto": "76",
+      "nom_mpio": "TRUJILLO"
+    },
+    "76834": {
+      "lat": 4.085399,
+      "lon": -76.197731,
+      "cod_dpto": "76",
+      "nom_mpio": "TULUÁ"
+    },
+    "76845": {
+      "lat": 4.703623,
+      "lon": -75.737808,
+      "cod_dpto": "76",
+      "nom_mpio": "ULLOA"
+    },
+    "76863": {
+      "lat": 4.575019,
+      "lon": -76.199203,
+      "cod_dpto": "76",
+      "nom_mpio": "VERSALLES"
+    },
+    "76869": {
+      "lat": 3.698686,
+      "lon": -76.441804,
+      "cod_dpto": "76",
+      "nom_mpio": "VIJES"
+    },
+    "76890": {
+      "lat": 3.861241,
+      "lon": -76.382698,
+      "cod_dpto": "76",
+      "nom_mpio": "YOTOCO"
+    },
+    "76892": {
+      "lat": 3.540097,
+      "lon": -76.499893,
+      "cod_dpto": "76",
+      "nom_mpio": "YUMBO"
+    },
+    "76895": {
+      "lat": 4.392658,
+      "lon": -76.070795,
+      "cod_dpto": "76",
+      "nom_mpio": "ZARZAL"
+    },
+    "81001": {
+      "lat": 7.072726,
+      "lon": -70.747408,
+      "cod_dpto": "81",
+      "nom_mpio": "ARAUCA"
+    },
+    "81065": {
+      "lat": 7.02702,
+      "lon": -71.426733,
+      "cod_dpto": "81",
+      "nom_mpio": "ARAUQUITA"
+    },
+    "81220": {
+      "lat": 6.303913,
+      "lon": -70.204286,
+      "cod_dpto": "81",
+      "nom_mpio": "CRAVO NORTE"
+    },
+    "81300": {
+      "lat": 6.796695,
+      "lon": -71.76877,
+      "cod_dpto": "81",
+      "nom_mpio": "FORTUL"
+    },
+    "81591": {
+      "lat": 6.281461,
+      "lon": -71.10339,
+      "cod_dpto": "81",
+      "nom_mpio": "PUERTO RONDÓN"
+    },
+    "81736": {
+      "lat": 6.953926,
+      "lon": -71.872812,
+      "cod_dpto": "81",
+      "nom_mpio": "SARAVENA"
+    },
+    "81794": {
+      "lat": 6.453324,
+      "lon": -71.754427,
+      "cod_dpto": "81",
+      "nom_mpio": "TAME"
+    },
+    "85001": {
+      "lat": 5.327102,
+      "lon": -72.396132,
+      "cod_dpto": "85",
+      "nom_mpio": "YOPAL"
+    },
+    "85010": {
+      "lat": 5.172641,
+      "lon": -72.546838,
+      "cod_dpto": "85",
+      "nom_mpio": "AGUAZUL"
+    },
+    "85015": {
+      "lat": 5.214527,
+      "lon": -72.87016,
+      "cod_dpto": "85",
+      "nom_mpio": "CHÁMEZA"
+    },
+    "85125": {
+      "lat": 6.154099,
+      "lon": -71.764213,
+      "cod_dpto": "85",
+      "nom_mpio": "HATO COROZAL"
+    },
+    "85136": {
+      "lat": 6.127762,
+      "lon": -72.334978,
+      "cod_dpto": "85",
+      "nom_mpio": "LA SALINA"
+    },
+    "85139": {
+      "lat": 4.81681,
+      "lon": -72.281384,
+      "cod_dpto": "85",
+      "nom_mpio": "MANÍ"
+    },
+    "85162": {
+      "lat": 4.877017,
+      "lon": -72.894065,
+      "cod_dpto": "85",
+      "nom_mpio": "MONTERREY"
+    },
+    "85225": {
+      "lat": 5.636474,
+      "lon": -72.195323,
+      "cod_dpto": "85",
+      "nom_mpio": "NUNCHÍA"
+    },
+    "85230": {
+      "lat": 4.790258,
+      "lon": -71.338533,
+      "cod_dpto": "85",
+      "nom_mpio": "OROCUÉ"
+    },
+    "85250": {
+      "lat": 5.879827,
+      "lon": -71.890348,
+      "cod_dpto": "85",
+      "nom_mpio": "PAZ DE ARIPORO"
+    },
+    "85263": {
+      "lat": 5.72773,
+      "lon": -71.99286,
+      "cod_dpto": "85",
+      "nom_mpio": "PORE"
+    },
+    "85279": {
+      "lat": 5.229181,
+      "lon": -72.760991,
+      "cod_dpto": "85",
+      "nom_mpio": "RECETOR"
+    },
+    "85300": {
+      "lat": 4.854787,
+      "lon": -73.038696,
+      "cod_dpto": "85",
+      "nom_mpio": "SABANALARGA"
+    },
+    "85315": {
+      "lat": 6.096738,
+      "lon": -72.250157,
+      "cod_dpto": "85",
+      "nom_mpio": "SÁCAMA"
+    },
+    "85325": {
+      "lat": 5.422397,
+      "lon": -71.732198,
+      "cod_dpto": "85",
+      "nom_mpio": "SAN LUIS DE PALENQUE"
+    },
+    "85400": {
+      "lat": 5.829543,
+      "lon": -72.16165,
+      "cod_dpto": "85",
+      "nom_mpio": "TÁMARA"
+    },
+    "85410": {
+      "lat": 5.018977,
+      "lon": -72.74662,
+      "cod_dpto": "85",
+      "nom_mpio": "TAURAMENA"
+    },
+    "85430": {
+      "lat": 5.412178,
+      "lon": -71.662812,
+      "cod_dpto": "85",
+      "nom_mpio": "TRINIDAD"
+    },
+    "85440": {
+      "lat": 4.61035,
+      "lon": -72.927797,
+      "cod_dpto": "85",
+      "nom_mpio": "VILLANUEVA"
+    },
+    "86001": {
+      "lat": 1.151172,
+      "lon": -76.654238,
+      "cod_dpto": "86",
+      "nom_mpio": "MOCOA"
+    },
+    "86219": {
+      "lat": 1.190133,
+      "lon": -76.972566,
+      "cod_dpto": "86",
+      "nom_mpio": "COLÓN"
+    },
+    "86320": {
+      "lat": 0.663593,
+      "lon": -76.873276,
+      "cod_dpto": "86",
+      "nom_mpio": "ORITO"
+    },
+    "86568": {
+      "lat": 0.505627,
+      "lon": -76.496887,
+      "cod_dpto": "86",
+      "nom_mpio": "PUERTO ASÍS"
+    },
+    "86569": {
+      "lat": 0.687784,
+      "lon": -76.606118,
+      "cod_dpto": "86",
+      "nom_mpio": "PUERTO CAICEDO"
+    },
+    "86571": {
+      "lat": 0.962854,
+      "lon": -76.407663,
+      "cod_dpto": "86",
+      "nom_mpio": "PUERTO GUZMÁN"
+    },
+    "86573": {
+      "lat": -0.192318,
+      "lon": -74.781842,
+      "cod_dpto": "86",
+      "nom_mpio": "PUERTO LEGUÍZAMO"
+    },
+    "86749": {
+      "lat": 1.20026,
+      "lon": -76.917814,
+      "cod_dpto": "86",
+      "nom_mpio": "SIBUNDOY"
+    },
+    "86755": {
+      "lat": 1.174194,
+      "lon": -76.879283,
+      "cod_dpto": "86",
+      "nom_mpio": "SAN FRANCISCO"
+    },
+    "86757": {
+      "lat": 0.34346,
+      "lon": -76.91217,
+      "cod_dpto": "86",
+      "nom_mpio": "SAN MIGUEL"
+    },
+    "86760": {
+      "lat": 1.147076,
+      "lon": -77.002641,
+      "cod_dpto": "86",
+      "nom_mpio": "SANTIAGO"
+    },
+    "86865": {
+      "lat": 0.423506,
+      "lon": -76.906751,
+      "cod_dpto": "86",
+      "nom_mpio": "VALLE DEL GUAMUEZ"
+    },
+    "86885": {
+      "lat": 1.028821,
+      "lon": -76.61721,
+      "cod_dpto": "86",
+      "nom_mpio": "VILLAGARZÓN"
+    },
+    "88001": {
+      "lat": 12.578108,
+      "lon": -81.707181,
+      "cod_dpto": "88",
+      "nom_mpio": "SAN ANDRÉS"
+    },
+    "88564": {
+      "lat": 13.373185,
+      "lon": -81.368386,
+      "cod_dpto": "88",
+      "nom_mpio": "PROVIDENCIA"
+    },
+    "91001": {
+      "lat": -4.19895,
+      "lon": -69.941721,
+      "cod_dpto": "91",
+      "nom_mpio": "LETICIA"
+    },
+    "91263": {
+      "lat": -1.74806,
+      "lon": -73.207114,
+      "cod_dpto": "91",
+      "nom_mpio": "EL ENCANTO"
+    },
+    "91405": {
+      "lat": -1.442617,
+      "lon": -72.791889,
+      "cod_dpto": "91",
+      "nom_mpio": "LA CHORRERA"
+    },
+    "91407": {
+      "lat": -1.320301,
+      "lon": -69.585499,
+      "cod_dpto": "91",
+      "nom_mpio": "LA PEDRERA"
+    },
+    "91430": {
+      "lat": 0.054936,
+      "lon": -71.223208,
+      "cod_dpto": "91",
+      "nom_mpio": "LA VICTORIA"
+    },
+    "91460": {
+      "lat": -0.888833,
+      "lon": -70.98893,
+      "cod_dpto": "91",
+      "nom_mpio": "MIRITÍ - PARANÁ"
+    },
+    "91530": {
+      "lat": -1.005674,
+      "lon": -74.014461,
+      "cod_dpto": "91",
+      "nom_mpio": "PUERTO ALEGRÍA"
+    },
+    "91536": {
+      "lat": -2.147039,
+      "lon": -71.752186,
+      "cod_dpto": "91",
+      "nom_mpio": "PUERTO ARICA"
+    },
+    "91540": {
+      "lat": -3.779934,
+      "lon": -70.364937,
+      "cod_dpto": "91",
+      "nom_mpio": "PUERTO NARIÑO"
+    },
+    "91669": {
+      "lat": -0.621184,
+      "lon": -72.384213,
+      "cod_dpto": "91",
+      "nom_mpio": "PUERTO SANTANDER"
+    },
+    "91798": {
+      "lat": -2.890126,
+      "lon": -69.741745,
+      "cod_dpto": "91",
+      "nom_mpio": "TARAPACÁ"
+    },
+    "94001": {
+      "lat": 3.866764,
+      "lon": -67.918613,
+      "cod_dpto": "94",
+      "nom_mpio": "INÍRIDA"
+    },
+    "94343": {
+      "lat": 3.494178,
+      "lon": -69.814066,
+      "cod_dpto": "94",
+      "nom_mpio": "BARRANCOMINAS"
+    },
+    "94883": {
+      "lat": 1.912495,
+      "lon": -67.067848,
+      "cod_dpto": "94",
+      "nom_mpio": "SAN FELIPE"
+    },
+    "94884": {
+      "lat": 2.726438,
+      "lon": -67.566774,
+      "cod_dpto": "94",
+      "nom_mpio": "PUERTO COLOMBIA"
+    },
+    "94885": {
+      "lat": 1.632464,
+      "lon": -66.963692,
+      "cod_dpto": "94",
+      "nom_mpio": "LA GUADALUPE"
+    },
+    "94886": {
+      "lat": 3.52617,
+      "lon": -67.413312,
+      "cod_dpto": "94",
+      "nom_mpio": "CACAHUAL"
+    },
+    "94887": {
+      "lat": 1.865668,
+      "lon": -69.0099,
+      "cod_dpto": "94",
+      "nom_mpio": "PANA PANA"
+    },
+    "94888": {
+      "lat": 2.265132,
+      "lon": -69.919404,
+      "cod_dpto": "94",
+      "nom_mpio": "MORICHAL"
+    },
+    "95001": {
+      "lat": 2.565932,
+      "lon": -72.639254,
+      "cod_dpto": "95",
+      "nom_mpio": "SAN JOSÉ DEL GUAVIARE"
+    },
+    "95015": {
+      "lat": 1.960982,
+      "lon": -72.655197,
+      "cod_dpto": "95",
+      "nom_mpio": "CALAMAR"
+    },
+    "95025": {
+      "lat": 2.330164,
+      "lon": -72.627304,
+      "cod_dpto": "95",
+      "nom_mpio": "EL RETORNO"
+    },
+    "95200": {
+      "lat": 1.337539,
+      "lon": -71.950416,
+      "cod_dpto": "95",
+      "nom_mpio": "MIRAFLORES"
+    },
+    "97001": {
+      "lat": 1.253151,
+      "lon": -70.232641,
+      "cod_dpto": "97",
+      "nom_mpio": "MITÚ"
+    },
+    "97161": {
+      "lat": 1.016116,
+      "lon": -71.30221,
+      "cod_dpto": "97",
+      "nom_mpio": "CARURÚ"
+    },
+    "97511": {
+      "lat": 0.020698,
+      "lon": -71.004339,
+      "cod_dpto": "97",
+      "nom_mpio": "PACOA"
+    },
+    "97666": {
+      "lat": -0.564984,
+      "lon": -69.635497,
+      "cod_dpto": "97",
+      "nom_mpio": "TARAIRA"
+    },
+    "97777": {
+      "lat": 1.908124,
+      "lon": -70.76091,
+      "cod_dpto": "97",
+      "nom_mpio": "PAPUNAHUA"
+    },
+    "97889": {
+      "lat": 0.609142,
+      "lon": -69.203337,
+      "cod_dpto": "97",
+      "nom_mpio": "YAVARATÉ"
+    },
+    "99001": {
+      "lat": 6.186636,
+      "lon": -67.487095,
+      "cod_dpto": "99",
+      "nom_mpio": "PUERTO CARREÑO"
+    },
+    "99524": {
+      "lat": 5.486309,
+      "lon": -70.410515,
+      "cod_dpto": "99",
+      "nom_mpio": "LA PRIMAVERA"
+    },
+    "99624": {
+      "lat": 5.136393,
+      "lon": -70.859499,
+      "cod_dpto": "99",
+      "nom_mpio": "SANTA ROSALÍA"
+    },
+    "99773": {
+      "lat": 4.446352,
+      "lon": -69.795533,
+      "cod_dpto": "99",
+      "nom_mpio": "CUMARIBO"
+    },
+    "11000": {
+      "lat": 4.649251,
+      "lon": -74.106992,
+      "cod_dpto": "11",
+      "nom_mpio": "BOGOTÁ, D.C."
+    }
+  },
+  "departamentos_code": {
+    "Antioquia": "05",
+    "Atlántico": "08",
+    "Bogotá D.C.": "11",
+    "Bolívar": "13",
+    "Boyacá": "15",
+    "Caldas": "17",
+    "Caquetá": "18",
+    "Cauca": "19",
+    "Cesar": "20",
+    "Córdoba": "23",
+    "Cundinamarca": "25",
+    "Chocó": "27",
+    "Huila": "41",
+    "La Guajira": "44",
+    "Magdalena": "47",
+    "Meta": "50",
+    "Nariño": "52",
+    "Norte de Santander": "54",
+    "Quindío": "63",
+    "Risaralda": "66",
+    "Santander": "68",
+    "Sucre": "70",
+    "Tolima": "73",
+    "Valle del Cauca": "76",
+    "Arauca": "81",
+    "Casanare": "85",
+    "Putumayo": "86",
+    "San Andrés, Providencia y Santa Catalina": "88",
+    "Amazonas": "91",
+    "Guainía": "94",
+    "Guaviare": "95",
+    "Vaupés": "97",
+    "Vichada": "99"
+  },
+  "departamentos_center": {
+    "05": {
+      "lat": 6.544,
+      "lon": -75.5605
+    },
+    "08": {
+      "lat": 10.6985,
+      "lon": -74.9037
+    },
+    "11": {
+      "lat": 4.6493,
+      "lon": -74.107
+    },
+    "13": {
+      "lat": 9.3489,
+      "lon": -74.6495
+    },
+    "15": {
+      "lat": 5.6666,
+      "lon": -73.2085
+    },
+    "17": {
+      "lat": 5.2831,
+      "lon": -75.4375
+    },
+    "18": {
+      "lat": 1.3977,
+      "lon": -75.4928
+    },
+    "19": {
+      "lat": 2.4979,
+      "lon": -76.6742
+    },
+    "20": {
+      "lat": 9.3046,
+      "lon": -73.5413
+    },
+    "23": {
+      "lat": 8.7601,
+      "lon": -75.7322
+    },
+    "25": {
+      "lat": 4.8187,
+      "lon": -74.1817
+    },
+    "27": {
+      "lat": 5.8009,
+      "lon": -76.8245
+    },
+    "41": {
+      "lat": 2.4318,
+      "lon": -75.6591
+    },
+    "44": {
+      "lat": 11.0488,
+      "lon": -72.8037
+    },
+    "47": {
+      "lat": 10.1258,
+      "lon": -74.482
+    },
+    "50": {
+      "lat": 3.6726,
+      "lon": -73.487
+    },
+    "52": {
+      "lat": 1.4005,
+      "lon": -77.5708
+    },
+    "54": {
+      "lat": 7.8526,
+      "lon": -72.8221
+    },
+    "63": {
+      "lat": 4.4936,
+      "lon": -75.7013
+    },
+    "66": {
+      "lat": 5.0611,
+      "lon": -75.8441
+    },
+    "68": {
+      "lat": 6.5542,
+      "lon": -73.2616
+    },
+    "70": {
+      "lat": 9.1955,
+      "lon": -75.2087
+    },
+    "73": {
+      "lat": 4.3234,
+      "lon": -75.0413
+    },
+    "76": {
+      "lat": 4.1114,
+      "lon": -76.2371
+    },
+    "81": {
+      "lat": 6.6984,
+      "lon": -71.2683
+    },
+    "85": {
+      "lat": 5.3789,
+      "lon": -72.3045
+    },
+    "86": {
+      "lat": 0.7912,
+      "lon": -76.6176
+    },
+    "88": {
+      "lat": 12.9756,
+      "lon": -81.5378
+    },
+    "91": {
+      "lat": -1.8171,
+      "lon": -71.4542
+    },
+    "94": {
+      "lat": 2.6612,
+      "lon": -68.2092
+    },
+    "95": {
+      "lat": 2.0487,
+      "lon": -72.468
+    },
+    "97": {
+      "lat": 0.707,
+      "lon": -70.3565
+    },
+    "99": {
+      "lat": 5.3139,
+      "lon": -69.6382
+    }
+  }
+}

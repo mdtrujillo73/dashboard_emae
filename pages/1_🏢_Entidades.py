@@ -1,15 +1,30 @@
 """
-Página: Análisis por Entidades – Rankings y buscador
+Página: Análisis por Entidades – Ficha de Homologación SECOP I / SECOP II, Rankings y Directorio
 """
 
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from utils.data_loader import load_data, apply_filters, fmt_billones, fmt_numero
-from utils.charts import chart_top_entidades, chart_modalidad, CCE_AZUL, ESCENARIO_LABELS, ESCENARIO_COLORS
+from utils.data_loader import (
+    load_data,
+    render_sidebar_filters,
+    fmt_billones,
+    fmt_numero,
+    ESCENARIO_LABELS,
+    ESCENARIO_COLORS,
+)
+from utils.charts import (
+    chart_top_entidades,
+    chart_modalidad,
+    CCE_AZUL,
+    CCE_NARANJA,
+    CCE_ROJO,
+    LAYOUT_DEFAULTS,
+)
 
 st.set_page_config(page_title="Entidades | EMAE Dashboard", page_icon="🏢", layout="wide")
 
@@ -17,147 +32,189 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 html,[class*="css"]{font-family:'Inter',sans-serif;}
-[data-testid="stSidebar"]{background:linear-gradient(180deg,#003F7E 0%,#002855 100%);}
+[data-testid="stSidebar"]{background:linear-gradient(180deg,#174073 0%,#3E546C 100%);}
 [data-testid="stSidebar"] *{color:#fff!important;}
-[data-testid="stSidebar"] label{color:#A8C8E8!important;font-size:0.82rem;font-weight:500;text-transform:uppercase;letter-spacing:0.03em;}
-.section-header{font-size:1.15rem;font-weight:700;color:#003F7E;border-bottom:3px solid #009B3A;padding-bottom:0.4rem;margin:1.5rem 0 1rem 0;}
-.entity-card{background:white;border-radius:14px;padding:1.2rem 1.5rem;box-shadow:0 4px 18px rgba(0,63,126,0.10);border-top:4px solid #003F7E;margin-bottom:0.8rem;}
-.entity-card h3{color:#003F7E;font-size:1rem;margin:0 0 0.5rem 0;}
-.entity-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.4rem;}
-.entity-stat{background:#F0F6FF;border-radius:8px;padding:0.4rem 0.8rem;font-size:0.8rem;color:#003F7E;font-weight:600;}
-.badge{display:inline-block;padding:.2rem .7rem;border-radius:999px;font-size:.72rem;font-weight:600;color:white;margin:.1rem;}
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] .stMultiSelect label,
+[data-testid="stSidebar"] .stRadio label{color:#FFC000!important;font-size:0.80rem;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;}
+.section-header{font-size:1.15rem;font-weight:700;color:#174073;border-bottom:3px solid #D61C38;padding-bottom:0.4rem;margin:1.5rem 0 1rem 0;}
+.entity-card{background:white;border-radius:14px;padding:1.3rem 1.6rem;box-shadow:0 4px 18px rgba(23,64,115,0.10);border-top:5px solid #174073;margin-bottom:0.8rem;}
+.entity-card h3{color:#174073;font-size:1.1rem;margin:0 0 0.55rem 0;}
+.entity-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.55rem;}
+.entity-stat{background:#F0F6FF;border-radius:8px;padding:0.4rem 0.8rem;font-size:0.8rem;color:#174073;font-weight:600;}
+.badge{display:inline-block;padding:.22rem .75rem;border-radius:999px;font-size:.73rem;font-weight:600;color:white;margin:.12rem;}
 </style>
 """, unsafe_allow_html=True)
 
 df_raw = load_data()
+df = render_sidebar_filters(df_raw)
 
-# Sidebar
-with st.sidebar:
-    st.markdown("## 🏛️ EMAE – SECOPI")
-    st.markdown("**(Versión Actualizada)**", unsafe_allow_html=True)
-    st.markdown("---")
-    vigencias_disp = sorted(df_raw["VIGENCIA"].dropna().unique().tolist())
-    sel_vigencia = st.multiselect("Vigencia", ["Todas"] + vigencias_disp, default=["Todas"])
-    col_depto = "DEPARTAMENTO_MINTIC" if "DEPARTAMENTO_MINTIC" in df_raw.columns else "DEPARTAMENTO_SECOPI"
-    deptos_disp = sorted(df_raw[col_depto].dropna().unique().tolist())
-    sel_depto = st.multiselect("Departamento", deptos_disp, default=[])
-    escenarios_disp = [k for k in ESCENARIO_LABELS if k in df_raw["ESCENARIO_REPORTE_FINAL"].unique()]
-    sel_escenario = st.multiselect("Escenario", escenarios_disp, format_func=lambda x: ESCENARIO_LABELS.get(x,x), default=[])
-    regimenes_disp = sorted(df_raw["REGIMEN_CLASIFICADO_FINAL"].dropna().unique().tolist())
-    sel_regimen = st.multiselect("Régimen", regimenes_disp, default=[])
+total_proc = int(df["CANTIDAD_PROCESOS"].sum())
+total_ent = int(df["NOMBRE_ENTIDAD"].nunique())
+total_nits = int(df.loc[df["NIT_HOMOLOGADO"] != "Sin NIT Válido", "NIT_HOMOLOGADO"].nunique())
 
-    if "MODALIDAD_CONTRATACION" in df_raw.columns:
-        modalidades_disp = sorted(df_raw["MODALIDAD_CONTRATACION"].dropna().unique().tolist())
-    else:
-        modalidades_disp = []
-    sel_modalidad = st.multiselect("Modalidad de Contratación", ["Todas"] + modalidades_disp, default=["Todas"])
-
-df = apply_filters(df_raw, sel_vigencia, sel_depto, sel_escenario, sel_regimen, sel_modalidad)
-
-st.markdown("# 🏢 Análisis por Entidades")
-st.markdown(f"Mostrando **{len(df):,}** contratos de **{df['NOMBRE_ENTIDAD_SECOPI'].nunique():,}** entidades")
+st.markdown("# 🏢 Análisis por Entidades y Homologación SECOP II")
+st.markdown(
+    f"Mostrando **{total_proc:,}** procesos de **{total_ent:,}** cuentas de entidades compradoras "
+    f"(**{total_nits:,}** NITs únicos homologados)"
+)
 
 # ── BUSCADOR DE ENTIDAD ────────────────────────────────────────────────────
-st.markdown('<div class="section-header">🔍 Ficha de Entidad</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🔍 Ficha Técnica y Homologación de Entidad (SECOP I ↔ SECOP II)</div>', unsafe_allow_html=True)
 
-entidades_lista = sorted(df["NOMBRE_ENTIDAD_SECOPI"].dropna().unique().tolist())
-entidad_sel = st.selectbox("Buscar entidad:", ["— Seleccione una entidad —"] + entidades_lista)
+entidades_lista = sorted(df["NOMBRE_ENTIDAD"].dropna().unique().tolist())
+entidad_sel = st.selectbox("Buscar entidad compradora en SECOP I:", ["— Seleccione una entidad —"] + entidades_lista)
 
 if entidad_sel != "— Seleccione una entidad —":
-    ent_df = df[df["NOMBRE_ENTIDAD_SECOPI"] == entidad_sel]
-    esc = ent_df["ESCENARIO_REPORTE_FINAL"].mode().iloc[0] if not ent_df.empty else "N/D"
-    reg = ent_df["REGIMEN_CLASIFICADO_FINAL"].mode().iloc[0] if not ent_df.empty else "N/D"
-    nit = ent_df["NIT_ENTIDAD_SECOPI"].iloc[0] if not ent_df.empty else "N/D"
-    depto = ent_df[col_depto].mode().iloc[0] if not ent_df.empty else "N/D"
-    total_c = len(ent_df)
-    total_v = ent_df["VALOR_CONTRATO_CON_ADICIONES"].sum()
-    aparece = ent_df.get("APARECE_SECOPI_CIRCULAR_FINAL", pd.Series(dtype=str)).mode()
-    aparece_str = aparece.iloc[0] if not aparece.empty else "N/D"
-    cruce = ent_df.get("TIENE_CRUCE_SECOPII_VALIDADO_FINAL", pd.Series(dtype=str)).mode()
-    cruce_str = cruce.iloc[0] if not cruce.empty else "N/D"
+    ent_df = df[df["NOMBRE_ENTIDAD"] == entidad_sel]
+    row0 = ent_df.iloc[0]
+
+    esc = row0["ESCENARIO_2026"]
     color_esc = ESCENARIO_COLORS.get(esc, "#6C757D")
     label_esc = ESCENARIO_LABELS.get(esc, esc)
 
-    f1, f2 = st.columns([2, 1])
+    nat_inst = row0.get("NATURALEZA_INSTITUCIONAL", "N/D")
+    tipo_ent = row0.get("TIPO_ENTIDAD", "N/D")
+    nit_s1 = row0.get("NIT_ENTIDAD", "N/D")
+    nit_hom = row0.get("NIT_HOMOLOGADO", "N/D")
+    cuenta_s2 = row0.get("NOMBRE_ENTIDAD_SECOP2", "N/D")
+    pub_s2 = row0.get("TIENE_PUBLICACIONES_SECOP2", "No")
+    proc_hist_s2 = int(ent_df["PROCESOS_HISTORICOS_SECOP2"].max()) if "PROCESOS_HISTORICOS_SECOP2" in ent_df.columns else 0
+
+    depto = row0.get("DEPARTAMENTO", "N/D")
+    mpio = row0.get("MUNICIPIO", "N/D")
+    divipola = row0.get("CODIGO_DIVIPOLA", "N/D")
+    cat_cgn = row0.get("CATEGORIA_CGN", "N/D")
+    pen_mintic = float(row0.get("PENETRACION_INTERNET_MINTIC", 0.0) or 0.0) * 100.0
+    rango_mintic = row0.get("RANGO_CONECTIVIDAD_MINTIC", "N/D")
+    detalle_obl = row0.get("DETALLE_OBLIGACION_PREVIA", "N/D")
+    ruta_2026 = row0.get("CLASIFICACION_Y_RUTA_DESPLIEGUE_2026", "N/D")
+
+    total_c = int(ent_df["CANTIDAD_PROCESOS"].sum())
+    total_v = float(ent_df["VALOR_REAL_CUANTIA"].sum())
+
+    f1, f2 = st.columns([1.85, 1.15])
     with f1:
         st.markdown(f"""
         <div class="entity-card">
             <h3>🏛️ {entidad_sel}</h3>
             <span class="badge" style="background:{color_esc};">{label_esc}</span>
-            <span class="badge" style="background:#003F7E;">{reg}</span>
+            <span class="badge" style="background:#174073;">{nat_inst}</span>
+            <span class="badge" style="background:#533965;">Categoría CGN: {cat_cgn}</span>
             <div class="entity-row">
-                <div class="entity-stat">📋 NIT: {nit}</div>
-                <div class="entity-stat">🗺️ {depto}</div>
-                <div class="entity-stat">📄 {total_c:,} contratos</div>
-                <div class="entity-stat">💰 {fmt_billones(total_v)}</div>
-                <div class="entity-stat">🔗 SECOP II: {aparece_str}</div>
-                <div class="entity-stat">✅ Cruce validado: {cruce_str}</div>
+                <div class="entity-stat">📋 NIT SECOP I: {nit_s1}</div>
+                <div class="entity-stat">✅ NIT Homologado: {nit_hom}</div>
+                <div class="entity-stat">🗺️ {depto} / {mpio} (DIVIPOLA: {divipola})</div>
+                <div class="entity-stat">📄 {total_c:,} procesos en SECOP I</div>
+                <div class="entity-stat">💰 {fmt_billones(total_v, short=True)}</div>
+                <div class="entity-stat">📡 Internet MinTIC: {pen_mintic:.1f}% ({rango_mintic})</div>
+            </div>
+            <div class="entity-row" style="margin-top:0.65rem;">
+                <div class="entity-stat" style="background:#EAFAF1;color:#1E8449;">🔗 Cuenta Oficial SECOP II: <b>{cuenta_s2}</b></div>
+                <div class="entity-stat" style="background:#FEF9E7;color:#9C7238;">📊 Publica en SECOP II: <b>{pub_s2}</b> ({proc_hist_s2:,} proc. históricos)</div>
+            </div>
+            <div style="margin-top:0.65rem;font-size:0.80rem;color:#3E546C;">
+                <b>⚖️ Trazabilidad Obligación:</b> {detalle_obl}<br>
+                <b>🚀 Ruta Operativa 2026:</b> {ruta_2026}
             </div>
         </div>
         """, unsafe_allow_html=True)
+
     with f2:
-        vig_ent = ent_df.groupby("VIGENCIA", observed=True).size().reset_index(name="contratos")
+        vig_ent = (
+            ent_df.groupby("VIGENCIA", observed=True)["CANTIDAD_PROCESOS"]
+            .sum()
+            .reset_index(name="procesos")
+        )
         if not vig_ent.empty:
-            import plotly.express as px
-            fig_vig = px.bar(vig_ent, x="VIGENCIA", y="contratos",
-                             color_discrete_sequence=[CCE_AZUL],
-                             labels={"contratos": "Contratos", "VIGENCIA": "Año"})
-            fig_vig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-                                   margin=dict(l=10,r=10,t=30,b=10), height=200,
-                                   font=dict(family="Inter, Arial"))
+            fig_vig = px.bar(
+                vig_ent,
+                x="VIGENCIA",
+                y="procesos",
+                text="procesos",
+                color_discrete_sequence=[CCE_AZUL],
+                labels={"procesos": "Procesos SECOP I", "VIGENCIA": "Vigencia"},
+                title="Evolución de Procesos en SECOP I (2023–2025)",
+            )
+            fig_vig.update_traces(texttemplate="%{text:,}", textposition="outside")
+            fig_vig.update_layout(
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(0,0,0,0)",
+                margin=dict(l=10, r=10, t=35, b=10),
+                height=250,
+                font=dict(family="Inter, Arial"),
+            )
             st.plotly_chart(fig_vig, use_container_width=True, key="vig_ent")
 
 # ── TOPS ──────────────────────────────────────────────────────────────────
-st.markdown('<div class="section-header">🏆 Rankings de Entidades</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">🏆 Rankings de Entidades Compradoras</div>', unsafe_allow_html=True)
 
-n_top = st.slider("Número de entidades a mostrar:", 5, 30, 20, key="n_top")
+n_top = st.slider("Número de entidades a mostrar en el ranking:", 5, 30, 15, key="n_top")
 t1, t2 = st.columns(2)
 
 with t1:
-    st.markdown("**Por número de contratos**")
-    st.plotly_chart(chart_top_entidades(df, n_top, "contratos"), use_container_width=True, key="top_c")
+    st.markdown("**Por número de procesos registrados en SECOP I**")
+    st.plotly_chart(chart_top_entidades(df, n_top, "procesos"), use_container_width=True, key="top_c")
 
 with t2:
-    st.markdown("**Por valor contratado**")
+    st.markdown("**Por cuantía real contratada (Billones COP)**")
     st.plotly_chart(chart_top_entidades(df, n_top, "valor"), use_container_width=True, key="top_v")
 
 # ── MODALIDAD ─────────────────────────────────────────────────────────────
-st.markdown('<div class="section-header">📑 Modalidad de Contratación</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">📑 Modalidades de Contratación</div>', unsafe_allow_html=True)
 
 m1, m2 = st.columns(2)
 with m1:
-    st.markdown("**Distribución por modalidad (Top 10)**")
+    st.markdown("**Proporción de procesos por modalidad agrupada**")
     st.plotly_chart(chart_modalidad(df, "pie"), use_container_width=True, key="mod_pie")
 
 with m2:
-    st.markdown("**Comparativo modalidades**")
+    st.markdown("**Volumen de procesos por modalidad**")
     st.plotly_chart(chart_modalidad(df, "bar"), use_container_width=True, key="mod_bar")
 
 # ── TABLA DESCARGABLE ─────────────────────────────────────────────────────
-st.markdown('<div class="section-header">📋 Directorio de Entidades</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">📋 Directorio Consolidado de Entidades (SECOP I vs. SECOP II)</div>', unsafe_allow_html=True)
 
-cols_dir = ["NOMBRE_ENTIDAD_SECOPI", "NIT_ENTIDAD_SECOPI", col_depto, "MUNICIPIO_SECOPI",
-            "ESCENARIO_REPORTE_FINAL", "REGIMEN_CLASIFICADO_FINAL",
-            "DEBE_REPORTAR_SEGUN_CIRCULAR_FINAL", "APARECE_SECOPI_CIRCULAR_FINAL"]
+cols_dir = [
+    "NOMBRE_ENTIDAD",
+    "NIT_ENTIDAD",
+    "NIT_HOMOLOGADO",
+    "NATURALEZA_INSTITUCIONAL",
+    "DEPARTAMENTO",
+    "MUNICIPIO",
+    "CODIGO_DIVIPOLA",
+    "CATEGORIA_CGN",
+    "SEGMENTO_NORMATIVO",
+    "ESTADO_OBLIGATORIEDAD",
+    "NOMBRE_ENTIDAD_SECOP2",
+    "TIENE_PUBLICACIONES_SECOP2",
+]
 cols_dir = [c for c in cols_dir if c in df.columns]
 
-directorio = (df.groupby([c for c in cols_dir if c in df.columns], observed=True, dropna=False)
-               .agg(Contratos=("UID","count"), Valor=("VALOR_CONTRATO_CON_ADICIONES","sum"))
-               .reset_index()
-               .sort_values("Contratos", ascending=False))
+directorio = (
+    df.groupby(cols_dir, observed=True, dropna=False)
+    .agg(
+        Procesos_S1=("CANTIDAD_PROCESOS", "sum"),
+        Valor_Real=("VALOR_REAL_CUANTIA", "sum"),
+        Procesos_Hist_S2=("PROCESOS_HISTORICOS_SECOP2", "max"),
+    )
+    .reset_index()
+    .sort_values("Procesos_S1", ascending=False)
+)
 
 col_search, col_dl = st.columns([3, 1])
 with col_search:
-    filtro_txt = st.text_input("🔎 Filtrar tabla por nombre o NIT:", "")
+    filtro_txt = st.text_input("🔎 Filtrar directorio por nombre de entidad, municipio, NIT o cuenta SECOP II:", "")
 with col_dl:
     st.write("")
     csv = directorio.to_csv(index=False).encode("utf-8-sig")
-    st.download_button("⬇️ Descargar CSV", csv, "directorio_entidades.csv", "text/csv")
+    st.download_button("⬇️ Descargar CSV", csv, "directorio_entidades_2026.csv", "text/csv")
 
 if filtro_txt:
-    mask = directorio["NOMBRE_ENTIDAD_SECOPI"].str.contains(filtro_txt, case=False, na=False)
-    if "NIT_ENTIDAD_SECOPI" in directorio.columns:
-        mask |= directorio["NIT_ENTIDAD_SECOPI"].astype(str).str.contains(filtro_txt, case=False, na=False)
+    mask = directorio["NOMBRE_ENTIDAD"].astype(str).str.contains(filtro_txt, case=False, na=False)
+    for col_s in ["NIT_ENTIDAD", "NIT_HOMOLOGADO", "NOMBRE_ENTIDAD_SECOP2", "MUNICIPIO", "DEPARTAMENTO"]:
+        if col_s in directorio.columns:
+            mask |= directorio[col_s].astype(str).str.contains(filtro_txt, case=False, na=False)
     directorio = directorio[mask]
 
 st.dataframe(
@@ -165,9 +222,10 @@ st.dataframe(
     use_container_width=True,
     hide_index=True,
     column_config={
-        "Valor": st.column_config.NumberColumn("Valor Contratado (COP)", format="$ {:,.0f}"),
-        "Contratos": st.column_config.NumberColumn("N° Contratos", format="%d"),
-        "ESCENARIO_REPORTE_FINAL": st.column_config.TextColumn("Escenario"),
+        "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+        "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
+        "Procesos_Hist_S2": st.column_config.NumberColumn("Procesos Hist. SECOP II", format="%d"),
+        "TIENE_PUBLICACIONES_SECOP2": st.column_config.TextColumn("¿Publica S2?"),
     },
-    height=400,
+    height=440,
 )
