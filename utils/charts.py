@@ -364,7 +364,7 @@ def chart_mapa_calor_departamentos(
         agg["pct_secop2"].fillna(0),
     ], axis=-1)
 
-    fig = go.Figure(go.Choroplethmapbox(
+    fig = go.Figure(go.Choroplethmap(
         geojson=geojson_depto,
         locations=agg["COD_DPTO"],
         featureidkey="id",
@@ -404,9 +404,9 @@ def chart_mapa_calor_departamentos(
         zoom = 4.6
 
     fig.update_layout(
-        mapbox_style=estilo_mapa,
-        mapbox_zoom=zoom,
-        mapbox_center=center,
+        map_style=estilo_mapa,
+        map_zoom=zoom,
+        map_center=center,
         margin=dict(l=0, r=0, t=10, b=0),
         height=580,
         paper_bgcolor="rgba(0,0,0,0)",
@@ -469,8 +469,8 @@ def chart_mapa_calor_municipios(
     """
     Mapa de Calor Geográfico de los Municipios de Colombia (1.076+ municipios con DIVIPOLA).
     Soporta 3 modos:
-      - 'densidad': Mapa de Calor continuo (Densitymapbox) + Puntos interactivos por municipio
-      - 'coropletico': Polígonos municipales coloreados según la métrica (Choroplethmapbox)
+      - 'densidad': Mapa de Calor continuo (Densitymap) + Puntos interactivos por municipio
+      - 'coropletico': Polígonos municipales coloreados según la métrica (Choroplethmap)
       - 'burbujas': Burbujas georreferenciadas escaladas y coloreadas por municipio
     """
     agg = aggregate_municipios(df)
@@ -537,7 +537,7 @@ def chart_mapa_calor_municipios(
         else:
             sub_geo = geojson_mpio
 
-        fig.add_trace(go.Choroplethmapbox(
+        fig.add_trace(go.Choroplethmap(
             geojson=sub_geo,
             locations=agg["CODIGO_DIVIPOLA_MAPA"],
             featureidkey="id",
@@ -560,7 +560,7 @@ def chart_mapa_calor_municipios(
         max_v = vals.max() if vals.max() > 0 else 1
         sizes = 6 + 24 * np.sqrt(vals / max_v)
 
-        fig.add_trace(go.Scattermapbox(
+        fig.add_trace(go.Scattermap(
             lat=agg["lat"],
             lon=agg["lon"],
             mode="markers",
@@ -581,8 +581,8 @@ def chart_mapa_calor_municipios(
         ))
 
     else:
-        # Modo por defecto: Mapa de Calor de Densidad (Densitymapbox) + Puntos Municipales interactivos
-        fig.add_trace(go.Densitymapbox(
+        # Modo por defecto: Mapa de Calor de Densidad (Densitymap) + Puntos Municipales interactivos
+        fig.add_trace(go.Densitymap(
             lat=agg["lat"],
             lon=agg["lon"],
             z=agg[col_z],
@@ -596,7 +596,7 @@ def chart_mapa_calor_municipios(
             ),
             hoverinfo="skip",
         ))
-        fig.add_trace(go.Scattermapbox(
+        fig.add_trace(go.Scattermap(
             lat=agg["lat"],
             lon=agg["lon"],
             mode="markers",
@@ -612,9 +612,9 @@ def chart_mapa_calor_municipios(
         ))
 
     fig.update_layout(
-        mapbox_style=estilo_mapa,
-        mapbox_zoom=zoom,
-        mapbox_center=center,
+        map_style=estilo_mapa,
+        map_zoom=zoom,
+        map_center=center,
         margin=dict(l=0, r=0, t=10, b=0),
         height=580,
         paper_bgcolor="rgba(0,0,0,0)",
