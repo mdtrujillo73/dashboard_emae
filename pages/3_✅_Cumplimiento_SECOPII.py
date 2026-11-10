@@ -187,12 +187,14 @@ with tab1:
         tbl_td1b = tbl_td1b[cols_show_td1b].sort_values("TOTAL_PROCESOS_ORDINARIOS_S1", ascending=False)
 
         st.caption(f"Mostrando **{len(tbl_td1b):,}** entidades únicas | **{int(tbl_td1b['TOTAL_PROCESOS_ORDINARIOS_S1'].sum()):,}** procesos ordinarios")
+        tbl_td1b_vista = tbl_td1b.copy()
+        tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"] = tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"].apply(lambda v: f"$ {v:,.0f}")
         st.dataframe(
-            tbl_td1b,
+            tbl_td1b_vista,
             use_container_width=True,
             hide_index=True,
             column_config={
-                "VALOR_REAL_CUANTIA_S1": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
+                "VALOR_REAL_CUANTIA_S1": st.column_config.TextColumn("Cuantía Real (COP)", width="medium"),
                 "TOTAL_PROCESOS_ORDINARIOS_S1": st.column_config.NumberColumn("Total Procesos S1", format="%d"),
                 "PROCESOS_HISTORICOS_SECOP2": st.column_config.NumberColumn("Procesos Hist. S2", format="%d"),
             },
@@ -228,12 +230,14 @@ with tab2:
             .reset_index()
             .sort_values("Procesos_S1", ascending=False)
         )
+        tbl_prev_vista = tbl_prev.copy()
+        tbl_prev_vista["Valor_Real"] = tbl_prev_vista["Valor_Real"].apply(lambda v: f"$ {v:,.0f}")
         st.dataframe(
-            tbl_prev,
+            tbl_prev_vista,
             use_container_width=True,
             hide_index=True,
             column_config={
-                "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
+                "Valor_Real": st.column_config.TextColumn("Cuantía Real (COP)", width="medium"),
                 "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
             },
             height=420,

@@ -217,12 +217,14 @@ if filtro_txt:
             mask |= directorio[col_s].astype(str).str.contains(filtro_txt, case=False, na=False)
     directorio = directorio[mask]
 
+directorio_vista = directorio.copy()
+directorio_vista["Valor_Real"] = directorio_vista["Valor_Real"].apply(lambda v: f"$ {v:,.0f}")
 st.dataframe(
-    directorio,
+    directorio_vista,
     use_container_width=True,
     hide_index=True,
     column_config={
-        "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
+        "Valor_Real": st.column_config.TextColumn("Cuantía Real (COP)", width="medium"),
         "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
         "Procesos_Hist_S2": st.column_config.NumberColumn("Procesos Hist. SECOP II", format="%d"),
         "TIENE_PUBLICACIONES_SECOP2": st.column_config.TextColumn("¿Publica S2?"),
