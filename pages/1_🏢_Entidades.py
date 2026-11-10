@@ -222,7 +222,7 @@ st.dataframe(
     use_container_width=True,
     hide_index=True,
     column_config={
-        "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+        "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
         "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
         "Procesos_Hist_S2": st.column_config.NumberColumn("Procesos Hist. SECOP II", format="%d"),
         "TIENE_PUBLICACIONES_SECOP2": st.column_config.TextColumn("¿Publica S2?"),

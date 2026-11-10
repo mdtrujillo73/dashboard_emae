@@ -192,7 +192,7 @@ with tab1:
             use_container_width=True,
             hide_index=True,
             column_config={
-                "VALOR_REAL_CUANTIA_S1": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+                "VALOR_REAL_CUANTIA_S1": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
                 "TOTAL_PROCESOS_ORDINARIOS_S1": st.column_config.NumberColumn("Total Procesos S1", format="%d"),
                 "PROCESOS_HISTORICOS_SECOP2": st.column_config.NumberColumn("Procesos Hist. S2", format="%d"),
             },
@@ -233,7 +233,7 @@ with tab2:
             use_container_width=True,
             hide_index=True,
             column_config={
-                "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="$ {:,.0f}"),
+                "Valor_Real": st.column_config.NumberColumn("Cuantía Real (COP)", format="dollar"),
                 "Procesos_S1": st.column_config.NumberColumn("Procesos SECOP I", format="%d"),
             },
             height=420,
