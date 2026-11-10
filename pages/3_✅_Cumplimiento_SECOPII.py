@@ -57,7 +57,7 @@ df_td1b = df_td1b_raw[df_td1b_raw["NOMBRE_ENTIDAD"].isin(entidades_filtradas)].c
 
 st.markdown("# ✅ Estrategia de Despliegue y Cumplimiento SECOP II (2026)")
 st.markdown(
-    "Ruta operativa para las **2.975 entidades potenciales (`TD_01B`)**, control de entidades obligadas en "
+    f"Ruta operativa para las **{len(df_td1b_raw):,} entidades potenciales (`TD_01B`)**, control de entidades obligadas en "
     "**vigencias anteriores (2020–2025)**, bloqueo manual por **Ley 2195 de 2022 (`TD_03`)** y **Exclusiones (`TD_02`)**"
 )
 
@@ -143,7 +143,7 @@ st.plotly_chart(chart_rutas_despliegue_2026(df_td1b, met_ruta), use_container_wi
 
 # ── Pestañas de Gestión Operativa ─────────────────────────────────────────
 tab1, tab2, tab3 = st.tabs([
-    "📋 1. Directorio TD_01B: Potenciales 2026 (2.975 Entidades)",
+    f"📋 1. Directorio TD_01B: Potenciales 2026 ({len(df_td1b_raw):,} Entidades)",
     "⚠️ 2. Obligadas Vigencias Anteriores (2020–2025) en SECOP I",
     "🔒 3. Régimen Especial (Ley 2195/2022 - TD_03) & Exclusiones (TD_02)",
 ])
@@ -154,9 +154,10 @@ with tab1:
         f_col1, f_col2 = st.columns([2, 1])
         with f_col1:
             rutas_disp = sorted(df_td1b["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"].dropna().unique().tolist())
+            opt_todas_rutas = f"Todas las rutas ({len(df_td1b):,} entidades)"
             sel_ruta_tbl = st.selectbox(
                 "Filtrar por Ruta de Despliegue 2026:",
-                ["Todas las rutas (2.975 entidades)"] + rutas_disp,
+                [opt_todas_rutas] + rutas_disp,
                 key="sel_ruta_tbl",
             )
         with f_col2:
@@ -168,7 +169,7 @@ with tab1:
             )
 
         tbl_td1b = df_td1b.copy()
-        if sel_ruta_tbl != "Todas las rutas (2.975 entidades)":
+        if sel_ruta_tbl != opt_todas_rutas:
             tbl_td1b = tbl_td1b[tbl_td1b["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"] == sel_ruta_tbl]
         if sel_pub_tbl == "Sí publica en SECOP II":
             tbl_td1b = tbl_td1b[tbl_td1b["PUBLICA_EN_SECOP2"] == "Sí"]

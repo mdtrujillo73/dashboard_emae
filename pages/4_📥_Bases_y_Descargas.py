@@ -266,7 +266,7 @@ with tab_td01:
 with tab_td01b:
     df_td01b = load_td01b()
     st.markdown("### 📋 TD_01B_LISTA_ENTIDADES – Directorio Maestro de Entidades Potenciales 2026")
-    st.caption("Ficha de cada una de las 2.975 entidades potenciales con asignación de su Ruta Operativa de Despliegue 2026 y homologación SECOP II.")
+    st.caption("Ficha de cada una de las entidades potenciales con asignación de su Ruta Operativa de Despliegue 2026 y homologación SECOP II.")
 
     if not df_td01b.empty:
         c1, c2, c3, c4 = st.columns(4)

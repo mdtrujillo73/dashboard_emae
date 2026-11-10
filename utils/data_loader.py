@@ -22,8 +22,8 @@ PARQUET_TD02    = BASE_DIR / "emae_td02_exclusiones.parquet"
 PARQUET_TD03    = BASE_DIR / "emae_td03_regimen_especial.parquet"
 
 EXCEL_CANDIDATES = [
-    ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
+    ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
     BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
 ]
 
@@ -195,7 +195,7 @@ def load_data() -> pd.DataFrame:
 @st.cache_resource(show_spinner="⏳ Cargando directorio de entidades potenciales (TD_01B)...", ttl=3600)
 def load_td01b() -> pd.DataFrame:
     """
-    Carga la hoja `TD_01B_LISTA_ENTIDADES` (2.975 entidades potenciales únicas).
+    Carga la hoja `TD_01B_LISTA_ENTIDADES` (directorio maestro de entidades potenciales únicas).
     """
     if PARQUET_TD01B.exists():
         df_td1b = pd.read_parquet(PARQUET_TD01B, engine="pyarrow")
@@ -339,6 +339,8 @@ def _post_process_td01b(df: pd.DataFrame) -> pd.DataFrame:
         df["COD_DPTO"] = df["DEPARTAMENTO"].map(DPTO_NAME_TO_CODE)
     if "VALOR_REAL_CUANTIA_S1" not in df.columns:
         df["VALOR_REAL_CUANTIA_S1"] = df["VALOR_TOTAL_CUANTIA_S1"].where(df["NOMBRE_ENTIDAD"] != "No Definido", 0.0)
+    if "TOTAL_PROCESOS_S1" in df.columns and "TOTAL_PROCESOS_ORDINARIOS_S1" not in df.columns:
+        df["TOTAL_PROCESOS_ORDINARIOS_S1"] = df["TOTAL_PROCESOS_S1"]
     df["RUTA_CORTA"] = df["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"].map(RUTA_SHORT_LABELS).fillna(
         df["CLASIFICACION_Y_RUTA_DESPLIEGUE_2026"]
     )
