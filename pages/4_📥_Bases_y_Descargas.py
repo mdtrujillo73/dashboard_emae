@@ -11,22 +11,112 @@ Acceso y descarga directa de las 5 hojas técnicas oficiales del modelo de despl
 import streamlit as st
 import pandas as pd
 import sys
+import importlib
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from utils.data_loader import (
-    load_data,
-    load_td01,
-    load_td01b,
-    load_td02,
-    load_td03,
-    get_master_excel_path,
-    render_sidebar_filters,
-    fmt_billones,
-    fmt_numero,
-    ESCENARIO_LABELS,
-    ESCENARIO_COLORS,
-)
+BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+# Importación resiliente compatible con recargas en caliente de Streamlit Cloud
+try:
+    import utils.data_loader as dl
+    if not hasattr(dl, "load_td01"):
+        dl = importlib.reload(dl)
+except Exception:
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("utils.data_loader", str(BASE_DIR / "utils" / "data_loader.py"))
+    dl = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(dl)
+
+load_data = getattr(dl, "load_data")
+render_sidebar_filters = getattr(dl, "render_sidebar_filters")
+fmt_billones = getattr(dl, "fmt_billones", lambda v, short=False: f"${v:,.2f}" if v is not None else "N/D")
+fmt_numero = getattr(dl, "fmt_numero", lambda v: f"{int(v):,}" if v is not None else "N/D")
+ESCENARIO_LABELS = getattr(dl, "ESCENARIO_LABELS", {})
+ESCENARIO_COLORS = getattr(dl, "ESCENARIO_COLORS", {})
+
+# Funciones de carga con fallback autónomo para máxima estabilidad
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_01_POTENCIALES...", ttl=3600)
+def load_td01() -> pd.DataFrame:
+    if hasattr(dl, "load_td01"):
+        try:
+            df = dl.load_td01()
+            if not df.empty:
+                return df
+        except Exception:
+            pass
+    p = BASE_DIR / "emae_td01_potenciales.parquet"
+    if p.exists():
+        try:
+            return pd.read_parquet(p, engine="pyarrow")
+        except Exception:
+            pass
+    return pd.DataFrame()
+
+@st.cache_resource(show_spinner="⏳ Cargando directorio TD_01B...", ttl=3600)
+def load_td01b() -> pd.DataFrame:
+    if hasattr(dl, "load_td01b"):
+        try:
+            df = dl.load_td01b()
+            if not df.empty:
+                return df
+        except Exception:
+            pass
+    p = BASE_DIR / "emae_td01b_entidades.parquet"
+    if p.exists():
+        try:
+            return pd.read_parquet(p, engine="pyarrow")
+        except Exception:
+            pass
+    return pd.DataFrame()
+
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_02_EXCLUSIONES...", ttl=3600)
+def load_td02() -> pd.DataFrame:
+    if hasattr(dl, "load_td02"):
+        try:
+            df = dl.load_td02()
+            if not df.empty:
+                return df
+        except Exception:
+            pass
+    p = BASE_DIR / "emae_td02_exclusiones.parquet"
+    if p.exists():
+        try:
+            return pd.read_parquet(p, engine="pyarrow")
+        except Exception:
+            pass
+    return pd.DataFrame()
+
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_03_REGIMEN_ESPECIAL...", ttl=3600)
+def load_td03() -> pd.DataFrame:
+    if hasattr(dl, "load_td03"):
+        try:
+            df = dl.load_td03()
+            if not df.empty:
+                return df
+        except Exception:
+            pass
+    p = BASE_DIR / "emae_td03_regimen_especial.parquet"
+    if p.exists():
+        try:
+            return pd.read_parquet(p, engine="pyarrow")
+        except Exception:
+            pass
+    return pd.DataFrame()
+
+def get_master_excel_path() -> Path:
+    if hasattr(dl, "get_master_excel_path"):
+        return dl.get_master_excel_path()
+    candidates = [
+        BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
+        BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
+        BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return candidates[0]
 
 st.set_page_config(page_title="Bases y Descargas | EMAE Dashboard", page_icon="📥", layout="wide")
 
