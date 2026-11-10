@@ -17,6 +17,9 @@ ASSETS_DIR      = BASE_DIR / "assets"
 
 PARQUET_MAIN    = BASE_DIR / "emae_base_estrella.parquet"
 PARQUET_TD01B   = BASE_DIR / "emae_td01b_entidades.parquet"
+PARQUET_TD01    = BASE_DIR / "emae_td01_potenciales.parquet"
+PARQUET_TD02    = BASE_DIR / "emae_td02_exclusiones.parquet"
+PARQUET_TD03    = BASE_DIR / "emae_td03_regimen_especial.parquet"
 
 EXCEL_CANDIDATES = [
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
@@ -204,6 +207,44 @@ def load_td01b() -> pd.DataFrame:
         df_td1b = pd.read_parquet(PARQUET_TD01B, engine="pyarrow")
         return _post_process_td01b(df_td1b)
     return pd.DataFrame()
+
+
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_01_POTENCIALES...", ttl=3600)
+def load_td01() -> pd.DataFrame:
+    """Carga la hoja `TD_01_POTENCIALES` (18.634 filas agrupadas por modalidad)."""
+    if PARQUET_TD01.exists():
+        return pd.read_parquet(PARQUET_TD01, engine="pyarrow")
+    excel_p = _find_excel_path()
+    if excel_p.exists():
+        return pd.read_excel(excel_p, sheet_name="TD_01_POTENCIALES", header=3)
+    return pd.DataFrame()
+
+
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_02_EXCLUSIONES...", ttl=3600)
+def load_td02() -> pd.DataFrame:
+    """Carga la hoja `TD_02_EXCLUSIONES` (1.682 filas exceptuadas normativamente)."""
+    if PARQUET_TD02.exists():
+        return pd.read_parquet(PARQUET_TD02, engine="pyarrow")
+    excel_p = _find_excel_path()
+    if excel_p.exists():
+        return pd.read_excel(excel_p, sheet_name="TD_02_EXCLUSIONES", header=3)
+    return pd.DataFrame()
+
+
+@st.cache_resource(show_spinner="⏳ Cargando hoja TD_03_REGIMEN_ESPECIAL...", ttl=3600)
+def load_td03() -> pd.DataFrame:
+    """Carga la hoja `TD_03_REGIMEN_ESPECIAL` (2.425 filas régimen especial / Ley 2195)."""
+    if PARQUET_TD03.exists():
+        return pd.read_parquet(PARQUET_TD03, engine="pyarrow")
+    excel_p = _find_excel_path()
+    if excel_p.exists():
+        return pd.read_excel(excel_p, sheet_name="TD_03_REGIMEN_ESPECIAL", header=3)
+    return pd.DataFrame()
+
+
+def get_master_excel_path() -> Path:
+    """Retorna la ruta al archivo Excel maestro si existe en disco."""
+    return _find_excel_path()
 
 
 def _enrich_and_save(df_bm: pd.DataFrame, df_td1b: pd.DataFrame) -> pd.DataFrame:

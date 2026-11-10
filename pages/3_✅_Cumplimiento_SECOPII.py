@@ -188,7 +188,7 @@ with tab1:
 
         st.caption(f"Mostrando **{len(tbl_td1b):,}** entidades únicas | **{int(tbl_td1b['TOTAL_PROCESOS_ORDINARIOS_S1'].sum()):,}** procesos ordinarios")
         tbl_td1b_vista = tbl_td1b.copy()
-        tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"] = tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"].apply(lambda v: f"$ {v:,.0f}")
+        tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"] = tbl_td1b_vista["VALOR_REAL_CUANTIA_S1"].fillna(0).apply(lambda v: f"$ {v:,.0f}")
         st.dataframe(
             tbl_td1b_vista,
             use_container_width=True,
@@ -231,7 +231,7 @@ with tab2:
             .sort_values("Procesos_S1", ascending=False)
         )
         tbl_prev_vista = tbl_prev.copy()
-        tbl_prev_vista["Valor_Real"] = tbl_prev_vista["Valor_Real"].apply(lambda v: f"$ {v:,.0f}")
+        tbl_prev_vista["Valor_Real"] = tbl_prev_vista["Valor_Real"].fillna(0).apply(lambda v: f"$ {v:,.0f}")
         st.dataframe(
             tbl_prev_vista,
             use_container_width=True,

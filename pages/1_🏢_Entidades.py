@@ -62,10 +62,53 @@ st.markdown(
 # ── BUSCADOR DE ENTIDAD ────────────────────────────────────────────────────
 st.markdown('<div class="section-header">🔍 Ficha Técnica y Homologación de Entidad (SECOP I ↔ SECOP II)</div>', unsafe_allow_html=True)
 
-entidades_lista = sorted(df["NOMBRE_ENTIDAD"].dropna().unique().tolist())
-entidad_sel = st.selectbox("Buscar entidad compradora en SECOP I:", ["— Seleccione una entidad —"] + entidades_lista)
+col_b1, col_b2 = st.columns([1.1, 1.9])
+with col_b1:
+    filtro_input = st.text_input(
+        "✍️ Digite texto, NIT o municipio:",
+        value="",
+        placeholder="Ej: Tumaco, 891200, Pasto, Personería, Hospital...",
+        help="Escriba cualquier término o NIT para filtrar interactivamente el listado de entidades.",
+        key="busq_ent_input",
+    )
 
-if entidad_sel != "— Seleccione una entidad —":
+entidades_todas = sorted(df["NOMBRE_ENTIDAD"].dropna().unique().tolist())
+if filtro_input.strip():
+    txt = filtro_input.strip().lower()
+    cols_search = [
+        "NOMBRE_ENTIDAD",
+        "NIT_ENTIDAD",
+        "NIT_HOMOLOGADO",
+        "MUNICIPIO",
+        "DEPARTAMENTO",
+        "NOMBRE_ENTIDAD_SECOP2",
+    ]
+    mask_b = pd.Series(False, index=df.index)
+    for c in cols_search:
+        if c in df.columns:
+            mask_b |= df[c].astype(str).str.lower().str.contains(txt, na=False)
+    entidades_filtradas = sorted(df.loc[mask_b, "NOMBRE_ENTIDAD"].dropna().unique().tolist())
+else:
+    entidades_filtradas = entidades_todas
+
+with col_b2:
+    if entidades_filtradas:
+        opciones_ent = ["— Seleccione una entidad —"] + entidades_filtradas
+        idx_default = 1 if (filtro_input.strip() and len(entidades_filtradas) == 1) else 0
+        entidad_sel = st.selectbox(
+            "🏛️ Buscar entidad compradora en SECOP I:",
+            options=opciones_ent,
+            index=idx_default,
+            key="entidad_sel_box",
+            help="Seleccione la entidad para desplegar su ficha técnica y trazabilidad 2026.",
+        )
+        st.caption(f"ℹ️ {len(entidades_filtradas):,} entidades disponibles (de {len(entidades_todas):,} en los filtros activos).")
+    else:
+        st.selectbox("🏛️ Buscar entidad compradora en SECOP I:", ["— Sin coincidencias encontradas —"], disabled=True)
+        entidad_sel = "— Sin coincidencias encontradas —"
+        st.warning(f"No se encontraron entidades con el término '{filtro_input}'. Borre o modifique el texto para ver todas.")
+
+if entidad_sel not in ("— Seleccione una entidad —", "— Sin coincidencias encontradas —"):
     ent_df = df[df["NOMBRE_ENTIDAD"] == entidad_sel]
     row0 = ent_df.iloc[0]
 
@@ -218,7 +261,7 @@ if filtro_txt:
     directorio = directorio[mask]
 
 directorio_vista = directorio.copy()
-directorio_vista["Valor_Real"] = directorio_vista["Valor_Real"].apply(lambda v: f"$ {v:,.0f}")
+directorio_vista["Valor_Real"] = directorio_vista["Valor_Real"].fillna(0).apply(lambda v: f"$ {v:,.0f}")
 st.dataframe(
     directorio_vista,
     use_container_width=True,
