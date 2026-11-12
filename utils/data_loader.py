@@ -22,8 +22,10 @@ PARQUET_TD02    = BASE_DIR / "emae_td02_exclusiones.parquet"
 PARQUET_TD03    = BASE_DIR / "emae_td03_regimen_especial.parquet"
 
 EXCEL_CANDIDATES = [
+    ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
+    BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
     BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
 ]
 

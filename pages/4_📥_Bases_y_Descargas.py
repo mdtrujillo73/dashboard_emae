@@ -109,8 +109,10 @@ def get_master_excel_path() -> Path:
     if hasattr(dl, "get_master_excel_path"):
         return dl.get_master_excel_path()
     candidates = [
-        BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
+        BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
         BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
+        BASE_DIR.parent / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
+        BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
         BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
     ]
     for c in candidates:
