@@ -322,21 +322,24 @@ def build_multilayer_colombia_map(
     modo_visual: str,
     estilo_mapa: str,
     metrica_tam: str,
+    df_contexto_gris: pd.DataFrame = None,
 ) -> go.Figure:
     """
     Construye el Mapa de Colombia con Código DIVIPOLA coloreando las entidades de cada hoja
     con su color distintivo (Verde: POTENCIALES 5%, Naranja: POTENCIALES 2%, Rojo: INFERIORES A 2%).
+    Soporta pintar una sola hoja, combinación de hojas, y opcionalmente el resto en gris de referencia.
     """
     agg = agg_by_divipola(df_in)
-    if agg.empty:
+    if agg.empty and (df_contexto_gris is None or df_contexto_gris.empty):
         return go.Figure()
 
-    n_deptos = agg["DEPARTAMENTO"].nunique()
+    base_ref = agg if not agg.empty else agg_by_divipola(df_contexto_gris)
+    n_deptos = base_ref["DEPARTAMENTO"].nunique()
     if n_deptos == 1:
-        center = dict(lat=float(agg["lat"].mean()), lon=float(agg["lon"].mean()))
+        center = dict(lat=float(base_ref["lat"].mean()), lon=float(base_ref["lon"].mean()))
         zoom = 6.8
     elif n_deptos <= 4:
-        center = dict(lat=float(agg["lat"].mean()), lon=float(agg["lon"].mean()))
+        center = dict(lat=float(base_ref["lat"].mean()), lon=float(base_ref["lon"].mean()))
         zoom = 5.7
     else:
         center = dict(lat=4.5709, lon=-74.2973)
@@ -344,16 +347,84 @@ def build_multilayer_colombia_map(
 
     fig = go.Figure()
 
-    # Filtrar GeoJSON si hay pocos departamentos para velocidad
+    # 0. Si el usuario activó ver las hojas no seleccionadas en gris de referencia
+    if df_contexto_gris is not None and not df_contexto_gris.empty:
+        agg_gris = agg_by_divipola(df_contexto_gris)
+        if not agg_gris.empty:
+            if modo_visual in ("poligonos_y_burbujas", "solo_poligonos") and geojson_mpio:
+                codes_g = set(agg_gris["CODIGO_DIVIPOLA_MAPA"].unique())
+                sub_geo_g = {
+                    "type": "FeatureCollection",
+                    "features": [f for f in geojson_mpio.get("features", []) if f.get("id") in codes_g],
+                }
+                fig.add_trace(go.Choroplethmap(
+                    geojson=sub_geo_g,
+                    locations=agg_gris["CODIGO_DIVIPOLA_MAPA"],
+                    featureidkey="id",
+                    z=np.ones(len(agg_gris)),
+                    colorscale=[[0, "#D5D8DC"], [1, "#D5D8DC"]],
+                    showscale=False,
+                    name="⚪ Otras Hojas (No seleccionadas)",
+                    marker_opacity=0.45,
+                    marker_line_width=0.4,
+                    marker_line_color="rgba(180,180,180,0.6)",
+                    customdata=np.stack([
+                        agg_gris["MUNICIPIO"],
+                        agg_gris["DEPARTAMENTO"],
+                        agg_gris["CODIGO_DIVIPOLA"],
+                        agg_gris["HOJA_ORIGEN"],
+                        agg_gris["penetracion_pct"],
+                        agg_gris["entidades"],
+                    ], axis=-1),
+                    hovertemplate=(
+                        "<b>⚪ (No seleccionada) %{customdata[0]} (%{customdata[1]})</b><br>"
+                        "DIVIPOLA: %{customdata[2]} | Hoja: <b>%{customdata[3]}</b><br>"
+                        "Penetración: %{customdata[4]:.2f}% | Entidades: %{customdata[5]}<extra></extra>"
+                    ),
+                ))
+            else:
+                fig.add_trace(go.Scattermap(
+                    lat=agg_gris["lat"],
+                    lon=agg_gris["lon"],
+                    mode="markers",
+                    name="⚪ Otras Hojas (No seleccionadas)",
+                    marker=dict(size=6, color="#BDC3C7", opacity=0.50),
+                    customdata=np.stack([
+                        agg_gris["MUNICIPIO"],
+                        agg_gris["DEPARTAMENTO"],
+                        agg_gris["CODIGO_DIVIPOLA"],
+                        agg_gris["HOJA_ORIGEN"],
+                        agg_gris["penetracion_pct"],
+                        agg_gris["entidades"],
+                    ], axis=-1),
+                    hovertemplate=(
+                        "<b>⚪ (No seleccionada) %{customdata[0]} (%{customdata[1]})</b><br>"
+                        "DIVIPOLA: %{customdata[2]} | Hoja: <b>%{customdata[3]}</b><br>"
+                        "Penetración: %{customdata[4]:.2f}% | Entidades: %{customdata[5]}<extra></extra>"
+                    ),
+                ))
+
+    if agg.empty:
+        fig.update_layout(
+            map=dict(style=estilo_mapa, center=center, zoom=zoom),
+            margin=dict(l=0, r=0, t=10, b=0),
+            height=640,
+        )
+        return fig
+
+    # Filtrar GeoJSON para los municipios activos
     valid_codes = set(agg["CODIGO_DIVIPOLA_MAPA"].unique())
     sub_geo = {
         "type": "FeatureCollection",
         "features": [f for f in geojson_mpio.get("features", []) if f.get("id") in valid_codes],
     } if geojson_mpio else {"type": "FeatureCollection", "features": []}
 
+    hojas_presentes = [h for h in ["POTENCIALES 5%", "POTENCIALES 2%", "INFERIORES A 2%"] if h in agg["HOJA_ORIGEN"].unique()]
+    una_sola_hoja = len(hojas_presentes) == 1
+
     # 1. Si el modo incluye Polígonos Coropléticos DIVIPOLA por Hoja
     if modo_visual in ("poligonos_y_burbujas", "solo_poligonos") and sub_geo["features"]:
-        for hoja in ["POTENCIALES 5%", "POTENCIALES 2%", "INFERIORES A 2%"]:
+        for hoja in hojas_presentes:
             sub_df = agg[agg["HOJA_ORIGEN"] == hoja]
             if sub_df.empty:
                 continue
@@ -377,11 +448,16 @@ def build_multilayer_colombia_map(
                 featureidkey="id",
                 z=sub_df["entidades"],
                 colorscale=meta["colorscale"],
-                showscale=False,
+                showscale=una_sola_hoja,
+                colorbar=dict(
+                    title=dict(text="Entidades", font=dict(size=12, color=meta["color"])),
+                    thickness=14,
+                    len=0.65,
+                ) if una_sola_hoja else None,
                 name=meta["short"],
-                marker_opacity=0.80,
-                marker_line_width=0.7,
-                marker_line_color="rgba(255,255,255,0.75)",
+                marker_opacity=0.84,
+                marker_line_width=0.75,
+                marker_line_color="rgba(255,255,255,0.80)",
                 customdata=customdata,
                 hovertemplate=(
                     "<b>📍 %{customdata[0]} (%{customdata[1]})</b><br>"
@@ -405,17 +481,24 @@ def build_multilayer_colombia_map(
             "penetracion": "penetracion_pct",
         }.get(metrica_tam, "entidades")
 
-        fig.add_trace(go.Densitymap(
-            lat=agg["lat"],
-            lon=agg["lon"],
-            z=agg[col_weight],
-            radius=20,
-            colorscale=[
+        # Si hay una sola hoja elegida, usar la escala de calor del color de esa hoja
+        if una_sola_hoja:
+            h_unica = hojas_presentes[0]
+            heat_scale = SHEET_META[h_unica]["colorscale"]
+        else:
+            heat_scale = [
                 [0.0, "rgba(255,255,255,0)"],
                 [0.25, "rgba(241,196,15,0.45)"],
                 [0.6, "rgba(230,126,34,0.70)"],
                 [1.0, "rgba(214,28,56,0.92)"],
-            ],
+            ]
+
+        fig.add_trace(go.Densitymap(
+            lat=agg["lat"],
+            lon=agg["lon"],
+            z=agg[col_weight],
+            radius=22 if una_sola_hoja else 20,
+            colorscale=heat_scale,
             showscale=False,
             hoverinfo="skip",
             name="Halo de Calor",
@@ -550,7 +633,93 @@ def build_multilayer_colombia_map(
 # SECCIÓN 1: MAPA PRINCIPAL MULTICAPA DE COLOMBIA (CÓDIGO DIVIPOLA)
 # ══════════════════════════════════════════════════════════════════════════
 st.markdown(
-    '<div class="section-header">🗺️ Mapa de Calor de Colombia por Código DIVIPOLA – Entidades Coloreadas por Libro / Hoja</div>',
+    '<div class="section-header">🗺️ Mapa de Calor de Colombia por Código DIVIPOLA – Selector de Hojas a Pintar (1, 2 o 3)</div>',
+    unsafe_allow_html=True,
+)
+
+# ── Panel Principal de Selección de Hoja(s) a Pintar en el Mapa ───────────
+st.markdown('<div class="sim-card">', unsafe_allow_html=True)
+sel_col_modo, sel_col_checks = st.columns([1.8, 1.2])
+
+with sel_col_modo:
+    modo_seleccion_hoja = st.radio(
+        "🎯 **Elija qué Hoja(s) desea pintar en el mapa de Colombia:**",
+        options=[
+            "TODAS",
+            "HOJA_1",
+            "HOJA_2",
+            "HOJA_3",
+            "HOJA_1_Y_2",
+            "HOJA_2_Y_3",
+            "MANUAL",
+        ],
+        format_func=lambda k: {
+            "TODAS": "🌎 Pintar las 3 Hojas (Hoja 1 + Hoja 2 + Hoja 3 — 2.011 entidades)",
+            "HOJA_1": "🟢 Pintar Solo Hoja 1: POTENCIALES 5% (Penetración ≥ 5% — 754 entidades)",
+            "HOJA_2": "🟠 Pintar Solo Hoja 2: POTENCIALES 2% (Penetración 2% a < 5% — 752 entidades)",
+            "HOJA_3": "🔴 Pintar Solo Hoja 3: INFERIORES A 2% (Penetración < 2% — 505 entidades)",
+            "HOJA_1_Y_2": "🟢+🟠 Pintar Hoja 1 + Hoja 2 Acumuladas (Penetración ≥ 2% — 1.506 entidades)",
+            "HOJA_2_Y_3": "🟠+🔴 Pintar Hoja 2 + Hoja 3 Acumuladas (Penetración < 5% — 1.257 entidades)",
+            "MANUAL": "🎛️ Selección Personalizada con Casillas (Activar / Desactivar Hoja 1, 2 o 3)",
+        }[k],
+        index=0,
+        key="radio_hoja_pintar",
+    )
+
+with sel_col_checks:
+    st.markdown("**📌 Control de Capas por Libro / Hoja:**")
+    if modo_seleccion_hoja == "MANUAL":
+        chk_h1 = st.checkbox("🟢 Hoja 1: POTENCIALES 5% (≥ 5%)", value=True, key="chk_m_h1")
+        chk_h2 = st.checkbox("🟠 Hoja 2: POTENCIALES 2% (2% a < 5%)", value=True, key="chk_m_h2")
+        chk_h3 = st.checkbox("🔴 Hoja 3: INFERIORES A 2% (< 2%)", value=False, key="chk_m_h3")
+        hojas_a_pintar = []
+        if chk_h1:
+            hojas_a_pintar.append("POTENCIALES 5%")
+        if chk_h2:
+            hojas_a_pintar.append("POTENCIALES 2%")
+        if chk_h3:
+            hojas_a_pintar.append("INFERIORES A 2%")
+    else:
+        mapa_preset_hojas = {
+            "TODAS": ["POTENCIALES 5%", "POTENCIALES 2%", "INFERIORES A 2%"],
+            "HOJA_1": ["POTENCIALES 5%"],
+            "HOJA_2": ["POTENCIALES 2%"],
+            "HOJA_3": ["INFERIORES A 2%"],
+            "HOJA_1_Y_2": ["POTENCIALES 5%", "POTENCIALES 2%"],
+            "HOJA_2_Y_3": ["POTENCIALES 2%", "INFERIORES A 2%"],
+        }
+        hojas_a_pintar = mapa_preset_hojas[modo_seleccion_hoja]
+        for h_code, h_title in [
+            ("POTENCIALES 5%", "🟢 Hoja 1: POTENCIALES 5% (≥ 5%)"),
+            ("POTENCIALES 2%", "🟠 Hoja 2: POTENCIALES 2% (2% a < 5%)"),
+            ("INFERIORES A 2%", "🔴 Hoja 3: INFERIORES A 2% (< 2%)"),
+        ]:
+            activo = h_code in hojas_a_pintar
+            estado_badge = "✅ **PINTADA EN EL MAPA**" if activo else "⚪ Oculta"
+            st.markdown(f"- {h_title}: {estado_badge}")
+
+    st.markdown("---")
+    mostrar_gris_fondo = st.checkbox(
+        "⚪ Mostrar en gris tenue las hojas no seleccionadas como referencia geográfica",
+        value=(len(hojas_a_pintar) < 3),
+        help="Cuando elige pintar solo 1 o 2 hojas, muestra los municipios de las demás hojas en gris claro para comparar cobertura.",
+    )
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Filtrar el dataframe del mapa según las hojas elegidas para pintar
+df_mapa_activo = df[df["HOJA_ORIGEN"].isin(hojas_a_pintar)]
+df_mapa_gris = df[~df["HOJA_ORIGEN"].isin(hojas_a_pintar)] if mostrar_gris_fondo and len(hojas_a_pintar) < 3 else None
+
+# Cinta informativa de lo que está pintado actualmente
+badges_html = " ".join([
+    f"<span style='background:{SHEET_META[h]['color']};color:white;padding:0.22rem 0.7rem;border-radius:999px;font-size:0.80rem;font-weight:600;margin-right:0.35rem;'>{SHEET_META[h]['short']}: {len(df_mapa_activo[df_mapa_activo['HOJA_ORIGEN']==h]):,} ent.</span>"
+    for h in hojas_a_pintar
+])
+st.markdown(
+    f"<div style='background:#F0F4F8;border-left:5px solid #174073;padding:0.65rem 1rem;border-radius:8px;margin-bottom:0.8rem;font-size:0.88rem;'>"
+    f"🎨 <b>Capas pintadas actualmente:</b> {badges_html if badges_html else '<i>Ninguna hoja seleccionada</i>'} "
+    f"| Total en mapa: <b>{len(df_mapa_activo):,} entidades</b> en <b>{df_mapa_activo['CODIGO_DIVIPOLA_MAPA'].nunique():,} municipios DIVIPOLA</b>"
+    f"</div>",
     unsafe_allow_html=True,
 )
 
@@ -596,18 +765,19 @@ with ctrl3:
     estilo_mapa = MAP_STYLES[estilo_label]
 
 fig_main_map = build_multilayer_colombia_map(
-    df_in=df,
+    df_in=df_mapa_activo,
     geojson_mpio=geojson_mpio,
     modo_visual=modo_mapa,
     estilo_mapa=estilo_mapa,
     metrica_tam=metrica_tam,
+    df_contexto_gris=df_mapa_gris,
 )
 st.plotly_chart(fig_main_map, use_container_width=True, key="map_2027_main")
 
 st.caption(
-    "💡 **Guía interactiva del mapa:** Pase el cursor sobre cualquier municipio para consultar su **Código DIVIPOLA**, "
-    "**Índice exacto de Penetración de Internet MinTIC (%)**, **Libro/Hoja asignada**, cantidad de entidades y listado nominal. "
-    "Puede hacer clic en la leyenda inferior para encender o apagar cualquiera de las 3 hojas."
+    "💡 **Guía interactiva del mapa:** Use el selector superior para **elegir si desea pintar la Hoja 1 (`POTENCIALES 5%`), "
+    "la Hoja 2 (`POTENCIALES 2%`), la Hoja 3 (`INFERIORES A 2%`) o combinaciones entre ellas**. "
+    "Cuando selecciona una sola hoja, el mapa aplica su escala de calor exclusiva y despliega la barra de intensidad."
 )
 
 
