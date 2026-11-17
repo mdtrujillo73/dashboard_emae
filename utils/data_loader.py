@@ -20,6 +20,7 @@ PARQUET_TD01B   = BASE_DIR / "emae_td01b_entidades.parquet"
 PARQUET_TD01    = BASE_DIR / "emae_td01_potenciales.parquet"
 PARQUET_TD02    = BASE_DIR / "emae_td02_exclusiones.parquet"
 PARQUET_TD03    = BASE_DIR / "emae_td03_regimen_especial.parquet"
+PARQUET_2027_2028 = BASE_DIR / "emae_despliegue_2027_2028.parquet"
 
 EXCEL_CANDIDATES = [
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
@@ -27,6 +28,12 @@ EXCEL_CANDIDATES = [
     ROOT_DIR / "Datos Actualizados" / "Base_Maestra_Despliegue_SECOP_II_2026 (1).xlsx",
     BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026_v2.xlsx",
     BASE_DIR / "Base_Maestra_Despliegue_SECOP_II_2026.xlsx",
+]
+
+EXCEL_2027_CANDIDATES = [
+    ROOT_DIR / "BASE DE DATOS POTENCIALES ENTIDADES A OBLIGAR.xlsx",
+    ROOT_DIR / "Datos Actualizados" / "BASE DE DATOS POTENCIALES ENTIDADES A OBLIGAR.xlsx",
+    BASE_DIR / "BASE DE DATOS POTENCIALES ENTIDADES A OBLIGAR.xlsx",
 ]
 
 GEOJSON_DEPTO_PATH = ASSETS_DIR / "colombia_departamentos.geojson"
@@ -247,6 +254,71 @@ def load_td03() -> pd.DataFrame:
 def get_master_excel_path() -> Path:
     """Retorna la ruta al archivo Excel maestro si existe en disco."""
     return _find_excel_path()
+
+
+def get_excel_2027_path() -> Path:
+    """Retorna la ruta al archivo Excel 'BASE DE DATOS POTENCIALES ENTIDADES A OBLIGAR.xlsx'."""
+    for p in EXCEL_2027_CANDIDATES:
+        if p.exists():
+            return p
+    return EXCEL_2027_CANDIDATES[0]
+
+
+@st.cache_resource(show_spinner="⏳ Cargando Base Despliegue SECOP II 2027–2028...", ttl=3600)
+def load_despliegue_2027_2028() -> pd.DataFrame:
+    """
+    Carga las 3 hojas de 'BASE DE DATOS POTENCIALES ENTIDADES A OBLIGAR' (2.011 entidades):
+    - POTENCIALES 5% (754 entidades)
+    - POTENCIALES 2% (752 entidades)
+    - INFERIORES A 2% (505 entidades)
+    """
+    if PARQUET_2027_2028.exists():
+        return pd.read_parquet(PARQUET_2027_2028, engine="pyarrow")
+
+    excel_src = get_excel_2027_path()
+    if not excel_src.exists():
+        return pd.DataFrame()
+
+    coords_info = load_divipola_coords()
+    coords_map = coords_info.get("municipios", {})
+    dpto_center_map = coords_info.get("departamentos_center", {})
+
+    sheets_cfg = [
+        ("POTENCIALES 5%", "1. Potenciales ≥ 5% (Tramo 1)", 1, "#1E8449"),
+        ("POTENCIALES 2%", "2. Potenciales 2% a < 5% (Tramo 2)", 2, "#E67E22"),
+        ("INFERIORES A 2%", "3. Inferiores a 2% (Tramo 3)", 3, "#D61C38"),
+    ]
+    dfs = []
+    for sheet_name, label, orden, color in sheets_cfg:
+        df = pd.read_excel(excel_src, sheet_name=sheet_name)
+        if "NIT_SECOP12" in df.columns and "DEPARTAMENTO" not in df.columns:
+            df = df.rename(columns={"NIT_SECOP12": "DEPARTAMENTO", "NIT_SECOP2": "MUNICIPIO"})
+        unnamed_cols = [c for c in df.columns if str(c).startswith("Unnamed:")]
+        if unnamed_cols:
+            df = df.drop(columns=unnamed_cols)
+        df["HOJA_ORIGEN"] = sheet_name
+        df["COHORTE_LABEL"] = label
+        df["ORDEN_COHORTE"] = orden
+        df["COHORTE_COLOR"] = color
+        df["NOMBRE_ENTIDAD"] = df["NOMBRE_ENTIDAD"].astype(str).str.strip()
+        df["DEPARTAMENTO"] = df["DEPARTAMENTO"].astype(str).str.strip()
+        df["MUNICIPIO"] = df["MUNICIPIO"].astype(str).str.strip()
+        df["CODIGO_DIVIPOLA"] = df["CODIGO_DIVIPOLA"].apply(_fix_divipola)
+        df["CODIGO_DIVIPOLA_MAPA"] = df["CODIGO_DIVIPOLA"].apply(
+            lambda s: s[:2] + "001" if isinstance(s, str) and len(s) == 5 and s.endswith("000") else s
+        )
+        df["COD_DPTO"] = df["DEPARTAMENTO"].map(DPTO_NAME_TO_CODE).fillna(df["CODIGO_DIVIPOLA_MAPA"].str[:2])
+        df["PENETRACION_INTERNET_MINTIC"] = pd.to_numeric(df["PENETRACION_INTERNET_MINTIC"], errors="coerce").fillna(0.0)
+        df["PENETRACION_PCT"] = df["PENETRACION_INTERNET_MINTIC"] * 100.0
+        df["LATITUD"] = pd.to_numeric(df["CODIGO_DIVIPOLA_MAPA"].map(lambda c: coords_map.get(c, {}).get("lat")), errors="coerce")
+        df["LONGITUD"] = pd.to_numeric(df["CODIGO_DIVIPOLA_MAPA"].map(lambda c: coords_map.get(c, {}).get("lon")), errors="coerce")
+        mask_na = df["LATITUD"].isna()
+        if mask_na.any():
+            df.loc[mask_na, "LATITUD"] = pd.to_numeric(df.loc[mask_na, "DEPARTAMENTO"].map(lambda d: dpto_center_map.get(d, {}).get("lat")), errors="coerce")
+            df.loc[mask_na, "LONGITUD"] = pd.to_numeric(df.loc[mask_na, "DEPARTAMENTO"].map(lambda d: dpto_center_map.get(d, {}).get("lon")), errors="coerce")
+        dfs.append(df)
+
+    return pd.concat(dfs, ignore_index=True)
 
 
 def _enrich_and_save(df_bm: pd.DataFrame, df_td1b: pd.DataFrame) -> pd.DataFrame:
