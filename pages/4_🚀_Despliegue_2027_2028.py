@@ -633,95 +633,30 @@ def build_multilayer_colombia_map(
 # SECCIÓN 1: MAPA PRINCIPAL MULTICAPA DE COLOMBIA (CÓDIGO DIVIPOLA)
 # ══════════════════════════════════════════════════════════════════════════
 st.markdown(
-    '<div class="section-header">🗺️ Mapa de Calor de Colombia por Código DIVIPOLA – Selector de Hojas a Pintar (1, 2 o 3)</div>',
+    '<div class="section-header">🗺️ Mapa de Calor de Colombia por Código DIVIPOLA – Selección por Hoja</div>',
     unsafe_allow_html=True,
 )
 
-# ── Panel Principal de Selección de Hoja(s) a Pintar en el Mapa ───────────
-st.markdown('<div class="sim-card">', unsafe_allow_html=True)
-sel_col_modo, sel_col_checks = st.columns([1.8, 1.2])
+# ── Selector directo de las 3 hojas ───────────────────────────────────────
+st.markdown("**Seleccione la(s) hoja(s) a dibujar en el mapa (si elige dos o más se superponen):**")
+chk_col1, chk_col2, chk_col3 = st.columns(3)
+with chk_col1:
+    chk_h1 = st.checkbox("🟢 Hoja 1: POTENCIALES 5% (Penetración ≥ 5%)", value=True, key="chk_h1")
+with chk_col2:
+    chk_h2 = st.checkbox("🟠 Hoja 2: POTENCIALES 2% (Penetración 2% a < 5%)", value=True, key="chk_h2")
+with chk_col3:
+    chk_h3 = st.checkbox("🔴 Hoja 3: INFERIORES A 2% (Penetración < 2%)", value=True, key="chk_h3")
 
-with sel_col_modo:
-    modo_seleccion_hoja = st.radio(
-        "🎯 **Elija qué Hoja(s) desea pintar en el mapa de Colombia:**",
-        options=[
-            "TODAS",
-            "HOJA_1",
-            "HOJA_2",
-            "HOJA_3",
-            "HOJA_1_Y_2",
-            "HOJA_2_Y_3",
-            "MANUAL",
-        ],
-        format_func=lambda k: {
-            "TODAS": "🌎 Pintar las 3 Hojas (Hoja 1 + Hoja 2 + Hoja 3 — 2.011 entidades)",
-            "HOJA_1": "🟢 Pintar Solo Hoja 1: POTENCIALES 5% (Penetración ≥ 5% — 754 entidades)",
-            "HOJA_2": "🟠 Pintar Solo Hoja 2: POTENCIALES 2% (Penetración 2% a < 5% — 752 entidades)",
-            "HOJA_3": "🔴 Pintar Solo Hoja 3: INFERIORES A 2% (Penetración < 2% — 505 entidades)",
-            "HOJA_1_Y_2": "🟢+🟠 Pintar Hoja 1 + Hoja 2 Acumuladas (Penetración ≥ 2% — 1.506 entidades)",
-            "HOJA_2_Y_3": "🟠+🔴 Pintar Hoja 2 + Hoja 3 Acumuladas (Penetración < 5% — 1.257 entidades)",
-            "MANUAL": "🎛️ Selección Personalizada con Casillas (Activar / Desactivar Hoja 1, 2 o 3)",
-        }[k],
-        index=0,
-        key="radio_hoja_pintar",
-    )
+hojas_a_pintar = []
+if chk_h1:
+    hojas_a_pintar.append("POTENCIALES 5%")
+if chk_h2:
+    hojas_a_pintar.append("POTENCIALES 2%")
+if chk_h3:
+    hojas_a_pintar.append("INFERIORES A 2%")
 
-with sel_col_checks:
-    st.markdown("**📌 Control de Capas por Libro / Hoja:**")
-    if modo_seleccion_hoja == "MANUAL":
-        chk_h1 = st.checkbox("🟢 Hoja 1: POTENCIALES 5% (≥ 5%)", value=True, key="chk_m_h1")
-        chk_h2 = st.checkbox("🟠 Hoja 2: POTENCIALES 2% (2% a < 5%)", value=True, key="chk_m_h2")
-        chk_h3 = st.checkbox("🔴 Hoja 3: INFERIORES A 2% (< 2%)", value=False, key="chk_m_h3")
-        hojas_a_pintar = []
-        if chk_h1:
-            hojas_a_pintar.append("POTENCIALES 5%")
-        if chk_h2:
-            hojas_a_pintar.append("POTENCIALES 2%")
-        if chk_h3:
-            hojas_a_pintar.append("INFERIORES A 2%")
-    else:
-        mapa_preset_hojas = {
-            "TODAS": ["POTENCIALES 5%", "POTENCIALES 2%", "INFERIORES A 2%"],
-            "HOJA_1": ["POTENCIALES 5%"],
-            "HOJA_2": ["POTENCIALES 2%"],
-            "HOJA_3": ["INFERIORES A 2%"],
-            "HOJA_1_Y_2": ["POTENCIALES 5%", "POTENCIALES 2%"],
-            "HOJA_2_Y_3": ["POTENCIALES 2%", "INFERIORES A 2%"],
-        }
-        hojas_a_pintar = mapa_preset_hojas[modo_seleccion_hoja]
-        for h_code, h_title in [
-            ("POTENCIALES 5%", "🟢 Hoja 1: POTENCIALES 5% (≥ 5%)"),
-            ("POTENCIALES 2%", "🟠 Hoja 2: POTENCIALES 2% (2% a < 5%)"),
-            ("INFERIORES A 2%", "🔴 Hoja 3: INFERIORES A 2% (< 2%)"),
-        ]:
-            activo = h_code in hojas_a_pintar
-            estado_badge = "✅ **PINTADA EN EL MAPA**" if activo else "⚪ Oculta"
-            st.markdown(f"- {h_title}: {estado_badge}")
-
-    st.markdown("---")
-    mostrar_gris_fondo = st.checkbox(
-        "⚪ Mostrar en gris tenue las hojas no seleccionadas como referencia geográfica",
-        value=(len(hojas_a_pintar) < 3),
-        help="Cuando elige pintar solo 1 o 2 hojas, muestra los municipios de las demás hojas en gris claro para comparar cobertura.",
-    )
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Filtrar el dataframe del mapa según las hojas elegidas para pintar
 df_mapa_activo = df[df["HOJA_ORIGEN"].isin(hojas_a_pintar)]
-df_mapa_gris = df[~df["HOJA_ORIGEN"].isin(hojas_a_pintar)] if mostrar_gris_fondo and len(hojas_a_pintar) < 3 else None
-
-# Cinta informativa de lo que está pintado actualmente
-badges_html = " ".join([
-    f"<span style='background:{SHEET_META[h]['color']};color:white;padding:0.22rem 0.7rem;border-radius:999px;font-size:0.80rem;font-weight:600;margin-right:0.35rem;'>{SHEET_META[h]['short']}: {len(df_mapa_activo[df_mapa_activo['HOJA_ORIGEN']==h]):,} ent.</span>"
-    for h in hojas_a_pintar
-])
-st.markdown(
-    f"<div style='background:#F0F4F8;border-left:5px solid #174073;padding:0.65rem 1rem;border-radius:8px;margin-bottom:0.8rem;font-size:0.88rem;'>"
-    f"🎨 <b>Capas pintadas actualmente:</b> {badges_html if badges_html else '<i>Ninguna hoja seleccionada</i>'} "
-    f"| Total en mapa: <b>{len(df_mapa_activo):,} entidades</b> en <b>{df_mapa_activo['CODIGO_DIVIPOLA_MAPA'].nunique():,} municipios DIVIPOLA</b>"
-    f"</div>",
-    unsafe_allow_html=True,
-)
+df_mapa_gris = None
 
 ctrl1, ctrl2, ctrl3 = st.columns([1.6, 1.2, 1.2])
 with ctrl1:
